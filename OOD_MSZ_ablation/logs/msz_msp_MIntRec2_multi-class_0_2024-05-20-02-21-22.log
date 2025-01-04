@@ -1,0 +1,442 @@
+2024-05-20 02:21:22,655 - Lists of intent labels are: ['Acknowledge', 'Advise', 'Agree', 'Apologise', 'Arrange', 'Ask for help', 'Asking for opinions', 'Care', 'Comfort', 'Complain', 'Confirm', 'Criticize', 'Doubt', 'Emphasize', 'Explain', 'Flaunt', 'Greet', 'Inform', 'Introduce', 'Invite', 'Joke', 'Leave', 'Oppose', 'Plan', 'Praise', 'Prevent', 'Refuse', 'Taunt', 'Thank', 'Warn']
+2024-05-20 02:21:22,655 - ID Data preparation...
+2024-05-20 02:21:41,932 - OOD Data preparation...
+2024-05-20 02:21:45,056 - ============================== Params ==============================
+2024-05-20 02:21:45,056 - logger_name: msz_msp_MIntRec2_multi-class_0
+2024-05-20 02:21:45,056 - dataset: MIntRec2
+2024-05-20 02:21:45,056 - ood_dataset: MIntRec2-OOD
+2024-05-20 02:21:45,056 - data_mode: multi-class
+2024-05-20 02:21:45,056 - multimodal_method: msz
+2024-05-20 02:21:45,056 - method: msz
+2024-05-20 02:21:45,056 - ood_detection_method: msp
+2024-05-20 02:21:45,056 - text_backbone: bert-base-uncased
+2024-05-20 02:21:45,056 - seed: 0
+2024-05-20 02:21:45,056 - num_workers: 8
+2024-05-20 02:21:45,056 - log_id: msz_msp_MIntRec2_multi-class_0_2024-05-20-02-21-22
+2024-05-20 02:21:45,056 - gpu_id: 2
+2024-05-20 02:21:45,056 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-20 02:21:45,056 - train: False
+2024-05-20 02:21:45,057 - tune: True
+2024-05-20 02:21:45,057 - ood: True
+2024-05-20 02:21:45,057 - save_model: False
+2024-05-20 02:21:45,057 - save_results: True
+2024-05-20 02:21:45,057 - log_path: logs
+2024-05-20 02:21:45,057 - cache_path: cache
+2024-05-20 02:21:45,057 - video_data_path: video_data
+2024-05-20 02:21:45,057 - audio_data_path: audio_data
+2024-05-20 02:21:45,057 - video_feats_path: swin_feats.pkl
+2024-05-20 02:21:45,057 - ood_video_feats_path: swin_feats.pkl
+2024-05-20 02:21:45,057 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:21:45,057 - audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:21:45,057 - results_path: results
+2024-05-20 02:21:45,057 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz
+2024-05-20 02:21:45,057 - model_path: models
+2024-05-20 02:21:45,057 - config_file_name: msz_MIntRec22
+2024-05-20 02:21:45,057 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-20 02:21:45,057 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-20 02:21:45,057 - text_seq_len: 50
+2024-05-20 02:21:45,057 - video_seq_len: 180
+2024-05-20 02:21:45,057 - audio_seq_len: 400
+2024-05-20 02:21:45,057 - text_feat_dim: 768
+2024-05-20 02:21:45,057 - video_feat_dim: 256
+2024-05-20 02:21:45,057 - audio_feat_dim: 768
+2024-05-20 02:21:45,057 - ood_label_id: 30
+2024-05-20 02:21:45,057 - num_labels: 30
+2024-05-20 02:21:45,057 - num_train_examples: 6165
+2024-05-20 02:21:45,057 - need_aligned: True
+2024-05-20 02:21:45,057 - freeze_parameters: False
+2024-05-20 02:21:45,057 - eval_monitor: acc
+2024-05-20 02:21:45,057 - train_batch_size: 32
+2024-05-20 02:21:45,057 - eval_batch_size: 16
+2024-05-20 02:21:45,057 - num_train_epochs: 100
+2024-05-20 02:21:45,057 - lr: [1e-05]
+2024-05-20 02:21:45,057 - weight_decay: [0.1]
+2024-05-20 02:21:45,057 - wait_patience: 3
+2024-05-20 02:21:45,057 - warmup_proportion: [0.01]
+2024-05-20 02:21:45,057 - hidden_dims: [768]
+2024-05-20 02:21:45,057 - num_attention_heads: [4]
+2024-05-20 02:21:45,057 - attention_probs_dropout_prob: [0.3]
+2024-05-20 02:21:45,057 - hidden_dropout_prob: [0.3]
+2024-05-20 02:21:45,057 - intermediate_size: [768]
+2024-05-20 02:21:45,057 - num_hidden_layers: [6]
+2024-05-20 02:21:45,057 - max_position_embeddings: [768]
+2024-05-20 02:21:45,057 - position_embedding_type: absolute
+2024-05-20 02:21:45,057 - batch_first: True
+2024-05-20 02:21:45,058 - aligned_method: ['ctc']
+2024-05-20 02:21:45,058 - sampler: ['dir']
+2024-05-20 02:21:45,058 - multiple_ood: [1]
+2024-05-20 02:21:45,058 - select_number_min: [2]
+2024-05-20 02:21:45,058 - select_number_max: [3]
+2024-05-20 02:21:45,058 - alpha: [2]
+2024-05-20 02:21:45,058 - mlp_hidden_size: [256]
+2024-05-20 02:21:45,058 - mlp_dropout: [0.3]
+2024-05-20 02:21:45,058 - scale: [8]
+2024-05-20 02:21:45,058 - ablation: ['no_CosClass']
+2024-05-20 02:21:45,058 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_0
+2024-05-20 02:21:45,058 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_0/models
+2024-05-20 02:21:45,058 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/binary_msz_MIntRec2_bert-base-uncased_0
+2024-05-20 02:21:45,058 - ============================== End Params ==============================
+2024-05-20 02:21:48,051 - Multimodal Intent Recognition begins...
+2024-05-20 02:21:48,051 - Testing begins...
+2024-05-20 02:22:15,543 - ***** Out-of-domain Evaluation results *****
+2024-05-20 02:22:15,543 -   aupr_in = 0.7202
+2024-05-20 02:22:15,543 -   aupr_out = 0.4337
+2024-05-20 02:22:15,544 -   auroc = 0.5727
+2024-05-20 02:22:15,544 -   der = 0.5886
+2024-05-20 02:22:15,544 -   eer = 0.4553
+2024-05-20 02:22:15,544 -   fpr95 = 0.9064
+2024-05-20 02:22:15,544 - Testing is finished...
+2024-05-20 02:22:15,544 - Multimodal intent recognition is finished...
+2024-05-20 02:22:15,544 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-20 02:22:15,591 - ============================== Params ==============================
+2024-05-20 02:22:15,591 - logger_name: msz_msp_MIntRec2_multi-class_0
+2024-05-20 02:22:15,591 - dataset: MIntRec2
+2024-05-20 02:22:15,591 - ood_dataset: MIntRec2-OOD
+2024-05-20 02:22:15,591 - data_mode: multi-class
+2024-05-20 02:22:15,591 - multimodal_method: msz
+2024-05-20 02:22:15,591 - method: msz
+2024-05-20 02:22:15,591 - ood_detection_method: msp
+2024-05-20 02:22:15,591 - text_backbone: bert-base-uncased
+2024-05-20 02:22:15,591 - seed: 1
+2024-05-20 02:22:15,591 - num_workers: 8
+2024-05-20 02:22:15,592 - log_id: msz_msp_MIntRec2_multi-class_0_2024-05-20-02-21-22
+2024-05-20 02:22:15,592 - gpu_id: 2
+2024-05-20 02:22:15,592 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-20 02:22:15,592 - train: False
+2024-05-20 02:22:15,592 - tune: True
+2024-05-20 02:22:15,592 - ood: True
+2024-05-20 02:22:15,592 - save_model: False
+2024-05-20 02:22:15,592 - save_results: True
+2024-05-20 02:22:15,592 - log_path: logs
+2024-05-20 02:22:15,592 - cache_path: cache
+2024-05-20 02:22:15,592 - video_data_path: video_data
+2024-05-20 02:22:15,592 - audio_data_path: audio_data
+2024-05-20 02:22:15,592 - video_feats_path: swin_feats.pkl
+2024-05-20 02:22:15,592 - ood_video_feats_path: swin_feats.pkl
+2024-05-20 02:22:15,592 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:22:15,592 - audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:22:15,592 - results_path: results
+2024-05-20 02:22:15,592 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz
+2024-05-20 02:22:15,592 - model_path: models
+2024-05-20 02:22:15,592 - config_file_name: msz_MIntRec22
+2024-05-20 02:22:15,592 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-20 02:22:15,592 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-20 02:22:15,592 - text_seq_len: 50
+2024-05-20 02:22:15,592 - video_seq_len: 180
+2024-05-20 02:22:15,592 - audio_seq_len: 400
+2024-05-20 02:22:15,592 - text_feat_dim: 768
+2024-05-20 02:22:15,592 - video_feat_dim: 256
+2024-05-20 02:22:15,592 - audio_feat_dim: 768
+2024-05-20 02:22:15,592 - ood_label_id: 30
+2024-05-20 02:22:15,592 - num_labels: 30
+2024-05-20 02:22:15,592 - num_train_examples: 6165
+2024-05-20 02:22:15,592 - need_aligned: True
+2024-05-20 02:22:15,592 - freeze_parameters: False
+2024-05-20 02:22:15,592 - eval_monitor: acc
+2024-05-20 02:22:15,592 - train_batch_size: 32
+2024-05-20 02:22:15,592 - eval_batch_size: 16
+2024-05-20 02:22:15,592 - num_train_epochs: 100
+2024-05-20 02:22:15,592 - lr: [1e-05]
+2024-05-20 02:22:15,592 - weight_decay: [0.1]
+2024-05-20 02:22:15,592 - wait_patience: 3
+2024-05-20 02:22:15,592 - warmup_proportion: [0.01]
+2024-05-20 02:22:15,592 - hidden_dims: [768]
+2024-05-20 02:22:15,592 - num_attention_heads: [4]
+2024-05-20 02:22:15,593 - attention_probs_dropout_prob: [0.3]
+2024-05-20 02:22:15,593 - hidden_dropout_prob: [0.3]
+2024-05-20 02:22:15,593 - intermediate_size: [768]
+2024-05-20 02:22:15,593 - num_hidden_layers: [6]
+2024-05-20 02:22:15,593 - max_position_embeddings: [768]
+2024-05-20 02:22:15,593 - position_embedding_type: absolute
+2024-05-20 02:22:15,593 - batch_first: True
+2024-05-20 02:22:15,593 - aligned_method: ['ctc']
+2024-05-20 02:22:15,593 - sampler: ['dir']
+2024-05-20 02:22:15,593 - multiple_ood: [1]
+2024-05-20 02:22:15,593 - select_number_min: [2]
+2024-05-20 02:22:15,593 - select_number_max: [3]
+2024-05-20 02:22:15,593 - alpha: [2]
+2024-05-20 02:22:15,593 - mlp_hidden_size: [256]
+2024-05-20 02:22:15,593 - mlp_dropout: [0.3]
+2024-05-20 02:22:15,593 - scale: [8]
+2024-05-20 02:22:15,593 - ablation: ['no_CosClass']
+2024-05-20 02:22:15,593 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_1
+2024-05-20 02:22:15,593 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_1/models
+2024-05-20 02:22:15,593 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/binary_msz_MIntRec2_bert-base-uncased_1
+2024-05-20 02:22:15,593 - device: cuda
+2024-05-20 02:22:15,593 - ============================== End Params ==============================
+2024-05-20 02:22:17,589 - Multimodal Intent Recognition begins...
+2024-05-20 02:22:17,589 - Testing begins...
+2024-05-20 02:22:44,556 - ***** Out-of-domain Evaluation results *****
+2024-05-20 02:22:44,557 -   aupr_in = 0.7279
+2024-05-20 02:22:44,557 -   aupr_out = 0.479
+2024-05-20 02:22:44,557 -   auroc = 0.6194
+2024-05-20 02:22:44,557 -   der = 0.5816
+2024-05-20 02:22:44,557 -   eer = 0.4211
+2024-05-20 02:22:44,557 -   fpr95 = 0.8947
+2024-05-20 02:22:44,557 - Testing is finished...
+2024-05-20 02:22:44,557 - Multimodal intent recognition is finished...
+2024-05-20 02:22:44,557 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-20 02:22:44,617 - ============================== Params ==============================
+2024-05-20 02:22:44,617 - logger_name: msz_msp_MIntRec2_multi-class_0
+2024-05-20 02:22:44,617 - dataset: MIntRec2
+2024-05-20 02:22:44,617 - ood_dataset: MIntRec2-OOD
+2024-05-20 02:22:44,617 - data_mode: multi-class
+2024-05-20 02:22:44,617 - multimodal_method: msz
+2024-05-20 02:22:44,617 - method: msz
+2024-05-20 02:22:44,617 - ood_detection_method: msp
+2024-05-20 02:22:44,617 - text_backbone: bert-base-uncased
+2024-05-20 02:22:44,618 - seed: 2
+2024-05-20 02:22:44,618 - num_workers: 8
+2024-05-20 02:22:44,618 - log_id: msz_msp_MIntRec2_multi-class_0_2024-05-20-02-21-22
+2024-05-20 02:22:44,618 - gpu_id: 2
+2024-05-20 02:22:44,618 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-20 02:22:44,618 - train: False
+2024-05-20 02:22:44,618 - tune: True
+2024-05-20 02:22:44,618 - ood: True
+2024-05-20 02:22:44,618 - save_model: False
+2024-05-20 02:22:44,618 - save_results: True
+2024-05-20 02:22:44,618 - log_path: logs
+2024-05-20 02:22:44,618 - cache_path: cache
+2024-05-20 02:22:44,618 - video_data_path: video_data
+2024-05-20 02:22:44,618 - audio_data_path: audio_data
+2024-05-20 02:22:44,618 - video_feats_path: swin_feats.pkl
+2024-05-20 02:22:44,618 - ood_video_feats_path: swin_feats.pkl
+2024-05-20 02:22:44,618 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:22:44,618 - audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:22:44,618 - results_path: results
+2024-05-20 02:22:44,618 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz
+2024-05-20 02:22:44,618 - model_path: models
+2024-05-20 02:22:44,618 - config_file_name: msz_MIntRec22
+2024-05-20 02:22:44,618 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-20 02:22:44,618 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-20 02:22:44,618 - text_seq_len: 50
+2024-05-20 02:22:44,618 - video_seq_len: 180
+2024-05-20 02:22:44,618 - audio_seq_len: 400
+2024-05-20 02:22:44,618 - text_feat_dim: 768
+2024-05-20 02:22:44,618 - video_feat_dim: 256
+2024-05-20 02:22:44,618 - audio_feat_dim: 768
+2024-05-20 02:22:44,618 - ood_label_id: 30
+2024-05-20 02:22:44,618 - num_labels: 30
+2024-05-20 02:22:44,618 - num_train_examples: 6165
+2024-05-20 02:22:44,618 - need_aligned: True
+2024-05-20 02:22:44,618 - freeze_parameters: False
+2024-05-20 02:22:44,618 - eval_monitor: acc
+2024-05-20 02:22:44,618 - train_batch_size: 32
+2024-05-20 02:22:44,618 - eval_batch_size: 16
+2024-05-20 02:22:44,618 - num_train_epochs: 100
+2024-05-20 02:22:44,618 - lr: [1e-05]
+2024-05-20 02:22:44,618 - weight_decay: [0.1]
+2024-05-20 02:22:44,618 - wait_patience: 3
+2024-05-20 02:22:44,618 - warmup_proportion: [0.01]
+2024-05-20 02:22:44,619 - hidden_dims: [768]
+2024-05-20 02:22:44,619 - num_attention_heads: [4]
+2024-05-20 02:22:44,619 - attention_probs_dropout_prob: [0.3]
+2024-05-20 02:22:44,619 - hidden_dropout_prob: [0.3]
+2024-05-20 02:22:44,619 - intermediate_size: [768]
+2024-05-20 02:22:44,619 - num_hidden_layers: [6]
+2024-05-20 02:22:44,619 - max_position_embeddings: [768]
+2024-05-20 02:22:44,619 - position_embedding_type: absolute
+2024-05-20 02:22:44,619 - batch_first: True
+2024-05-20 02:22:44,619 - aligned_method: ['ctc']
+2024-05-20 02:22:44,619 - sampler: ['dir']
+2024-05-20 02:22:44,619 - multiple_ood: [1]
+2024-05-20 02:22:44,619 - select_number_min: [2]
+2024-05-20 02:22:44,619 - select_number_max: [3]
+2024-05-20 02:22:44,619 - alpha: [2]
+2024-05-20 02:22:44,619 - mlp_hidden_size: [256]
+2024-05-20 02:22:44,619 - mlp_dropout: [0.3]
+2024-05-20 02:22:44,619 - scale: [8]
+2024-05-20 02:22:44,619 - ablation: ['no_CosClass']
+2024-05-20 02:22:44,619 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_2
+2024-05-20 02:22:44,619 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_2/models
+2024-05-20 02:22:44,619 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/binary_msz_MIntRec2_bert-base-uncased_2
+2024-05-20 02:22:44,619 - device: cuda
+2024-05-20 02:22:44,619 - ============================== End Params ==============================
+2024-05-20 02:22:46,651 - Multimodal Intent Recognition begins...
+2024-05-20 02:22:46,651 - Testing begins...
+2024-05-20 02:23:13,270 - ***** Out-of-domain Evaluation results *****
+2024-05-20 02:23:13,270 -   aupr_in = 0.7635
+2024-05-20 02:23:13,270 -   aupr_out = 0.4767
+2024-05-20 02:23:13,270 -   auroc = 0.649
+2024-05-20 02:23:13,270 -   der = 0.5858
+2024-05-20 02:23:13,271 -   eer = 0.3985
+2024-05-20 02:23:13,271 -   fpr95 = 0.9014
+2024-05-20 02:23:13,271 - Testing is finished...
+2024-05-20 02:23:13,271 - Multimodal intent recognition is finished...
+2024-05-20 02:23:13,271 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-20 02:23:13,366 - ============================== Params ==============================
+2024-05-20 02:23:13,366 - logger_name: msz_msp_MIntRec2_multi-class_0
+2024-05-20 02:23:13,366 - dataset: MIntRec2
+2024-05-20 02:23:13,366 - ood_dataset: MIntRec2-OOD
+2024-05-20 02:23:13,366 - data_mode: multi-class
+2024-05-20 02:23:13,366 - multimodal_method: msz
+2024-05-20 02:23:13,366 - method: msz
+2024-05-20 02:23:13,366 - ood_detection_method: msp
+2024-05-20 02:23:13,366 - text_backbone: bert-base-uncased
+2024-05-20 02:23:13,366 - seed: 3
+2024-05-20 02:23:13,366 - num_workers: 8
+2024-05-20 02:23:13,366 - log_id: msz_msp_MIntRec2_multi-class_0_2024-05-20-02-21-22
+2024-05-20 02:23:13,366 - gpu_id: 2
+2024-05-20 02:23:13,366 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-20 02:23:13,366 - train: False
+2024-05-20 02:23:13,366 - tune: True
+2024-05-20 02:23:13,366 - ood: True
+2024-05-20 02:23:13,366 - save_model: False
+2024-05-20 02:23:13,366 - save_results: True
+2024-05-20 02:23:13,366 - log_path: logs
+2024-05-20 02:23:13,366 - cache_path: cache
+2024-05-20 02:23:13,366 - video_data_path: video_data
+2024-05-20 02:23:13,366 - audio_data_path: audio_data
+2024-05-20 02:23:13,366 - video_feats_path: swin_feats.pkl
+2024-05-20 02:23:13,366 - ood_video_feats_path: swin_feats.pkl
+2024-05-20 02:23:13,366 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:23:13,366 - audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:23:13,366 - results_path: results
+2024-05-20 02:23:13,366 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz
+2024-05-20 02:23:13,366 - model_path: models
+2024-05-20 02:23:13,367 - config_file_name: msz_MIntRec22
+2024-05-20 02:23:13,367 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-20 02:23:13,367 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-20 02:23:13,367 - text_seq_len: 50
+2024-05-20 02:23:13,367 - video_seq_len: 180
+2024-05-20 02:23:13,367 - audio_seq_len: 400
+2024-05-20 02:23:13,367 - text_feat_dim: 768
+2024-05-20 02:23:13,367 - video_feat_dim: 256
+2024-05-20 02:23:13,367 - audio_feat_dim: 768
+2024-05-20 02:23:13,367 - ood_label_id: 30
+2024-05-20 02:23:13,367 - num_labels: 30
+2024-05-20 02:23:13,367 - num_train_examples: 6165
+2024-05-20 02:23:13,367 - need_aligned: True
+2024-05-20 02:23:13,367 - freeze_parameters: False
+2024-05-20 02:23:13,367 - eval_monitor: acc
+2024-05-20 02:23:13,367 - train_batch_size: 32
+2024-05-20 02:23:13,367 - eval_batch_size: 16
+2024-05-20 02:23:13,367 - num_train_epochs: 100
+2024-05-20 02:23:13,367 - lr: [1e-05]
+2024-05-20 02:23:13,367 - weight_decay: [0.1]
+2024-05-20 02:23:13,367 - wait_patience: 3
+2024-05-20 02:23:13,367 - warmup_proportion: [0.01]
+2024-05-20 02:23:13,367 - hidden_dims: [768]
+2024-05-20 02:23:13,367 - num_attention_heads: [4]
+2024-05-20 02:23:13,367 - attention_probs_dropout_prob: [0.3]
+2024-05-20 02:23:13,367 - hidden_dropout_prob: [0.3]
+2024-05-20 02:23:13,367 - intermediate_size: [768]
+2024-05-20 02:23:13,367 - num_hidden_layers: [6]
+2024-05-20 02:23:13,367 - max_position_embeddings: [768]
+2024-05-20 02:23:13,367 - position_embedding_type: absolute
+2024-05-20 02:23:13,367 - batch_first: True
+2024-05-20 02:23:13,367 - aligned_method: ['ctc']
+2024-05-20 02:23:13,367 - sampler: ['dir']
+2024-05-20 02:23:13,367 - multiple_ood: [1]
+2024-05-20 02:23:13,367 - select_number_min: [2]
+2024-05-20 02:23:13,368 - select_number_max: [3]
+2024-05-20 02:23:13,368 - alpha: [2]
+2024-05-20 02:23:13,368 - mlp_hidden_size: [256]
+2024-05-20 02:23:13,368 - mlp_dropout: [0.3]
+2024-05-20 02:23:13,368 - scale: [8]
+2024-05-20 02:23:13,368 - ablation: ['no_CosClass']
+2024-05-20 02:23:13,368 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_3
+2024-05-20 02:23:13,368 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_3/models
+2024-05-20 02:23:13,368 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/binary_msz_MIntRec2_bert-base-uncased_3
+2024-05-20 02:23:13,368 - device: cuda
+2024-05-20 02:23:13,368 - ============================== End Params ==============================
+2024-05-20 02:23:15,472 - Multimodal Intent Recognition begins...
+2024-05-20 02:23:15,472 - Testing begins...
+2024-05-20 02:23:42,288 - ***** Out-of-domain Evaluation results *****
+2024-05-20 02:23:42,289 -   aupr_in = 0.7799
+2024-05-20 02:23:42,289 -   aupr_out = 0.5415
+2024-05-20 02:23:42,289 -   auroc = 0.6887
+2024-05-20 02:23:42,289 -   der = 0.5586
+2024-05-20 02:23:42,289 -   eer = 0.3609
+2024-05-20 02:23:42,289 -   fpr95 = 0.8588
+2024-05-20 02:23:42,289 - Testing is finished...
+2024-05-20 02:23:42,289 - Multimodal intent recognition is finished...
+2024-05-20 02:23:42,289 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-20 02:23:42,381 - ============================== Params ==============================
+2024-05-20 02:23:42,381 - logger_name: msz_msp_MIntRec2_multi-class_0
+2024-05-20 02:23:42,381 - dataset: MIntRec2
+2024-05-20 02:23:42,381 - ood_dataset: MIntRec2-OOD
+2024-05-20 02:23:42,381 - data_mode: multi-class
+2024-05-20 02:23:42,381 - multimodal_method: msz
+2024-05-20 02:23:42,381 - method: msz
+2024-05-20 02:23:42,381 - ood_detection_method: msp
+2024-05-20 02:23:42,381 - text_backbone: bert-base-uncased
+2024-05-20 02:23:42,381 - seed: 4
+2024-05-20 02:23:42,381 - num_workers: 8
+2024-05-20 02:23:42,381 - log_id: msz_msp_MIntRec2_multi-class_0_2024-05-20-02-21-22
+2024-05-20 02:23:42,381 - gpu_id: 2
+2024-05-20 02:23:42,381 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-20 02:23:42,381 - train: False
+2024-05-20 02:23:42,381 - tune: True
+2024-05-20 02:23:42,381 - ood: True
+2024-05-20 02:23:42,381 - save_model: False
+2024-05-20 02:23:42,381 - save_results: True
+2024-05-20 02:23:42,381 - log_path: logs
+2024-05-20 02:23:42,381 - cache_path: cache
+2024-05-20 02:23:42,381 - video_data_path: video_data
+2024-05-20 02:23:42,381 - audio_data_path: audio_data
+2024-05-20 02:23:42,382 - video_feats_path: swin_feats.pkl
+2024-05-20 02:23:42,382 - ood_video_feats_path: swin_feats.pkl
+2024-05-20 02:23:42,382 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:23:42,382 - audio_feats_path: wavlm_feats.pkl
+2024-05-20 02:23:42,382 - results_path: results
+2024-05-20 02:23:42,382 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz
+2024-05-20 02:23:42,382 - model_path: models
+2024-05-20 02:23:42,382 - config_file_name: msz_MIntRec22
+2024-05-20 02:23:42,382 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-20 02:23:42,382 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-20 02:23:42,382 - text_seq_len: 50
+2024-05-20 02:23:42,382 - video_seq_len: 180
+2024-05-20 02:23:42,382 - audio_seq_len: 400
+2024-05-20 02:23:42,382 - text_feat_dim: 768
+2024-05-20 02:23:42,382 - video_feat_dim: 256
+2024-05-20 02:23:42,382 - audio_feat_dim: 768
+2024-05-20 02:23:42,382 - ood_label_id: 30
+2024-05-20 02:23:42,382 - num_labels: 30
+2024-05-20 02:23:42,382 - num_train_examples: 6165
+2024-05-20 02:23:42,382 - need_aligned: True
+2024-05-20 02:23:42,382 - freeze_parameters: False
+2024-05-20 02:23:42,382 - eval_monitor: acc
+2024-05-20 02:23:42,382 - train_batch_size: 32
+2024-05-20 02:23:42,382 - eval_batch_size: 16
+2024-05-20 02:23:42,382 - num_train_epochs: 100
+2024-05-20 02:23:42,382 - lr: [1e-05]
+2024-05-20 02:23:42,382 - weight_decay: [0.1]
+2024-05-20 02:23:42,382 - wait_patience: 3
+2024-05-20 02:23:42,382 - warmup_proportion: [0.01]
+2024-05-20 02:23:42,382 - hidden_dims: [768]
+2024-05-20 02:23:42,382 - num_attention_heads: [4]
+2024-05-20 02:23:42,382 - attention_probs_dropout_prob: [0.3]
+2024-05-20 02:23:42,382 - hidden_dropout_prob: [0.3]
+2024-05-20 02:23:42,382 - intermediate_size: [768]
+2024-05-20 02:23:42,382 - num_hidden_layers: [6]
+2024-05-20 02:23:42,383 - max_position_embeddings: [768]
+2024-05-20 02:23:42,383 - position_embedding_type: absolute
+2024-05-20 02:23:42,383 - batch_first: True
+2024-05-20 02:23:42,383 - aligned_method: ['ctc']
+2024-05-20 02:23:42,383 - sampler: ['dir']
+2024-05-20 02:23:42,383 - multiple_ood: [1]
+2024-05-20 02:23:42,383 - select_number_min: [2]
+2024-05-20 02:23:42,383 - select_number_max: [3]
+2024-05-20 02:23:42,383 - alpha: [2]
+2024-05-20 02:23:42,383 - mlp_hidden_size: [256]
+2024-05-20 02:23:42,383 - mlp_dropout: [0.3]
+2024-05-20 02:23:42,383 - scale: [8]
+2024-05-20 02:23:42,383 - ablation: ['no_CosClass']
+2024-05-20 02:23:42,383 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_4
+2024-05-20 02:23:42,383 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/msz_MIntRec2_bert-base-uncased_multi-class_4/models
+2024-05-20 02:23:42,383 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_CosClass_msz/binary_msz_MIntRec2_bert-base-uncased_4
+2024-05-20 02:23:42,383 - device: cuda
+2024-05-20 02:23:42,383 - ============================== End Params ==============================
+2024-05-20 02:23:44,365 - Multimodal Intent Recognition begins...
+2024-05-20 02:23:44,365 - Testing begins...
+2024-05-20 02:24:11,256 - ***** Out-of-domain Evaluation results *****
+2024-05-20 02:24:11,256 -   aupr_in = 0.7235
+2024-05-20 02:24:11,256 -   aupr_out = 0.4425
+2024-05-20 02:24:11,256 -   auroc = 0.5905
+2024-05-20 02:24:11,256 -   der = 0.5979
+2024-05-20 02:24:11,257 -   eer = 0.4361
+2024-05-20 02:24:11,257 -   fpr95 = 0.9206
+2024-05-20 02:24:11,257 - Testing is finished...
+2024-05-20 02:24:11,257 - Multimodal intent recognition is finished...
+2024-05-20 02:24:11,257 - Results are saved in results/results_msz_ablation_MIntRec2.csv

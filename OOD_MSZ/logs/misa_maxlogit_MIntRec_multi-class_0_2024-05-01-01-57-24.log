@@ -1,0 +1,413 @@
+2024-05-01 01:57:24,049 - Lists of intent labels are: ['Complain', 'Praise', 'Apologise', 'Thank', 'Criticize', 'Agree', 'Taunt', 'Flaunt', 'Joke', 'Oppose', 'Comfort', 'Care', 'Inform', 'Advise', 'Arrange', 'Introduce', 'Leave', 'Prevent', 'Greet', 'Ask for help']
+2024-05-01 01:57:24,049 - ID Data preparation...
+2024-05-01 01:57:30,696 - OOD Data preparation...
+2024-05-01 01:57:32,110 - ============================== Params ==============================
+2024-05-01 01:57:32,110 - logger_name: misa_maxlogit_MIntRec_multi-class_0
+2024-05-01 01:57:32,110 - dataset: MIntRec
+2024-05-01 01:57:32,110 - ood_dataset: MIntRec-OOD
+2024-05-01 01:57:32,110 - data_mode: multi-class
+2024-05-01 01:57:32,110 - multimodal_method: misa
+2024-05-01 01:57:32,110 - method: misa
+2024-05-01 01:57:32,110 - ood_detection_method: maxlogit
+2024-05-01 01:57:32,110 - text_backbone: bert-base-uncased
+2024-05-01 01:57:32,110 - seed: 0
+2024-05-01 01:57:32,110 - num_workers: 8
+2024-05-01 01:57:32,110 - log_id: misa_maxlogit_MIntRec_multi-class_0_2024-05-01-01-57-24
+2024-05-01 01:57:32,110 - gpu_id: 3
+2024-05-01 01:57:32,110 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-01 01:57:32,110 - train: False
+2024-05-01 01:57:32,110 - tune: True
+2024-05-01 01:57:32,110 - ood: True
+2024-05-01 01:57:32,110 - save_model: True
+2024-05-01 01:57:32,110 - save_results: True
+2024-05-01 01:57:32,110 - log_path: logs
+2024-05-01 01:57:32,110 - cache_path: cache
+2024-05-01 01:57:32,110 - video_data_path: video_data
+2024-05-01 01:57:32,111 - audio_data_path: audio_data
+2024-05-01 01:57:32,111 - video_feats_path: swin_feats.pkl
+2024-05-01 01:57:32,111 - ood_video_feats_path: swin_feats.pkl
+2024-05-01 01:57:32,111 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:57:32,111 - audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:57:32,111 - results_path: results
+2024-05-01 01:57:32,111 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa
+2024-05-01 01:57:32,111 - model_path: models
+2024-05-01 01:57:32,111 - config_file_name: misa_MIntRec
+2024-05-01 01:57:32,111 - results_file_name: results_misa_MIntRec.csv
+2024-05-01 01:57:32,111 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-01 01:57:32,111 - text_seq_len: 30
+2024-05-01 01:57:32,111 - video_seq_len: 230
+2024-05-01 01:57:32,111 - audio_seq_len: 480
+2024-05-01 01:57:32,111 - text_feat_dim: 768
+2024-05-01 01:57:32,111 - video_feat_dim: 1024
+2024-05-01 01:57:32,111 - audio_feat_dim: 768
+2024-05-01 01:57:32,111 - ood_label_id: 20
+2024-05-01 01:57:32,111 - num_labels: 20
+2024-05-01 01:57:32,111 - num_train_examples: 1334
+2024-05-01 01:57:32,111 - padding_mode: zero
+2024-05-01 01:57:32,111 - padding_loc: end
+2024-05-01 01:57:32,111 - need_aligned: False
+2024-05-01 01:57:32,111 - eval_monitor: acc
+2024-05-01 01:57:32,111 - train_batch_size: 32
+2024-05-01 01:57:32,111 - eval_batch_size: 16
+2024-05-01 01:57:32,111 - test_batch_size: 16
+2024-05-01 01:57:32,111 - wait_patience: 5
+2024-05-01 01:57:32,111 - num_train_epochs: 100
+2024-05-01 01:57:32,111 - rnncell: lstm
+2024-05-01 01:57:32,111 - use_cmd_sim: False
+2024-05-01 01:57:32,111 - reverse_grad_weight: 0.8
+2024-05-01 01:57:32,111 - hidden_size: 256
+2024-05-01 01:57:32,111 - dropout_rate: 0.1
+2024-05-01 01:57:32,111 - diff_weight: 0.7
+2024-05-01 01:57:32,111 - sim_weight: 0.7
+2024-05-01 01:57:32,111 - recon_weight: 0.6
+2024-05-01 01:57:32,111 - lr: 3e-05
+2024-05-01 01:57:32,111 - grad_clip: -1.0
+2024-05-01 01:57:32,111 - gamma: 0.5
+2024-05-01 01:57:32,111 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_0
+2024-05-01 01:57:32,111 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_0/models
+2024-05-01 01:57:32,111 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/binary_misa_MIntRec_bert-base-uncased_0
+2024-05-01 01:57:32,111 - ============================== End Params ==============================
+2024-05-01 01:57:35,555 - Multimodal Intent Recognition begins...
+2024-05-01 01:57:35,555 - Testing begins...
+2024-05-01 01:57:43,114 - ***** Out-of-domain Evaluation results *****
+2024-05-01 01:57:43,114 -   aupr_in = 0.7654
+2024-05-01 01:57:43,114 -   aupr_out = 0.7465
+2024-05-01 01:57:43,115 -   auroc = 0.7719
+2024-05-01 01:57:43,115 -   der = 0.4027
+2024-05-01 01:57:43,115 -   eer = 0.2867
+2024-05-01 01:57:43,115 -   fpr95 = 0.76
+2024-05-01 01:57:43,115 - Testing is finished...
+2024-05-01 01:57:43,115 - Multimodal intent recognition is finished...
+2024-05-01 01:57:43,115 - Results are saved in results/results_misa_MIntRec.csv
+2024-05-01 01:57:43,174 - ============================== Params ==============================
+2024-05-01 01:57:43,174 - logger_name: misa_maxlogit_MIntRec_multi-class_0
+2024-05-01 01:57:43,174 - dataset: MIntRec
+2024-05-01 01:57:43,174 - ood_dataset: MIntRec-OOD
+2024-05-01 01:57:43,174 - data_mode: multi-class
+2024-05-01 01:57:43,174 - multimodal_method: misa
+2024-05-01 01:57:43,174 - method: misa
+2024-05-01 01:57:43,174 - ood_detection_method: maxlogit
+2024-05-01 01:57:43,174 - text_backbone: bert-base-uncased
+2024-05-01 01:57:43,174 - seed: 1
+2024-05-01 01:57:43,174 - num_workers: 8
+2024-05-01 01:57:43,174 - log_id: misa_maxlogit_MIntRec_multi-class_0_2024-05-01-01-57-24
+2024-05-01 01:57:43,174 - gpu_id: 3
+2024-05-01 01:57:43,174 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-01 01:57:43,174 - train: False
+2024-05-01 01:57:43,174 - tune: True
+2024-05-01 01:57:43,174 - ood: True
+2024-05-01 01:57:43,175 - save_model: True
+2024-05-01 01:57:43,175 - save_results: True
+2024-05-01 01:57:43,175 - log_path: logs
+2024-05-01 01:57:43,175 - cache_path: cache
+2024-05-01 01:57:43,175 - video_data_path: video_data
+2024-05-01 01:57:43,175 - audio_data_path: audio_data
+2024-05-01 01:57:43,175 - video_feats_path: swin_feats.pkl
+2024-05-01 01:57:43,175 - ood_video_feats_path: swin_feats.pkl
+2024-05-01 01:57:43,175 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:57:43,175 - audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:57:43,175 - results_path: results
+2024-05-01 01:57:43,175 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa
+2024-05-01 01:57:43,175 - model_path: models
+2024-05-01 01:57:43,175 - config_file_name: misa_MIntRec
+2024-05-01 01:57:43,175 - results_file_name: results_misa_MIntRec.csv
+2024-05-01 01:57:43,175 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-01 01:57:43,175 - text_seq_len: 30
+2024-05-01 01:57:43,175 - video_seq_len: 230
+2024-05-01 01:57:43,175 - audio_seq_len: 480
+2024-05-01 01:57:43,175 - text_feat_dim: 768
+2024-05-01 01:57:43,175 - video_feat_dim: 1024
+2024-05-01 01:57:43,175 - audio_feat_dim: 768
+2024-05-01 01:57:43,175 - ood_label_id: 20
+2024-05-01 01:57:43,175 - num_labels: 20
+2024-05-01 01:57:43,175 - num_train_examples: 1334
+2024-05-01 01:57:43,175 - padding_mode: zero
+2024-05-01 01:57:43,175 - padding_loc: end
+2024-05-01 01:57:43,175 - need_aligned: False
+2024-05-01 01:57:43,175 - eval_monitor: acc
+2024-05-01 01:57:43,175 - train_batch_size: 32
+2024-05-01 01:57:43,175 - eval_batch_size: 16
+2024-05-01 01:57:43,175 - test_batch_size: 16
+2024-05-01 01:57:43,176 - wait_patience: 5
+2024-05-01 01:57:43,176 - num_train_epochs: 100
+2024-05-01 01:57:43,176 - rnncell: lstm
+2024-05-01 01:57:43,176 - use_cmd_sim: False
+2024-05-01 01:57:43,176 - reverse_grad_weight: 0.8
+2024-05-01 01:57:43,176 - hidden_size: 256
+2024-05-01 01:57:43,176 - dropout_rate: 0.1
+2024-05-01 01:57:43,176 - diff_weight: 0.7
+2024-05-01 01:57:43,176 - sim_weight: 0.7
+2024-05-01 01:57:43,176 - recon_weight: 0.6
+2024-05-01 01:57:43,176 - lr: 3e-05
+2024-05-01 01:57:43,176 - grad_clip: -1.0
+2024-05-01 01:57:43,176 - gamma: 0.5
+2024-05-01 01:57:43,176 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_1
+2024-05-01 01:57:43,176 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_1/models
+2024-05-01 01:57:43,176 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/binary_misa_MIntRec_bert-base-uncased_1
+2024-05-01 01:57:43,176 - device: cuda
+2024-05-01 01:57:43,176 - feat_size: 768
+2024-05-01 01:57:43,176 - text_feat_size: 768
+2024-05-01 01:57:43,176 - video_feat_size: 4096
+2024-05-01 01:57:43,176 - audio_feat_size: 3072
+2024-05-01 01:57:43,176 - ============================== End Params ==============================
+2024-05-01 01:57:45,067 - Multimodal Intent Recognition begins...
+2024-05-01 01:57:45,067 - Testing begins...
+2024-05-01 01:57:52,933 - ***** Out-of-domain Evaluation results *****
+2024-05-01 01:57:52,933 -   aupr_in = 0.7362
+2024-05-01 01:57:52,933 -   aupr_out = 0.7419
+2024-05-01 01:57:52,933 -   auroc = 0.7466
+2024-05-01 01:57:52,933 -   der = 0.386
+2024-05-01 01:57:52,934 -   eer = 0.3311
+2024-05-01 01:57:52,934 -   fpr95 = 0.7289
+2024-05-01 01:57:52,934 - Testing is finished...
+2024-05-01 01:57:52,934 - Multimodal intent recognition is finished...
+2024-05-01 01:57:52,934 - Results are saved in results/results_misa_MIntRec.csv
+2024-05-01 01:57:52,964 - ============================== Params ==============================
+2024-05-01 01:57:52,964 - logger_name: misa_maxlogit_MIntRec_multi-class_0
+2024-05-01 01:57:52,964 - dataset: MIntRec
+2024-05-01 01:57:52,964 - ood_dataset: MIntRec-OOD
+2024-05-01 01:57:52,964 - data_mode: multi-class
+2024-05-01 01:57:52,964 - multimodal_method: misa
+2024-05-01 01:57:52,964 - method: misa
+2024-05-01 01:57:52,964 - ood_detection_method: maxlogit
+2024-05-01 01:57:52,964 - text_backbone: bert-base-uncased
+2024-05-01 01:57:52,964 - seed: 2
+2024-05-01 01:57:52,964 - num_workers: 8
+2024-05-01 01:57:52,964 - log_id: misa_maxlogit_MIntRec_multi-class_0_2024-05-01-01-57-24
+2024-05-01 01:57:52,964 - gpu_id: 3
+2024-05-01 01:57:52,964 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-01 01:57:52,964 - train: False
+2024-05-01 01:57:52,964 - tune: True
+2024-05-01 01:57:52,964 - ood: True
+2024-05-01 01:57:52,964 - save_model: True
+2024-05-01 01:57:52,965 - save_results: True
+2024-05-01 01:57:52,965 - log_path: logs
+2024-05-01 01:57:52,965 - cache_path: cache
+2024-05-01 01:57:52,965 - video_data_path: video_data
+2024-05-01 01:57:52,965 - audio_data_path: audio_data
+2024-05-01 01:57:52,965 - video_feats_path: swin_feats.pkl
+2024-05-01 01:57:52,965 - ood_video_feats_path: swin_feats.pkl
+2024-05-01 01:57:52,965 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:57:52,965 - audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:57:52,965 - results_path: results
+2024-05-01 01:57:52,965 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa
+2024-05-01 01:57:52,965 - model_path: models
+2024-05-01 01:57:52,965 - config_file_name: misa_MIntRec
+2024-05-01 01:57:52,965 - results_file_name: results_misa_MIntRec.csv
+2024-05-01 01:57:52,965 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-01 01:57:52,965 - text_seq_len: 30
+2024-05-01 01:57:52,965 - video_seq_len: 230
+2024-05-01 01:57:52,965 - audio_seq_len: 480
+2024-05-01 01:57:52,965 - text_feat_dim: 768
+2024-05-01 01:57:52,965 - video_feat_dim: 1024
+2024-05-01 01:57:52,965 - audio_feat_dim: 768
+2024-05-01 01:57:52,965 - ood_label_id: 20
+2024-05-01 01:57:52,965 - num_labels: 20
+2024-05-01 01:57:52,965 - num_train_examples: 1334
+2024-05-01 01:57:52,965 - padding_mode: zero
+2024-05-01 01:57:52,965 - padding_loc: end
+2024-05-01 01:57:52,965 - need_aligned: False
+2024-05-01 01:57:52,965 - eval_monitor: acc
+2024-05-01 01:57:52,965 - train_batch_size: 32
+2024-05-01 01:57:52,965 - eval_batch_size: 16
+2024-05-01 01:57:52,965 - test_batch_size: 16
+2024-05-01 01:57:52,965 - wait_patience: 5
+2024-05-01 01:57:52,965 - num_train_epochs: 100
+2024-05-01 01:57:52,965 - rnncell: lstm
+2024-05-01 01:57:52,965 - use_cmd_sim: False
+2024-05-01 01:57:52,965 - reverse_grad_weight: 0.8
+2024-05-01 01:57:52,965 - hidden_size: 256
+2024-05-01 01:57:52,965 - dropout_rate: 0.1
+2024-05-01 01:57:52,965 - diff_weight: 0.7
+2024-05-01 01:57:52,965 - sim_weight: 0.7
+2024-05-01 01:57:52,966 - recon_weight: 0.6
+2024-05-01 01:57:52,966 - lr: 3e-05
+2024-05-01 01:57:52,966 - grad_clip: -1.0
+2024-05-01 01:57:52,966 - gamma: 0.5
+2024-05-01 01:57:52,966 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_2
+2024-05-01 01:57:52,966 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_2/models
+2024-05-01 01:57:52,966 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/binary_misa_MIntRec_bert-base-uncased_2
+2024-05-01 01:57:52,966 - device: cuda
+2024-05-01 01:57:52,966 - feat_size: 768
+2024-05-01 01:57:52,966 - text_feat_size: 768
+2024-05-01 01:57:52,966 - video_feat_size: 4096
+2024-05-01 01:57:52,966 - audio_feat_size: 3072
+2024-05-01 01:57:52,966 - ============================== End Params ==============================
+2024-05-01 01:57:58,650 - Multimodal Intent Recognition begins...
+2024-05-01 01:57:58,650 - Testing begins...
+2024-05-01 01:58:05,655 - ***** Out-of-domain Evaluation results *****
+2024-05-01 01:58:05,655 -   aupr_in = 0.7436
+2024-05-01 01:58:05,655 -   aupr_out = 0.7217
+2024-05-01 01:58:05,655 -   auroc = 0.7631
+2024-05-01 01:58:05,655 -   der = 0.4436
+2024-05-01 01:58:05,655 -   eer = 0.2889
+2024-05-01 01:58:05,656 -   fpr95 = 0.8422
+2024-05-01 01:58:05,656 - Testing is finished...
+2024-05-01 01:58:05,656 - Multimodal intent recognition is finished...
+2024-05-01 01:58:05,656 - Results are saved in results/results_misa_MIntRec.csv
+2024-05-01 01:58:05,686 - ============================== Params ==============================
+2024-05-01 01:58:05,686 - logger_name: misa_maxlogit_MIntRec_multi-class_0
+2024-05-01 01:58:05,686 - dataset: MIntRec
+2024-05-01 01:58:05,686 - ood_dataset: MIntRec-OOD
+2024-05-01 01:58:05,686 - data_mode: multi-class
+2024-05-01 01:58:05,686 - multimodal_method: misa
+2024-05-01 01:58:05,686 - method: misa
+2024-05-01 01:58:05,686 - ood_detection_method: maxlogit
+2024-05-01 01:58:05,686 - text_backbone: bert-base-uncased
+2024-05-01 01:58:05,686 - seed: 3
+2024-05-01 01:58:05,686 - num_workers: 8
+2024-05-01 01:58:05,686 - log_id: misa_maxlogit_MIntRec_multi-class_0_2024-05-01-01-57-24
+2024-05-01 01:58:05,686 - gpu_id: 3
+2024-05-01 01:58:05,686 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-01 01:58:05,686 - train: False
+2024-05-01 01:58:05,686 - tune: True
+2024-05-01 01:58:05,686 - ood: True
+2024-05-01 01:58:05,686 - save_model: True
+2024-05-01 01:58:05,686 - save_results: True
+2024-05-01 01:58:05,686 - log_path: logs
+2024-05-01 01:58:05,686 - cache_path: cache
+2024-05-01 01:58:05,686 - video_data_path: video_data
+2024-05-01 01:58:05,686 - audio_data_path: audio_data
+2024-05-01 01:58:05,686 - video_feats_path: swin_feats.pkl
+2024-05-01 01:58:05,686 - ood_video_feats_path: swin_feats.pkl
+2024-05-01 01:58:05,686 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:58:05,686 - audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:58:05,686 - results_path: results
+2024-05-01 01:58:05,686 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa
+2024-05-01 01:58:05,686 - model_path: models
+2024-05-01 01:58:05,686 - config_file_name: misa_MIntRec
+2024-05-01 01:58:05,686 - results_file_name: results_misa_MIntRec.csv
+2024-05-01 01:58:05,686 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-01 01:58:05,686 - text_seq_len: 30
+2024-05-01 01:58:05,686 - video_seq_len: 230
+2024-05-01 01:58:05,687 - audio_seq_len: 480
+2024-05-01 01:58:05,687 - text_feat_dim: 768
+2024-05-01 01:58:05,687 - video_feat_dim: 1024
+2024-05-01 01:58:05,687 - audio_feat_dim: 768
+2024-05-01 01:58:05,687 - ood_label_id: 20
+2024-05-01 01:58:05,687 - num_labels: 20
+2024-05-01 01:58:05,687 - num_train_examples: 1334
+2024-05-01 01:58:05,687 - padding_mode: zero
+2024-05-01 01:58:05,687 - padding_loc: end
+2024-05-01 01:58:05,687 - need_aligned: False
+2024-05-01 01:58:05,687 - eval_monitor: acc
+2024-05-01 01:58:05,687 - train_batch_size: 32
+2024-05-01 01:58:05,687 - eval_batch_size: 16
+2024-05-01 01:58:05,687 - test_batch_size: 16
+2024-05-01 01:58:05,687 - wait_patience: 5
+2024-05-01 01:58:05,687 - num_train_epochs: 100
+2024-05-01 01:58:05,687 - rnncell: lstm
+2024-05-01 01:58:05,687 - use_cmd_sim: False
+2024-05-01 01:58:05,687 - reverse_grad_weight: 0.8
+2024-05-01 01:58:05,687 - hidden_size: 256
+2024-05-01 01:58:05,687 - dropout_rate: 0.1
+2024-05-01 01:58:05,687 - diff_weight: 0.7
+2024-05-01 01:58:05,687 - sim_weight: 0.7
+2024-05-01 01:58:05,687 - recon_weight: 0.6
+2024-05-01 01:58:05,687 - lr: 3e-05
+2024-05-01 01:58:05,687 - grad_clip: -1.0
+2024-05-01 01:58:05,687 - gamma: 0.5
+2024-05-01 01:58:05,687 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_3
+2024-05-01 01:58:05,687 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_3/models
+2024-05-01 01:58:05,687 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/binary_misa_MIntRec_bert-base-uncased_3
+2024-05-01 01:58:05,687 - device: cuda
+2024-05-01 01:58:05,687 - feat_size: 768
+2024-05-01 01:58:05,687 - text_feat_size: 768
+2024-05-01 01:58:05,687 - video_feat_size: 4096
+2024-05-01 01:58:05,687 - audio_feat_size: 3072
+2024-05-01 01:58:05,687 - ============================== End Params ==============================
+2024-05-01 01:58:07,530 - Multimodal Intent Recognition begins...
+2024-05-01 01:58:07,530 - Testing begins...
+2024-05-01 01:58:14,830 - ***** Out-of-domain Evaluation results *****
+2024-05-01 01:58:14,830 -   aupr_in = 0.7575
+2024-05-01 01:58:14,830 -   aupr_out = 0.7515
+2024-05-01 01:58:14,830 -   auroc = 0.7683
+2024-05-01 01:58:14,830 -   der = 0.384
+2024-05-01 01:58:14,830 -   eer = 0.3156
+2024-05-01 01:58:14,830 -   fpr95 = 0.7222
+2024-05-01 01:58:14,830 - Testing is finished...
+2024-05-01 01:58:14,830 - Multimodal intent recognition is finished...
+2024-05-01 01:58:14,830 - Results are saved in results/results_misa_MIntRec.csv
+2024-05-01 01:58:14,870 - ============================== Params ==============================
+2024-05-01 01:58:14,870 - logger_name: misa_maxlogit_MIntRec_multi-class_0
+2024-05-01 01:58:14,870 - dataset: MIntRec
+2024-05-01 01:58:14,870 - ood_dataset: MIntRec-OOD
+2024-05-01 01:58:14,870 - data_mode: multi-class
+2024-05-01 01:58:14,870 - multimodal_method: misa
+2024-05-01 01:58:14,870 - method: misa
+2024-05-01 01:58:14,870 - ood_detection_method: maxlogit
+2024-05-01 01:58:14,871 - text_backbone: bert-base-uncased
+2024-05-01 01:58:14,871 - seed: 4
+2024-05-01 01:58:14,871 - num_workers: 8
+2024-05-01 01:58:14,871 - log_id: misa_maxlogit_MIntRec_multi-class_0_2024-05-01-01-57-24
+2024-05-01 01:58:14,871 - gpu_id: 3
+2024-05-01 01:58:14,871 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-01 01:58:14,871 - train: False
+2024-05-01 01:58:14,871 - tune: True
+2024-05-01 01:58:14,871 - ood: True
+2024-05-01 01:58:14,871 - save_model: True
+2024-05-01 01:58:14,871 - save_results: True
+2024-05-01 01:58:14,871 - log_path: logs
+2024-05-01 01:58:14,871 - cache_path: cache
+2024-05-01 01:58:14,871 - video_data_path: video_data
+2024-05-01 01:58:14,871 - audio_data_path: audio_data
+2024-05-01 01:58:14,871 - video_feats_path: swin_feats.pkl
+2024-05-01 01:58:14,871 - ood_video_feats_path: swin_feats.pkl
+2024-05-01 01:58:14,871 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:58:14,871 - audio_feats_path: wavlm_feats.pkl
+2024-05-01 01:58:14,871 - results_path: results
+2024-05-01 01:58:14,871 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa
+2024-05-01 01:58:14,871 - model_path: models
+2024-05-01 01:58:14,871 - config_file_name: misa_MIntRec
+2024-05-01 01:58:14,871 - results_file_name: results_misa_MIntRec.csv
+2024-05-01 01:58:14,871 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-01 01:58:14,871 - text_seq_len: 30
+2024-05-01 01:58:14,871 - video_seq_len: 230
+2024-05-01 01:58:14,871 - audio_seq_len: 480
+2024-05-01 01:58:14,871 - text_feat_dim: 768
+2024-05-01 01:58:14,871 - video_feat_dim: 1024
+2024-05-01 01:58:14,872 - audio_feat_dim: 768
+2024-05-01 01:58:14,872 - ood_label_id: 20
+2024-05-01 01:58:14,872 - num_labels: 20
+2024-05-01 01:58:14,872 - num_train_examples: 1334
+2024-05-01 01:58:14,872 - padding_mode: zero
+2024-05-01 01:58:14,872 - padding_loc: end
+2024-05-01 01:58:14,872 - need_aligned: False
+2024-05-01 01:58:14,872 - eval_monitor: acc
+2024-05-01 01:58:14,872 - train_batch_size: 32
+2024-05-01 01:58:14,872 - eval_batch_size: 16
+2024-05-01 01:58:14,872 - test_batch_size: 16
+2024-05-01 01:58:14,872 - wait_patience: 5
+2024-05-01 01:58:14,872 - num_train_epochs: 100
+2024-05-01 01:58:14,872 - rnncell: lstm
+2024-05-01 01:58:14,872 - use_cmd_sim: False
+2024-05-01 01:58:14,872 - reverse_grad_weight: 0.8
+2024-05-01 01:58:14,872 - hidden_size: 256
+2024-05-01 01:58:14,872 - dropout_rate: 0.1
+2024-05-01 01:58:14,872 - diff_weight: 0.7
+2024-05-01 01:58:14,872 - sim_weight: 0.7
+2024-05-01 01:58:14,872 - recon_weight: 0.6
+2024-05-01 01:58:14,872 - lr: 3e-05
+2024-05-01 01:58:14,872 - grad_clip: -1.0
+2024-05-01 01:58:14,872 - gamma: 0.5
+2024-05-01 01:58:14,872 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_4
+2024-05-01 01:58:14,872 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/misa_MIntRec_bert-base-uncased_multi-class_4/models
+2024-05-01 01:58:14,872 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/misa/binary_misa_MIntRec_bert-base-uncased_4
+2024-05-01 01:58:14,872 - device: cuda
+2024-05-01 01:58:14,872 - feat_size: 768
+2024-05-01 01:58:14,873 - text_feat_size: 768
+2024-05-01 01:58:14,873 - video_feat_size: 4096
+2024-05-01 01:58:14,873 - audio_feat_size: 3072
+2024-05-01 01:58:14,873 - ============================== End Params ==============================
+2024-05-01 01:58:16,706 - Multimodal Intent Recognition begins...
+2024-05-01 01:58:16,706 - Testing begins...
+2024-05-01 01:58:24,334 - ***** Out-of-domain Evaluation results *****
+2024-05-01 01:58:24,334 -   aupr_in = 0.751
+2024-05-01 01:58:24,334 -   aupr_out = 0.7494
+2024-05-01 01:58:24,334 -   auroc = 0.7567
+2024-05-01 01:58:24,334 -   der = 0.4049
+2024-05-01 01:58:24,334 -   eer = 0.3133
+2024-05-01 01:58:24,334 -   fpr95 = 0.7644
+2024-05-01 01:58:24,334 - Testing is finished...
+2024-05-01 01:58:24,335 - Multimodal intent recognition is finished...
+2024-05-01 01:58:24,335 - Results are saved in results/results_misa_MIntRec.csv

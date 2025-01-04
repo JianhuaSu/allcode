@@ -1,0 +1,787 @@
+2024-05-18 02:49:53,257 - Lists of intent labels are: ['Acknowledge', 'Advise', 'Agree', 'Apologise', 'Arrange', 'Ask for help', 'Asking for opinions', 'Care', 'Comfort', 'Complain', 'Confirm', 'Criticize', 'Doubt', 'Emphasize', 'Explain', 'Flaunt', 'Greet', 'Inform', 'Introduce', 'Invite', 'Joke', 'Leave', 'Oppose', 'Plan', 'Praise', 'Prevent', 'Refuse', 'Taunt', 'Thank', 'Warn']
+2024-05-18 02:49:53,257 - ID Data preparation...
+2024-05-18 02:50:12,303 - OOD Data preparation...
+2024-05-18 02:50:15,650 - ============================== Params ==============================
+2024-05-18 02:50:15,650 - logger_name: mult_ma_MIntRec2_multi-class_0
+2024-05-18 02:50:15,650 - dataset: MIntRec2
+2024-05-18 02:50:15,650 - ood_dataset: MIntRec2-OOD
+2024-05-18 02:50:15,650 - data_mode: multi-class
+2024-05-18 02:50:15,650 - multimodal_method: mult
+2024-05-18 02:50:15,650 - method: mult
+2024-05-18 02:50:15,650 - ood_detection_method: ma
+2024-05-18 02:50:15,650 - text_backbone: bert-base-uncased
+2024-05-18 02:50:15,650 - seed: 0
+2024-05-18 02:50:15,650 - num_workers: 8
+2024-05-18 02:50:15,650 - log_id: mult_ma_MIntRec2_multi-class_0_2024-05-18-02-49-53
+2024-05-18 02:50:15,650 - gpu_id: 3
+2024-05-18 02:50:15,650 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-18 02:50:15,650 - train: False
+2024-05-18 02:50:15,650 - tune: True
+2024-05-18 02:50:15,650 - ood: True
+2024-05-18 02:50:15,650 - save_model: False
+2024-05-18 02:50:15,650 - save_results: True
+2024-05-18 02:50:15,650 - log_path: logs
+2024-05-18 02:50:15,650 - cache_path: cache
+2024-05-18 02:50:15,650 - video_data_path: video_data
+2024-05-18 02:50:15,650 - audio_data_path: audio_data
+2024-05-18 02:50:15,651 - video_feats_path: swin_feats.pkl
+2024-05-18 02:50:15,651 - ood_video_feats_path: swin_feats.pkl
+2024-05-18 02:50:15,651 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:50:15,651 - audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:50:15,651 - results_path: results
+2024-05-18 02:50:15,651 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult
+2024-05-18 02:50:15,651 - model_path: models
+2024-05-18 02:50:15,651 - config_file_name: mult_MIntRec2
+2024-05-18 02:50:15,651 - results_file_name: results_mult_MIntRec2_ood.csv
+2024-05-18 02:50:15,651 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-18 02:50:15,651 - text_seq_len: 50
+2024-05-18 02:50:15,651 - video_seq_len: 180
+2024-05-18 02:50:15,651 - audio_seq_len: 400
+2024-05-18 02:50:15,651 - text_feat_dim: 768
+2024-05-18 02:50:15,651 - video_feat_dim: 256
+2024-05-18 02:50:15,651 - audio_feat_dim: 768
+2024-05-18 02:50:15,651 - ood_label_id: 30
+2024-05-18 02:50:15,651 - num_labels: 30
+2024-05-18 02:50:15,651 - num_train_examples: 6165
+2024-05-18 02:50:15,651 - padding_mode: zero
+2024-05-18 02:50:15,651 - padding_loc: end
+2024-05-18 02:50:15,651 - need_aligned: False
+2024-05-18 02:50:15,651 - eval_monitor: acc
+2024-05-18 02:50:15,651 - train_batch_size: 32
+2024-05-18 02:50:15,651 - eval_batch_size: 16
+2024-05-18 02:50:15,651 - test_batch_size: 16
+2024-05-18 02:50:15,651 - wait_patience: 3
+2024-05-18 02:50:15,651 - num_train_epochs: 100
+2024-05-18 02:50:15,651 - dst_feature_dims: [80]
+2024-05-18 02:50:15,651 - nheads: [4]
+2024-05-18 02:50:15,651 - n_levels: [8]
+2024-05-18 02:50:15,651 - attn_dropout: [0.0]
+2024-05-18 02:50:15,651 - attn_dropout_v: [0.2]
+2024-05-18 02:50:15,651 - attn_dropout_a: [0.2]
+2024-05-18 02:50:15,651 - relu_dropout: [0.0]
+2024-05-18 02:50:15,651 - embed_dropout: [0.1]
+2024-05-18 02:50:15,651 - res_dropout: [0.0]
+2024-05-18 02:50:15,651 - output_dropout: [0.2]
+2024-05-18 02:50:15,651 - text_dropout: [0.4]
+2024-05-18 02:50:15,651 - grad_clip: 0.5
+2024-05-18 02:50:15,651 - attn_mask: True
+2024-05-18 02:50:15,651 - conv1d_kernel_size_l: [5]
+2024-05-18 02:50:15,651 - conv1d_kernel_size_v: [1]
+2024-05-18 02:50:15,652 - conv1d_kernel_size_a: [1]
+2024-05-18 02:50:15,652 - lr: [3e-05]
+2024-05-18 02:50:15,652 - scale: 20
+2024-05-18 02:50:15,652 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_0
+2024-05-18 02:50:15,652 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_0/models
+2024-05-18 02:50:15,652 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/binary_mult_MIntRec2_bert-base-uncased_0
+2024-05-18 02:50:15,652 - ============================== End Params ==============================
+2024-05-18 02:50:21,601 - Multimodal Intent Recognition begins...
+2024-05-18 02:50:21,601 - Testing begins...
+2024-05-18 02:50:43,021 - ***** Test: Confusion Matrix *****
+2024-05-18 02:50:43,026 - [[ 46   0  15   0   0   0   0   0   0   0   2   0   0   1   0   0   0   1
+    0   0   0   1   0   0   2   0   0   0   0   0   0]
+ [  0  52   0   0   7   1   5   0   4   0   1   0   3   0   6   0   0   7
+    0   2   0   0   1   0   2   0   0   5   0   1   0]
+ [  9   0  43   0   2   0   0   0   0   0   1   0   0   2   0   0   0   3
+    0   0   0   0   0   1   2   0   0   1   0   0   0]
+ [  0   0   0  62   0   0   0   1   0   0   0   0   0   0   2   0   0   0
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   3   0   0  33   0   0   0   1   0   0   0   0   0   0   0   0   7
+    0   0   0   3   0   1   1   0   0   0   1   1   0]
+ [  0   1   0   0   1  20   1   1   0   1   2   0   0   0   1   0   0   5
+    0   0   1   0   0   1   0   0   1   0   0   1   0]
+ [  0   1   0   0   0   3  27   7   0   2   0   0   8   0   0   0   0   0
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   1   0   0   0   0   7  24   0   2   5   0   6   0   0   0   1   0
+    0   0   0   0   1   0   0   0   0   0   0   0   0]
+ [  1   1   1   3   1   0   0   0  21   0   0   1   1   1   7   0   0   4
+    0   0   0   0   3   0   2   0   1   1   0   0   0]
+ [  0   0   1   0   0   0   0   0   4  48   0   5   9   0  11   1   0   6
+    3   0   2   3   3   1   1   1   0   6   0   2   0]
+ [  2   0   0   0   0   3   1   4   0   0  40   0  33   0   2   0   0   1
+    0   3   2   0   0   0   1   0   0   1   0   0   0]
+ [  0   0   0   0   0   0   1   0   0   5   0  18   9   0   2   0   0   2
+    1   0   2   0   2   0   0   0   0   4   0   1   0]
+ [  0   2   0   0   0   0   9   5   2   2  20   1  90   0   0   0   2   0
+    0   0   0   0   0   0   0   0   0   2   0   0   0]
+ [  0   0   1   0   1   0   0   0   0   2   0   0   0   0   5   2   0   3
+    2   0   1   0   0   0   0   0   0   0   0   0   0]
+ [  0   3   1   0   0   1   0   1   4   7   1   0   2   2 127   1   0  23
+    1   0   1   1   9   0   3   0   0   5   0   0   0]
+ [  0   0   1   0   0   0   0   0   0   3   0   0   0   1   2   6   0   3
+    2   0   1   1   0   0   0   0   0   1   1   0   0]
+ [  0   0   0   0   1   0   1   2   0   0   1   0   1   0   0   1  54   0
+    5   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   5   2   0   8   2   0   0   2  10   0   0   1   1  19   2   2 122
+    7   0   3   7   5   8   0   1   2   5   1   2   0]
+ [  0   1   0   0   1   0   0   0   0   3   2   0   0   3   9   0   1   8
+   27   1   3   0   0   0   0   0   0   1   0   0   0]
+ [  0   5   0   0   0   0   2   0   0   0   2   0   0   0   0   0   0   0
+    0   6   0   2   0   0   0   0   0   0   0   0   0]
+ [  0   1   2   0   1   0   0   0   0   2   0   0   1   0   6   1   0   5
+    4   0   2   0   0   1   0   0   0   3   0   0   0]
+ [  6   1   1   0   0   0   0   0   0   2   0   0   0   0   1   0   4   1
+    1   1   1  25   2   4   0   0   0   1   0   2   0]
+ [  0   0   1   0   0   0   0   0   1   4   0   3   0   0  12   0   0   6
+    0   0   1   1  78   0   0   3   6   0   0   1   0]
+ [  0   1   1   0   1   0   0   0   0   1   0   0   0   0   0   0   0   9
+    0   0   0   1   0  23   0   0   0   1   0   0   0]
+ [  1   0   3   0   0   0   0   0   0   1   1   3   0   0   3   2   0   2
+    1   0   0   0   1   1  84   0   0   9   1   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2
+    0   0   0   0   1   0   1  24   0   0   0   2   0]
+ [  0   0   0   0   0   0   0   0   1   1   0   0   0   0   3   0   0   4
+    0   0   0   1   2   0   0   0   3   0   2   0   0]
+ [  0   4   1   0   0   0   0   0   3   5   1   3   5   1   5   0   0   2
+    0   0   2   0   2   0   9   1   0  12   1   1   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0
+    0   0   0   0   0   0   0   0   0   0  57   0   0]
+ [  0   1   0   0   0   0   0   0   4   0   1   2   0   0   0   0   0   3
+    1   0   0   0   0   0   0   1   0   1   0   5   0]
+ [ 55  32  49   3  21   7  22   3  38  97  18  25  40  39 159  27  13 167
+   58  12  43  22  65  23  56   7   6  77   4   9   0]]
+2024-05-18 02:50:43,026 - ***** In-domain Evaluation results *****
+2024-05-18 02:50:43,026 -   acc = 0.365
+2024-05-18 02:50:43,026 -   f1 = 0.4126
+2024-05-18 02:50:43,026 -   prec = 0.358
+2024-05-18 02:50:43,026 -   rec = 0.501
+2024-05-18 02:50:43,027 -   weighted_f1 = 0.2922
+2024-05-18 02:50:43,027 -   weighted_prec = 0.2486
+2024-05-18 02:50:43,027 -   weighted_rec = 0.365
+2024-05-18 02:51:28,140 - ***** Out-of-domain Evaluation results *****
+2024-05-18 02:51:28,141 -   aupr_in = 0.7856
+2024-05-18 02:51:28,141 -   aupr_out = 0.5235
+2024-05-18 02:51:28,141 -   auroc = 0.6873
+2024-05-18 02:51:28,141 -   der = 0.5714
+2024-05-18 02:51:28,141 -   eer = 0.3601
+2024-05-18 02:51:28,141 -   fpr95 = 0.8797
+2024-05-18 02:51:28,141 - Testing is finished...
+2024-05-18 02:51:28,141 - Multimodal intent recognition is finished...
+2024-05-18 02:51:28,141 - Results are saved in results/results_mult_MIntRec2_ood.csv
+2024-05-18 02:51:28,209 - ============================== Params ==============================
+2024-05-18 02:51:28,209 - logger_name: mult_ma_MIntRec2_multi-class_0
+2024-05-18 02:51:28,210 - dataset: MIntRec2
+2024-05-18 02:51:28,210 - ood_dataset: MIntRec2-OOD
+2024-05-18 02:51:28,210 - data_mode: multi-class
+2024-05-18 02:51:28,210 - multimodal_method: mult
+2024-05-18 02:51:28,210 - method: mult
+2024-05-18 02:51:28,210 - ood_detection_method: ma
+2024-05-18 02:51:28,210 - text_backbone: bert-base-uncased
+2024-05-18 02:51:28,210 - seed: 1
+2024-05-18 02:51:28,210 - num_workers: 8
+2024-05-18 02:51:28,210 - log_id: mult_ma_MIntRec2_multi-class_0_2024-05-18-02-49-53
+2024-05-18 02:51:28,210 - gpu_id: 3
+2024-05-18 02:51:28,210 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-18 02:51:28,210 - train: False
+2024-05-18 02:51:28,210 - tune: True
+2024-05-18 02:51:28,210 - ood: True
+2024-05-18 02:51:28,210 - save_model: False
+2024-05-18 02:51:28,210 - save_results: True
+2024-05-18 02:51:28,210 - log_path: logs
+2024-05-18 02:51:28,210 - cache_path: cache
+2024-05-18 02:51:28,210 - video_data_path: video_data
+2024-05-18 02:51:28,210 - audio_data_path: audio_data
+2024-05-18 02:51:28,210 - video_feats_path: swin_feats.pkl
+2024-05-18 02:51:28,210 - ood_video_feats_path: swin_feats.pkl
+2024-05-18 02:51:28,211 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:51:28,211 - audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:51:28,211 - results_path: results
+2024-05-18 02:51:28,211 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult
+2024-05-18 02:51:28,211 - model_path: models
+2024-05-18 02:51:28,211 - config_file_name: mult_MIntRec2
+2024-05-18 02:51:28,211 - results_file_name: results_mult_MIntRec2_ood.csv
+2024-05-18 02:51:28,211 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-18 02:51:28,211 - text_seq_len: 50
+2024-05-18 02:51:28,211 - video_seq_len: 180
+2024-05-18 02:51:28,211 - audio_seq_len: 400
+2024-05-18 02:51:28,211 - text_feat_dim: 768
+2024-05-18 02:51:28,211 - video_feat_dim: 256
+2024-05-18 02:51:28,211 - audio_feat_dim: 768
+2024-05-18 02:51:28,211 - ood_label_id: 30
+2024-05-18 02:51:28,211 - num_labels: 30
+2024-05-18 02:51:28,211 - num_train_examples: 6165
+2024-05-18 02:51:28,211 - padding_mode: zero
+2024-05-18 02:51:28,211 - padding_loc: end
+2024-05-18 02:51:28,211 - need_aligned: False
+2024-05-18 02:51:28,211 - eval_monitor: acc
+2024-05-18 02:51:28,211 - train_batch_size: 32
+2024-05-18 02:51:28,211 - eval_batch_size: 16
+2024-05-18 02:51:28,211 - test_batch_size: 16
+2024-05-18 02:51:28,211 - wait_patience: 3
+2024-05-18 02:51:28,211 - num_train_epochs: 100
+2024-05-18 02:51:28,211 - dst_feature_dims: [80]
+2024-05-18 02:51:28,211 - nheads: [4]
+2024-05-18 02:51:28,211 - n_levels: [8]
+2024-05-18 02:51:28,211 - attn_dropout: [0.0]
+2024-05-18 02:51:28,211 - attn_dropout_v: [0.2]
+2024-05-18 02:51:28,211 - attn_dropout_a: [0.2]
+2024-05-18 02:51:28,211 - relu_dropout: [0.0]
+2024-05-18 02:51:28,211 - embed_dropout: [0.1]
+2024-05-18 02:51:28,211 - res_dropout: [0.0]
+2024-05-18 02:51:28,211 - output_dropout: [0.2]
+2024-05-18 02:51:28,212 - text_dropout: [0.4]
+2024-05-18 02:51:28,212 - grad_clip: 0.5
+2024-05-18 02:51:28,212 - attn_mask: True
+2024-05-18 02:51:28,212 - conv1d_kernel_size_l: [5]
+2024-05-18 02:51:28,212 - conv1d_kernel_size_v: [1]
+2024-05-18 02:51:28,212 - conv1d_kernel_size_a: [1]
+2024-05-18 02:51:28,212 - lr: [3e-05]
+2024-05-18 02:51:28,212 - scale: 20
+2024-05-18 02:51:28,212 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_1
+2024-05-18 02:51:28,212 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_1/models
+2024-05-18 02:51:28,212 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/binary_mult_MIntRec2_bert-base-uncased_1
+2024-05-18 02:51:28,212 - device: cuda
+2024-05-18 02:51:28,212 - ============================== End Params ==============================
+2024-05-18 02:51:59,910 - Multimodal Intent Recognition begins...
+2024-05-18 02:51:59,911 - Testing begins...
+2024-05-18 02:52:18,688 - ***** Test: Confusion Matrix *****
+2024-05-18 02:52:18,691 - [[ 50   0   7   0   0   0   0   0   1   0   2   0   0   0   0   1   0   1
+    0   0   0   2   1   0   3   0   0   0   0   0   0]
+ [  0  61   0   0   7   1   8   0   1   0   2   0   2   0   3   0   0   5
+    0   2   0   0   2   0   1   0   0   2   0   0   0]
+ [ 12   0  37   0   2   0   0   0   0   0   1   0   0   1   0   1   0   3
+    0   0   0   1   0   2   3   0   0   1   0   0   0]
+ [  0   0   0  61   0   0   0   1   0   1   0   0   0   0   1   0   0   0
+    0   0   0   0   0   0   0   0   0   1   0   0   0]
+ [  0   4   0   0  36   1   0   0   1   0   0   0   0   0   1   0   0   4
+    0   1   0   0   0   0   1   0   0   0   1   1   0]
+ [  0   1   0   0   0  20   2   0   0   2   1   0   0   0   1   0   0   6
+    0   2   0   0   1   1   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   3  28  12   0   2   0   1   2   0   0   0   0   0
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   9  26   0   1   4   0   4   0   0   0   1   0
+    0   1   0   0   1   0   0   0   0   0   0   0   0]
+ [  1   3   1   3   1   0   0   0  23   2   0   1   1   0   2   0   0   2
+    1   0   0   1   3   0   2   0   0   2   0   0   0]
+ [  0   1   0   1   1   1   0   0   1  49   0   6   9   1  15   0   0   5
+    1   0   0   0   3   1   5   1   0   6   0   0   0]
+ [  0   1   0   0   0   2  14   2   2   2  36   0  24   0   1   0   1   2
+    0   4   0   0   1   0   1   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   2   1   0   7   0  16   6   0   3   0   0   4
+    1   0   0   0   2   0   1   0   0   4   0   0   0]
+ [  0   1   0   0   0   1  12  11   0   4  21   1  77   0   0   0   3   1
+    0   1   0   0   0   0   0   0   0   2   0   0   0]
+ [  0   0   2   0   1   0   0   0   0   2   0   0   0   1   3   2   0   2
+    2   0   1   0   1   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   1   0   2   0   1   8   1   1   2   2 106   1   0  35
+    5   0   1   0  13   4   5   0   0   5   0   0   0]
+ [  0   0   1   0   1   0   0   0   0   6   0   0   0   1   1   2   0   5
+    2   0   0   1   0   0   0   0   0   1   1   0   0]
+ [  0   0   0   0   1   0   1   2   0   0   2   0   1   0   0   0  53   0
+    5   0   0   0   0   0   1   0   0   0   0   0   0]
+ [  1   7   0   0   9   3   0   0   3  13   0   0   1   0  15   2   3 118
+   11   2   1   2   8   9   1   1   0   5   1   1   0]
+ [  1   3   0   0   0   0   1   0   0   3   1   0   0   0   2   1   3   9
+   28   0   2   0   2   0   3   0   0   1   0   0   0]
+ [  0   5   0   0   1   0   3   0   0   0   0   0   0   0   0   0   0   0
+    0   7   0   1   0   0   0   0   0   0   0   0   0]
+ [  0   1   1   0   1   0   1   0   0   1   0   1   0   1   5   0   0   5
+    4   0   1   0   0   1   2   0   0   3   0   1   0]
+ [  7   1   0   0   2   0   0   0   0   5   0   0   0   0   0   0   4   2
+    0   0   0  26   2   3   1   0   0   0   0   0   0]
+ [  0   1   0   1   0   0   0   0   1   4   0   3   0   1   7   0   0   6
+    0   0   0   1  87   0   1   0   3   1   0   0   0]
+ [  0   3   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0  10
+    0   0   0   1   0  23   0   0   0   0   0   0   0]
+ [  1   0   2   0   1   0   1   0   0   1   0   1   0   0   2   0   0   4
+    0   0   0   1   1   1  92   0   0   4   1   0   0]
+ [  1   2   0   0   1   0   0   0   0   0   0   3   0   0   0   0   0   1
+    0   0   0   0   4   0   1  17   0   0   0   1   0]
+ [  0   0   0   0   0   0   0   0   0   3   0   0   0   0   2   0   0   4
+    0   0   0   0   2   0   0   0   4   0   2   0   0]
+ [  0   2   0   0   2   0   0   1   2   8   2   3   3   0   2   0   0   2
+    1   0   0   0   3   1  11   1   0  13   1   0   0]
+ [  0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   1   0
+    0   0   0   0   0   0   0   0   0   0  56   0   0]
+ [  0   3   0   0   1   0   0   0   2   1   1   1   0   0   0   0   0   4
+    1   0   0   0   0   0   1   1   0   0   0   3   0]
+ [ 59  44  29   3  29   9  21   5  37 115  17  23  37   9 121  15  16 191
+   77  13  14  14  67  22 103   9   5  85   3   5   0]]
+2024-05-18 02:52:18,691 - ***** In-domain Evaluation results *****
+2024-05-18 02:52:18,692 -   acc = 0.3582
+2024-05-18 02:52:18,692 -   f1 = 0.4009
+2024-05-18 02:52:18,692 -   prec = 0.3525
+2024-05-18 02:52:18,692 -   rec = 0.4914
+2024-05-18 02:52:18,692 -   weighted_f1 = 0.2824
+2024-05-18 02:52:18,692 -   weighted_prec = 0.2405
+2024-05-18 02:52:18,692 -   weighted_rec = 0.3582
+2024-05-18 02:53:03,707 - ***** Out-of-domain Evaluation results *****
+2024-05-18 02:53:03,707 -   aupr_in = 0.7965
+2024-05-18 02:53:03,707 -   aupr_out = 0.5274
+2024-05-18 02:53:03,707 -   auroc = 0.6994
+2024-05-18 02:53:03,707 -   der = 0.5679
+2024-05-18 02:53:03,707 -   eer = 0.3425
+2024-05-18 02:53:03,707 -   fpr95 = 0.873
+2024-05-18 02:53:03,707 - Testing is finished...
+2024-05-18 02:53:03,707 - Multimodal intent recognition is finished...
+2024-05-18 02:53:03,707 - Results are saved in results/results_mult_MIntRec2_ood.csv
+2024-05-18 02:53:03,764 - ============================== Params ==============================
+2024-05-18 02:53:03,764 - logger_name: mult_ma_MIntRec2_multi-class_0
+2024-05-18 02:53:03,764 - dataset: MIntRec2
+2024-05-18 02:53:03,764 - ood_dataset: MIntRec2-OOD
+2024-05-18 02:53:03,764 - data_mode: multi-class
+2024-05-18 02:53:03,764 - multimodal_method: mult
+2024-05-18 02:53:03,764 - method: mult
+2024-05-18 02:53:03,764 - ood_detection_method: ma
+2024-05-18 02:53:03,764 - text_backbone: bert-base-uncased
+2024-05-18 02:53:03,764 - seed: 2
+2024-05-18 02:53:03,765 - num_workers: 8
+2024-05-18 02:53:03,765 - log_id: mult_ma_MIntRec2_multi-class_0_2024-05-18-02-49-53
+2024-05-18 02:53:03,765 - gpu_id: 3
+2024-05-18 02:53:03,765 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-18 02:53:03,765 - train: False
+2024-05-18 02:53:03,765 - tune: True
+2024-05-18 02:53:03,765 - ood: True
+2024-05-18 02:53:03,765 - save_model: False
+2024-05-18 02:53:03,765 - save_results: True
+2024-05-18 02:53:03,765 - log_path: logs
+2024-05-18 02:53:03,765 - cache_path: cache
+2024-05-18 02:53:03,765 - video_data_path: video_data
+2024-05-18 02:53:03,765 - audio_data_path: audio_data
+2024-05-18 02:53:03,765 - video_feats_path: swin_feats.pkl
+2024-05-18 02:53:03,765 - ood_video_feats_path: swin_feats.pkl
+2024-05-18 02:53:03,765 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:53:03,765 - audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:53:03,765 - results_path: results
+2024-05-18 02:53:03,765 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult
+2024-05-18 02:53:03,765 - model_path: models
+2024-05-18 02:53:03,765 - config_file_name: mult_MIntRec2
+2024-05-18 02:53:03,765 - results_file_name: results_mult_MIntRec2_ood.csv
+2024-05-18 02:53:03,765 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-18 02:53:03,765 - text_seq_len: 50
+2024-05-18 02:53:03,766 - video_seq_len: 180
+2024-05-18 02:53:03,766 - audio_seq_len: 400
+2024-05-18 02:53:03,766 - text_feat_dim: 768
+2024-05-18 02:53:03,766 - video_feat_dim: 256
+2024-05-18 02:53:03,766 - audio_feat_dim: 768
+2024-05-18 02:53:03,766 - ood_label_id: 30
+2024-05-18 02:53:03,766 - num_labels: 30
+2024-05-18 02:53:03,766 - num_train_examples: 6165
+2024-05-18 02:53:03,766 - padding_mode: zero
+2024-05-18 02:53:03,766 - padding_loc: end
+2024-05-18 02:53:03,766 - need_aligned: False
+2024-05-18 02:53:03,766 - eval_monitor: acc
+2024-05-18 02:53:03,766 - train_batch_size: 32
+2024-05-18 02:53:03,766 - eval_batch_size: 16
+2024-05-18 02:53:03,766 - test_batch_size: 16
+2024-05-18 02:53:03,766 - wait_patience: 3
+2024-05-18 02:53:03,766 - num_train_epochs: 100
+2024-05-18 02:53:03,766 - dst_feature_dims: [80]
+2024-05-18 02:53:03,766 - nheads: [4]
+2024-05-18 02:53:03,766 - n_levels: [8]
+2024-05-18 02:53:03,766 - attn_dropout: [0.0]
+2024-05-18 02:53:03,766 - attn_dropout_v: [0.2]
+2024-05-18 02:53:03,766 - attn_dropout_a: [0.2]
+2024-05-18 02:53:03,766 - relu_dropout: [0.0]
+2024-05-18 02:53:03,767 - embed_dropout: [0.1]
+2024-05-18 02:53:03,767 - res_dropout: [0.0]
+2024-05-18 02:53:03,767 - output_dropout: [0.2]
+2024-05-18 02:53:03,767 - text_dropout: [0.4]
+2024-05-18 02:53:03,767 - grad_clip: 0.5
+2024-05-18 02:53:03,767 - attn_mask: True
+2024-05-18 02:53:03,767 - conv1d_kernel_size_l: [5]
+2024-05-18 02:53:03,767 - conv1d_kernel_size_v: [1]
+2024-05-18 02:53:03,767 - conv1d_kernel_size_a: [1]
+2024-05-18 02:53:03,767 - lr: [3e-05]
+2024-05-18 02:53:03,767 - scale: 20
+2024-05-18 02:53:03,767 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_2
+2024-05-18 02:53:03,767 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_2/models
+2024-05-18 02:53:03,767 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/binary_mult_MIntRec2_bert-base-uncased_2
+2024-05-18 02:53:03,767 - device: cuda
+2024-05-18 02:53:03,767 - ============================== End Params ==============================
+2024-05-18 02:53:23,094 - Multimodal Intent Recognition begins...
+2024-05-18 02:53:23,095 - Testing begins...
+2024-05-18 02:53:41,933 - ***** Test: Confusion Matrix *****
+2024-05-18 02:53:41,935 - [[ 47   0  14   0   0   0   0   0   0   0   2   0   0   1   1   0   0   0
+    0   0   0   0   0   1   2   0   0   0   0   0   0]
+ [  0  58   0   0   9   1   4   0   2   0   1   0   3   0   6   1   0   5
+    0   2   0   0   1   0   2   1   0   1   0   0   0]
+ [  9   0  44   0   1   0   0   0   0   0   1   0   0   0   1   0   0   4
+    0   0   0   1   0   0   3   0   0   0   0   0   0]
+ [  0   0   0  61   0   0   0   1   0   0   0   0   0   0   2   0   0   1
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   5   0   0  34   0   0   0   1   0   0   0   0   0   0   0   0   4
+    0   0   0   2   0   1   1   0   0   0   1   2   0]
+ [  0   1   0   0   2  26   0   0   0   0   1   0   0   0   1   0   0   4
+    0   0   0   0   0   1   0   0   1   0   0   0   0]
+ [  0   1   0   0   0   2  27   8   0   1   3   1   5   0   0   0   0   0
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   5  25   0   0   6   0   6   0   0   0   2   0
+    1   0   0   0   1   0   0   0   0   1   0   0   0]
+ [  1   2   1   3   1   0   0   0  21   0   0   2   1   1   5   0   0   6
+    0   0   0   0   3   0   2   0   0   0   0   0   0]
+ [  0   1   1   0   0   1   0   0   2  43   0   4   8   0  15   1   0   9
+    1   0   0   3   4   1   2   1   0   8   0   2   0]
+ [  2   0   0   0   0   1   5   2   0   0  47   0  28   0   2   0   1   1
+    0   2   1   1   0   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   0   1   1   4   1  18   9   0   2   0   0   3
+    1   0   0   0   2   0   1   0   0   4   0   0   0]
+ [  0   1   2   0   0   2   3   7   0   4  22   0  87   0   1   0   3   0
+    0   1   0   0   1   0   0   0   0   1   0   0   0]
+ [  0   0   2   0   1   0   0   0   0   1   0   0   0   2   3   1   0   4
+    2   0   1   0   0   0   0   0   0   0   0   0   0]
+ [  0   1   1   0   0   2   0   0   2   8   3   1   1   2 118   1   0  27
+    3   0   3   0  10   0   5   0   0   4   0   1   0]
+ [  0   0   3   0   0   0   0   0   0   4   0   0   0   0   2   4   0   2
+    1   0   2   0   1   0   0   0   1   1   1   0   0]
+ [  0   0   0   0   1   0   1   1   0   0   0   0   1   0   0   1  56   0
+    4   0   0   0   0   0   1   0   0   0   0   0   0]
+ [  0   3   3   0   6   2   1   0   3   9   0   1   0   1  24   4   2 120
+    9   2   0   5   5   8   1   1   1   2   1   3   0]
+ [  0   1   0   0   0   0   0   0   0   5   2   0   0   1   8   0   2  10
+   25   2   4   0   0   0   0   0   0   0   0   0   0]
+ [  0   5   0   0   0   0   3   0   0   0   1   0   0   0   1   0   0   1
+    0   5   0   1   0   0   0   0   0   0   0   0   0]
+ [  0   2   2   0   1   0   0   0   0   1   0   0   1   0   5   2   0   1
+    5   0   4   0   0   1   1   0   0   3   0   0   0]
+ [  7   1   0   0   1   0   0   0   0   2   0   0   0   0   0   0   4   0
+    0   0   1  26   3   5   0   0   1   1   0   1   0]
+ [  0   0   1   1   0   0   0   0   1   2   1   2   1   0  11   1   0   4
+    0   0   0   2  78   0   1   2   8   1   0   0   0]
+ [  0   3   1   0   1   0   0   0   0   2   0   0   0   0   1   0   0   6
+    0   0   0   4   0  20   0   0   0   0   0   0   0]
+ [  1   0   3   0   0   0   0   0   0   1   2   1   0   0   2   0   0   3
+    0   0   0   0   1   1  91   0   0   6   1   0   0]
+ [  1   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+    0   0   0   1   3   0   1  21   1   0   0   1   0]
+ [  0   0   0   1   0   0   0   0   0   1   0   0   0   0   2   0   0   4
+    0   0   0   0   1   0   0   0   6   0   2   0   0]
+ [  0   2   1   0   1   0   0   1   3   6   2   1   3   1   5   0   0   4
+    0   0   3   0   2   0   7   1   0  14   1   0   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   1   0
+    0   0   0   0   0   0   0   0   0   0  56   0   0]
+ [  0   1   0   0   0   0   0   0   1   1   1   1   0   0   0   0   0   3
+    1   0   0   0   0   0   0   1   0   2   0   7   0]
+ [ 50  43  41   4  20   8  18   4  35  93  19  22  35  38 172  29  19 176
+   57  11  30  20  66  13  58   5   6  89   1  15   0]]
+2024-05-18 02:53:41,935 - ***** In-domain Evaluation results *****
+2024-05-18 02:53:41,935 -   acc = 0.3687
+2024-05-18 02:53:41,935 -   f1 = 0.4242
+2024-05-18 02:53:41,935 -   prec = 0.3664
+2024-05-18 02:53:41,935 -   rec = 0.5161
+2024-05-18 02:53:41,936 -   weighted_f1 = 0.2943
+2024-05-18 02:53:41,936 -   weighted_prec = 0.249
+2024-05-18 02:53:41,936 -   weighted_rec = 0.3687
+2024-05-18 02:54:25,374 - ***** Out-of-domain Evaluation results *****
+2024-05-18 02:54:25,375 -   aupr_in = 0.7941
+2024-05-18 02:54:25,375 -   aupr_out = 0.5314
+2024-05-18 02:54:25,375 -   auroc = 0.6979
+2024-05-18 02:54:25,375 -   der = 0.5672
+2024-05-18 02:54:25,375 -   eer = 0.3551
+2024-05-18 02:54:25,375 -   fpr95 = 0.8722
+2024-05-18 02:54:25,375 - Testing is finished...
+2024-05-18 02:54:25,375 - Multimodal intent recognition is finished...
+2024-05-18 02:54:25,375 - Results are saved in results/results_mult_MIntRec2_ood.csv
+2024-05-18 02:54:25,435 - ============================== Params ==============================
+2024-05-18 02:54:25,436 - logger_name: mult_ma_MIntRec2_multi-class_0
+2024-05-18 02:54:25,436 - dataset: MIntRec2
+2024-05-18 02:54:25,436 - ood_dataset: MIntRec2-OOD
+2024-05-18 02:54:25,436 - data_mode: multi-class
+2024-05-18 02:54:25,436 - multimodal_method: mult
+2024-05-18 02:54:25,436 - method: mult
+2024-05-18 02:54:25,436 - ood_detection_method: ma
+2024-05-18 02:54:25,436 - text_backbone: bert-base-uncased
+2024-05-18 02:54:25,436 - seed: 3
+2024-05-18 02:54:25,436 - num_workers: 8
+2024-05-18 02:54:25,436 - log_id: mult_ma_MIntRec2_multi-class_0_2024-05-18-02-49-53
+2024-05-18 02:54:25,436 - gpu_id: 3
+2024-05-18 02:54:25,436 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-18 02:54:25,436 - train: False
+2024-05-18 02:54:25,436 - tune: True
+2024-05-18 02:54:25,436 - ood: True
+2024-05-18 02:54:25,436 - save_model: False
+2024-05-18 02:54:25,436 - save_results: True
+2024-05-18 02:54:25,436 - log_path: logs
+2024-05-18 02:54:25,436 - cache_path: cache
+2024-05-18 02:54:25,436 - video_data_path: video_data
+2024-05-18 02:54:25,436 - audio_data_path: audio_data
+2024-05-18 02:54:25,436 - video_feats_path: swin_feats.pkl
+2024-05-18 02:54:25,436 - ood_video_feats_path: swin_feats.pkl
+2024-05-18 02:54:25,436 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:54:25,436 - audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:54:25,436 - results_path: results
+2024-05-18 02:54:25,437 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult
+2024-05-18 02:54:25,437 - model_path: models
+2024-05-18 02:54:25,437 - config_file_name: mult_MIntRec2
+2024-05-18 02:54:25,437 - results_file_name: results_mult_MIntRec2_ood.csv
+2024-05-18 02:54:25,437 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-18 02:54:25,437 - text_seq_len: 50
+2024-05-18 02:54:25,437 - video_seq_len: 180
+2024-05-18 02:54:25,437 - audio_seq_len: 400
+2024-05-18 02:54:25,437 - text_feat_dim: 768
+2024-05-18 02:54:25,437 - video_feat_dim: 256
+2024-05-18 02:54:25,437 - audio_feat_dim: 768
+2024-05-18 02:54:25,437 - ood_label_id: 30
+2024-05-18 02:54:25,437 - num_labels: 30
+2024-05-18 02:54:25,437 - num_train_examples: 6165
+2024-05-18 02:54:25,437 - padding_mode: zero
+2024-05-18 02:54:25,437 - padding_loc: end
+2024-05-18 02:54:25,437 - need_aligned: False
+2024-05-18 02:54:25,437 - eval_monitor: acc
+2024-05-18 02:54:25,437 - train_batch_size: 32
+2024-05-18 02:54:25,437 - eval_batch_size: 16
+2024-05-18 02:54:25,437 - test_batch_size: 16
+2024-05-18 02:54:25,437 - wait_patience: 3
+2024-05-18 02:54:25,437 - num_train_epochs: 100
+2024-05-18 02:54:25,437 - dst_feature_dims: [80]
+2024-05-18 02:54:25,437 - nheads: [4]
+2024-05-18 02:54:25,437 - n_levels: [8]
+2024-05-18 02:54:25,437 - attn_dropout: [0.0]
+2024-05-18 02:54:25,437 - attn_dropout_v: [0.2]
+2024-05-18 02:54:25,437 - attn_dropout_a: [0.2]
+2024-05-18 02:54:25,438 - relu_dropout: [0.0]
+2024-05-18 02:54:25,438 - embed_dropout: [0.1]
+2024-05-18 02:54:25,438 - res_dropout: [0.0]
+2024-05-18 02:54:25,438 - output_dropout: [0.2]
+2024-05-18 02:54:25,438 - text_dropout: [0.4]
+2024-05-18 02:54:25,438 - grad_clip: 0.5
+2024-05-18 02:54:25,438 - attn_mask: True
+2024-05-18 02:54:25,438 - conv1d_kernel_size_l: [5]
+2024-05-18 02:54:25,438 - conv1d_kernel_size_v: [1]
+2024-05-18 02:54:25,438 - conv1d_kernel_size_a: [1]
+2024-05-18 02:54:25,438 - lr: [3e-05]
+2024-05-18 02:54:25,438 - scale: 20
+2024-05-18 02:54:25,438 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_3
+2024-05-18 02:54:25,438 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_3/models
+2024-05-18 02:54:25,438 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/binary_mult_MIntRec2_bert-base-uncased_3
+2024-05-18 02:54:25,438 - device: cuda
+2024-05-18 02:54:25,438 - ============================== End Params ==============================
+2024-05-18 02:54:30,714 - Multimodal Intent Recognition begins...
+2024-05-18 02:54:30,714 - Testing begins...
+2024-05-18 02:54:49,320 - ***** Test: Confusion Matrix *****
+2024-05-18 02:54:49,322 - [[ 50   0  13   0   0   0   0   0   0   0   2   0   0   0   0   0   0   1
+    0   0   0   1   1   0   0   0   0   0   0   0   0]
+ [  0  63   0   0   7   1   4   0   2   0   1   0   4   0   3   0   0   4
+    0   3   0   1   2   0   1   0   0   1   0   0   0]
+ [  9   0  42   0   1   0   0   0   0   0   1   1   0   0   2   0   0   4
+    1   0   0   1   0   0   2   0   0   0   0   0   0]
+ [  0   0   0  61   0   0   0   1   0   1   0   0   0   0   1   0   0   1
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   3   0   0  31   0   0   0   2   0   0   0   0   0   0   0   0   7
+    0   1   0   2   0   2   1   1   0   0   1   0   0]
+ [  0   1   0   0   1  18   2   0   0   1   1   0   0   0   0   0   0   8
+    0   4   0   0   1   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   2  33   4   0   2   0   0   6   0   0   0   0   0
+    0   1   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   7  26   0   1   8   0   4   0   0   0   0   0
+    0   0   0   0   1   0   0   0   0   0   0   0   0]
+ [  1   1   1   3   1   0   0   0  22   1   0   0   1   0   4   0   0   4
+    0   1   0   0   6   0   3   0   0   0   0   0   0]
+ [  0   1   1   0   0   0   0   0   1  52   0   4  10   0  12   1   0  16
+    0   0   0   0   4   0   2   1   0   2   0   0   0]
+ [  0   0   0   0   1   4   6   0   0   0  50   0  26   0   2   0   1   0
+    0   3   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   0   0   0   7   0  19   9   0   3   0   0   4
+    0   0   0   0   3   0   0   0   0   2   0   0   0]
+ [  0   0   0   0   0   1   6   5   0   6  31   0  84   0   0   0   0   0
+    0   1   0   0   1   0   0   0   0   0   0   0   0]
+ [  0   1   2   0   0   0   0   0   0   3   0   0   0   0   4   0   0   4
+    3   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   3   1   0   0   0   0   0   2   7   4   1   2   0 111   1   0  35
+    2   1   0   1  14   1   4   0   0   3   0   0   0]
+ [  0   0   1   0   0   0   0   0   0   6   0   0   0   0   2   1   0   6
+    3   0   0   1   1   0   0   0   0   0   1   0   0]
+ [  0   0   0   0   1   0   0   3   0   0   3   0   1   0   0   0  54   1
+    2   0   0   1   0   0   0   0   0   0   0   0   0]
+ [  0   9   2   0   6   1   0   0   0  13   2   0   0   0  16   1   2 131
+   11   5   0   3   7   4   0   2   0   1   1   0   0]
+ [  0   2   1   0   0   0   0   0   0   2   1   0   0   0   4   0   2   7
+   36   0   0   0   2   0   3   0   0   0   0   0   0]
+ [  0   4   0   0   0   0   3   0   1   0   0   0   0   0   0   0   0   0
+    0   8   0   1   0   0   0   0   0   0   0   0   0]
+ [  0   3   2   0   1   0   0   0   1   3   1   1   0   0   2   0   0   5
+    4   0   0   0   2   1   3   0   0   0   0   0   0]
+ [  6   1   0   0   1   0   0   0   0   5   0   0   0   0   1   0   0   0
+    0   0   0  32   1   3   2   1   0   0   0   0   0]
+ [  0   0   0   1   0   0   0   0   1   1   1   1   0   0   9   0   0   3
+    0   0   0   0  96   0   2   2   0   0   0   0   0]
+ [  0   3   2   0   1   0   0   0   0   0   0   0   0   0   0   0   0   8
+    0   0   0   4   0  20   0   0   0   0   0   0   0]
+ [  2   0   0   0   0   0   0   0   2   3   2   2   1   0   3   0   0   2
+    0   0   0   0   1   1  89   0   0   4   1   0   0]
+ [  1   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   2
+    0   0   0   0   5   0   1  20   0   0   0   1   0]
+ [  0   1   0   1   0   0   0   0   0   1   0   0   0   0   1   0   0   2
+    0   0   0   0   5   0   0   1   2   0   3   0   0]
+ [  0   3   3   0   0   0   0   0   2   8   3   4   3   0   4   0   0   7
+    2   0   0   0   1   1   9   1   0   6   1   0   0]
+ [  0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   1   0
+    0   0   0   0   0   0   0   0   0   0  56   0   0]
+ [  0   2   0   0   1   0   0   0   3   2   1   1   0   0   0   0   0   3
+    1   0   0   0   0   0   1   1   0   0   0   3   0]
+ [ 57  64  43   3  19   6  17   2  33 123  23  14  42   2 149   6  14 237
+   78  11   0  12  98  19  76   9   0  36   4   0   0]]
+2024-05-18 02:54:49,322 - ***** In-domain Evaluation results *****
+2024-05-18 02:54:49,322 -   acc = 0.3765
+2024-05-18 02:54:49,322 -   f1 = 0.4166
+2024-05-18 02:54:49,322 -   prec = 0.4064
+2024-05-18 02:54:49,323 -   rec = 0.505
+2024-05-18 02:54:49,323 -   weighted_f1 = 0.2915
+2024-05-18 02:54:49,323 -   weighted_prec = 0.2524
+2024-05-18 02:54:49,323 -   weighted_rec = 0.3765
+2024-05-18 02:55:32,975 - ***** Out-of-domain Evaluation results *****
+2024-05-18 02:55:32,976 -   aupr_in = 0.7981
+2024-05-18 02:55:32,976 -   aupr_out = 0.5473
+2024-05-18 02:55:32,976 -   auroc = 0.7082
+2024-05-18 02:55:32,976 -   der = 0.5465
+2024-05-18 02:55:32,976 -   eer = 0.3475
+2024-05-18 02:55:32,976 -   fpr95 = 0.8396
+2024-05-18 02:55:32,976 - Testing is finished...
+2024-05-18 02:55:32,976 - Multimodal intent recognition is finished...
+2024-05-18 02:55:32,976 - Results are saved in results/results_mult_MIntRec2_ood.csv
+2024-05-18 02:55:33,037 - ============================== Params ==============================
+2024-05-18 02:55:33,037 - logger_name: mult_ma_MIntRec2_multi-class_0
+2024-05-18 02:55:33,037 - dataset: MIntRec2
+2024-05-18 02:55:33,037 - ood_dataset: MIntRec2-OOD
+2024-05-18 02:55:33,037 - data_mode: multi-class
+2024-05-18 02:55:33,037 - multimodal_method: mult
+2024-05-18 02:55:33,037 - method: mult
+2024-05-18 02:55:33,037 - ood_detection_method: ma
+2024-05-18 02:55:33,037 - text_backbone: bert-base-uncased
+2024-05-18 02:55:33,037 - seed: 4
+2024-05-18 02:55:33,037 - num_workers: 8
+2024-05-18 02:55:33,037 - log_id: mult_ma_MIntRec2_multi-class_0_2024-05-18-02-49-53
+2024-05-18 02:55:33,037 - gpu_id: 3
+2024-05-18 02:55:33,037 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-18 02:55:33,037 - train: False
+2024-05-18 02:55:33,037 - tune: True
+2024-05-18 02:55:33,037 - ood: True
+2024-05-18 02:55:33,037 - save_model: False
+2024-05-18 02:55:33,037 - save_results: True
+2024-05-18 02:55:33,037 - log_path: logs
+2024-05-18 02:55:33,037 - cache_path: cache
+2024-05-18 02:55:33,037 - video_data_path: video_data
+2024-05-18 02:55:33,038 - audio_data_path: audio_data
+2024-05-18 02:55:33,038 - video_feats_path: swin_feats.pkl
+2024-05-18 02:55:33,038 - ood_video_feats_path: swin_feats.pkl
+2024-05-18 02:55:33,038 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:55:33,038 - audio_feats_path: wavlm_feats.pkl
+2024-05-18 02:55:33,038 - results_path: results
+2024-05-18 02:55:33,038 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult
+2024-05-18 02:55:33,038 - model_path: models
+2024-05-18 02:55:33,038 - config_file_name: mult_MIntRec2
+2024-05-18 02:55:33,038 - results_file_name: results_mult_MIntRec2_ood.csv
+2024-05-18 02:55:33,038 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-18 02:55:33,038 - text_seq_len: 50
+2024-05-18 02:55:33,038 - video_seq_len: 180
+2024-05-18 02:55:33,038 - audio_seq_len: 400
+2024-05-18 02:55:33,038 - text_feat_dim: 768
+2024-05-18 02:55:33,038 - video_feat_dim: 256
+2024-05-18 02:55:33,038 - audio_feat_dim: 768
+2024-05-18 02:55:33,038 - ood_label_id: 30
+2024-05-18 02:55:33,038 - num_labels: 30
+2024-05-18 02:55:33,038 - num_train_examples: 6165
+2024-05-18 02:55:33,038 - padding_mode: zero
+2024-05-18 02:55:33,038 - padding_loc: end
+2024-05-18 02:55:33,038 - need_aligned: False
+2024-05-18 02:55:33,038 - eval_monitor: acc
+2024-05-18 02:55:33,038 - train_batch_size: 32
+2024-05-18 02:55:33,038 - eval_batch_size: 16
+2024-05-18 02:55:33,038 - test_batch_size: 16
+2024-05-18 02:55:33,038 - wait_patience: 3
+2024-05-18 02:55:33,038 - num_train_epochs: 100
+2024-05-18 02:55:33,038 - dst_feature_dims: [80]
+2024-05-18 02:55:33,038 - nheads: [4]
+2024-05-18 02:55:33,038 - n_levels: [8]
+2024-05-18 02:55:33,038 - attn_dropout: [0.0]
+2024-05-18 02:55:33,038 - attn_dropout_v: [0.2]
+2024-05-18 02:55:33,038 - attn_dropout_a: [0.2]
+2024-05-18 02:55:33,038 - relu_dropout: [0.0]
+2024-05-18 02:55:33,038 - embed_dropout: [0.1]
+2024-05-18 02:55:33,038 - res_dropout: [0.0]
+2024-05-18 02:55:33,038 - output_dropout: [0.2]
+2024-05-18 02:55:33,038 - text_dropout: [0.4]
+2024-05-18 02:55:33,038 - grad_clip: 0.5
+2024-05-18 02:55:33,038 - attn_mask: True
+2024-05-18 02:55:33,039 - conv1d_kernel_size_l: [5]
+2024-05-18 02:55:33,039 - conv1d_kernel_size_v: [1]
+2024-05-18 02:55:33,039 - conv1d_kernel_size_a: [1]
+2024-05-18 02:55:33,039 - lr: [3e-05]
+2024-05-18 02:55:33,039 - scale: 20
+2024-05-18 02:55:33,039 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_4
+2024-05-18 02:55:33,039 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/mult_MIntRec2_bert-base-uncased_multi-class_4/models
+2024-05-18 02:55:33,039 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/mult/binary_mult_MIntRec2_bert-base-uncased_4
+2024-05-18 02:55:33,039 - device: cuda
+2024-05-18 02:55:33,039 - ============================== End Params ==============================
+2024-05-18 02:55:38,370 - Multimodal Intent Recognition begins...
+2024-05-18 02:55:38,370 - Testing begins...
+2024-05-18 02:55:56,854 - ***** Test: Confusion Matrix *****
+2024-05-18 02:55:56,857 - [[ 52   0   8   0   0   0   0   0   1   2   1   0   1   0   0   0   0   1
+    0   0   0   1   1   0   0   0   0   0   0   0   0]
+ [  0  57   0   0   8   1   0   0   2   0   4   0   1   0   2   0   0  15
+    0   4   0   0   1   0   1   0   0   1   0   0   0]
+ [ 10   0  38   0   0   0   0   0   0   1   1   0   0   2   1   0   0   3
+    0   0   0   1   0   3   3   0   0   0   0   1   0]
+ [  0   0   0  61   0   0   0   1   0   0   0   0   0   0   2   0   0   1
+    0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   2   0   0  29   0   0   0   1   0   0   0   0   0   0   0   0  10
+    0   1   0   4   0   1   1   0   0   0   1   1   0]
+ [  0   1   0   0   1  17   1   1   0   2   4   0   0   0   1   0   0   8
+    0   1   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   1   0   0   0   1  27   4   0   0   5   0   7   0   0   0   0   0
+    0   3   0   0   0   0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   5  17   0   3  11   0   6   0   0   0   4   0
+    0   0   0   0   1   0   0   0   0   0   0   0   0]
+ [  0   2   1   3   1   0   0   0  23   1   0   0   1   0   4   0   0   4
+    1   0   0   1   5   0   2   0   0   0   0   0   0]
+ [  0   2   0   0   0   0   0   0   1  66   0   3   7   0   7   0   0  10
+    2   0   0   1   3   0   3   0   0   1   0   1   0]
+ [  0   0   0   0   0   1   0   1   0   1  54   0  29   0   1   0   1   3
+    0   1   0   0   0   0   1   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   1   0   0  12   0  15   8   0   1   0   0   4
+    1   0   0   0   2   0   1   0   0   2   0   0   0]
+ [  0   3   2   0   0   0   1   3   0   6  27   0  90   0   1   0   1   0
+    0   0   0   0   1   0   0   0   0   0   0   0   0]
+ [  0   0   1   0   1   0   0   0   0   3   0   0   0   1   2   0   0   6
+    2   0   0   0   1   0   0   0   0   0   0   0   0]
+ [  0   1   0   0   0   1   0   0   3  13   3   0   0   0 116   0   0  39
+    3   1   1   0  10   0   0   0   0   2   0   0   0]
+ [  0   0   0   0   1   0   0   0   0   7   0   0   0   1   2   3   0   3
+    2   0   0   1   1   0   0   0   0   0   1   0   0]
+ [  0   0   0   0   1   0   0   1   0   0   2   0   1   0   0   1  54   1
+    4   0   0   1   0   0   0   0   0   0   0   0   0]
+ [  0   5   1   0   6   0   0   0   0  14   2   0   0   1  16   0   2 144
+    7   2   0   3   4   6   1   0   1   1   1   0   0]
+ [  0   2   0   0   0   0   0   0   0   5   1   0   0   0   6   0   2  14
+   28   0   0   0   0   0   2   0   0   0   0   0   0]
+ [  0   5   0   0   1   0   2   0   0   0   1   0   0   0   0   0   0   1
+    0   6   0   1   0   0   0   0   0   0   0   0   0]
+ [  0   1   1   0   1   0   0   0   0   5   0   1   1   1   1   0   0   6
+    5   0   1   0   1   1   1   0   0   2   0   0   0]
+ [  7   0   0   0   1   0   0   0   1   5   0   0   0   0   0   0   4   1
+    0   0   0  28   0   4   0   1   0   0   0   1   0]
+ [  0   0   1   1   1   0   0   0   1   4   1   1   0   0  12   0   0   2
+    0   0   0   0  92   0   0   1   0   0   0   0   0]
+ [  0   3   2   0   0   0   0   0   0   1   0   0   0   0   1   0   0   9
+    0   0   0   4   0  18   0   0   0   0   0   0   0]
+ [  1   0   2   0   0   0   1   0   1   3   0   1   1   0   3   0   0   4
+    0   0   0   1   1   1  90   0   0   2   1   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   2
+    0   0   0   0   7   0   1  16   1   0   0   2   0]
+ [  0   0   0   0   0   0   0   0   1   2   0   0   0   0   2   0   0   3
+    0   0   0   1   5   0   0   0   3   0   0   0   0]
+ [  0   2   1   0   0   0   0   0   2  13   3   4   3   0   2   0   0   8
+    1   0   0   0   2   0   9   1   0   5   1   1   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   1   0
+    0   0   0   0   0   0   0   0   0   0  56   0   0]
+ [  0   1   0   0   3   0   0   0   1   1   1   1   0   0   0   0   0   4
+    1   0   0   1   0   0   0   1   0   1   0   3   0]
+ [ 57  35  34   2  22   5  10   1  29 184  24  10  43  14 146   6  15 271
+   72   6   4  21  67  19  55  10   1  29   0   5   0]]
+2024-05-18 02:55:56,857 - ***** In-domain Evaluation results *****
+2024-05-18 02:55:56,857 -   acc = 0.3746
+2024-05-18 02:55:56,857 -   f1 = 0.418
+2024-05-18 02:55:56,858 -   prec = 0.3976
+2024-05-18 02:55:56,858 -   rec = 0.4874
+2024-05-18 02:55:56,858 -   weighted_f1 = 0.2952
+2024-05-18 02:55:56,858 -   weighted_prec = 0.2588
+2024-05-18 02:55:56,858 -   weighted_rec = 0.3746
+2024-05-18 02:56:40,240 - ***** Out-of-domain Evaluation results *****
+2024-05-18 02:56:40,240 -   aupr_in = 0.7977
+2024-05-18 02:56:40,240 -   aupr_out = 0.5366
+2024-05-18 02:56:40,240 -   auroc = 0.7053
+2024-05-18 02:56:40,240 -   der = 0.5726
+2024-05-18 02:56:40,240 -   eer = 0.3509
+2024-05-18 02:56:40,241 -   fpr95 = 0.8805
+2024-05-18 02:56:40,241 - Testing is finished...
+2024-05-18 02:56:40,241 - Multimodal intent recognition is finished...
+2024-05-18 02:56:40,241 - Results are saved in results/results_mult_MIntRec2_ood.csv

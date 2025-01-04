@@ -1,0 +1,371 @@
+2024-05-19 13:32:33,871 - Lists of intent labels are: ['Complain', 'Praise', 'Apologise', 'Thank', 'Criticize', 'Agree', 'Taunt', 'Flaunt', 'Joke', 'Oppose', 'Comfort', 'Care', 'Inform', 'Advise', 'Arrange', 'Introduce', 'Leave', 'Prevent', 'Greet', 'Ask for help']
+2024-05-19 13:32:33,871 - ID Data preparation...
+2024-05-19 13:32:40,405 - OOD Data preparation...
+2024-05-19 13:32:41,770 - ============================== Params ==============================
+2024-05-19 13:32:41,770 - logger_name: mag_bert_vim_MIntRec_multi-class_0
+2024-05-19 13:32:41,771 - dataset: MIntRec
+2024-05-19 13:32:41,771 - ood_dataset: MIntRec-OOD
+2024-05-19 13:32:41,771 - data_mode: multi-class
+2024-05-19 13:32:41,771 - multimodal_method: mag_bert
+2024-05-19 13:32:41,771 - method: mag_bert
+2024-05-19 13:32:41,771 - ood_detection_method: vim
+2024-05-19 13:32:41,771 - text_backbone: bert-base-uncased
+2024-05-19 13:32:41,771 - seed: 0
+2024-05-19 13:32:41,771 - num_workers: 8
+2024-05-19 13:32:41,771 - log_id: mag_bert_vim_MIntRec_multi-class_0_2024-05-19-13-32-33
+2024-05-19 13:32:41,771 - gpu_id: 3
+2024-05-19 13:32:41,771 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-19 13:32:41,771 - train: False
+2024-05-19 13:32:41,771 - tune: True
+2024-05-19 13:32:41,771 - ood: True
+2024-05-19 13:32:41,771 - save_model: False
+2024-05-19 13:32:41,771 - save_results: True
+2024-05-19 13:32:41,771 - log_path: logs
+2024-05-19 13:32:41,771 - cache_path: cache
+2024-05-19 13:32:41,771 - video_data_path: video_data
+2024-05-19 13:32:41,771 - audio_data_path: audio_data
+2024-05-19 13:32:41,771 - video_feats_path: swin_feats.pkl
+2024-05-19 13:32:41,771 - ood_video_feats_path: swin_feats.pkl
+2024-05-19 13:32:41,771 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:32:41,771 - audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:32:41,771 - results_path: results
+2024-05-19 13:32:41,771 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert
+2024-05-19 13:32:41,771 - model_path: models
+2024-05-19 13:32:41,771 - config_file_name: mag_bert_MIntRec
+2024-05-19 13:32:41,771 - results_file_name: results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:32:41,771 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-19 13:32:41,771 - text_seq_len: 30
+2024-05-19 13:32:41,771 - video_seq_len: 230
+2024-05-19 13:32:41,771 - audio_seq_len: 480
+2024-05-19 13:32:41,771 - text_feat_dim: 768
+2024-05-19 13:32:41,771 - video_feat_dim: 1024
+2024-05-19 13:32:41,771 - audio_feat_dim: 768
+2024-05-19 13:32:41,771 - ood_label_id: 20
+2024-05-19 13:32:41,771 - num_labels: 20
+2024-05-19 13:32:41,771 - num_train_examples: 1334
+2024-05-19 13:32:41,771 - need_aligned: True
+2024-05-19 13:32:41,771 - eval_monitor: acc
+2024-05-19 13:32:41,771 - train_batch_size: 32
+2024-05-19 13:32:41,771 - eval_batch_size: 16
+2024-05-19 13:32:41,771 - test_batch_size: 16
+2024-05-19 13:32:41,772 - wait_patience: 5
+2024-05-19 13:32:41,772 - num_train_epochs: 100
+2024-05-19 13:32:41,772 - beta_shift: [0.006]
+2024-05-19 13:32:41,772 - dropout_prob: [0.4]
+2024-05-19 13:32:41,772 - warmup_proportion: [0.1]
+2024-05-19 13:32:41,772 - lr: [2e-05]
+2024-05-19 13:32:41,772 - aligned_method: ['ctc']
+2024-05-19 13:32:41,772 - weight_decay: [0.03]
+2024-05-19 13:32:41,772 - scale: [32]
+2024-05-19 13:32:41,772 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_0
+2024-05-19 13:32:41,772 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_0/models
+2024-05-19 13:32:41,772 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/binary_mag_bert_MIntRec_bert-base-uncased_0
+2024-05-19 13:32:41,772 - ============================== End Params ==============================
+2024-05-19 13:32:44,310 - Multimodal Intent Recognition begins...
+2024-05-19 13:32:44,311 - Testing begins...
+2024-05-19 13:32:56,388 - ***** Out-of-domain Evaluation results *****
+2024-05-19 13:32:56,389 -   aupr_in = 0.7465
+2024-05-19 13:32:56,389 -   aupr_out = 0.7122
+2024-05-19 13:32:56,389 -   auroc = 0.7422
+2024-05-19 13:32:56,389 -   der = 0.4358
+2024-05-19 13:32:56,389 -   eer = 0.3267
+2024-05-19 13:32:56,389 -   fpr95 = 0.8311
+2024-05-19 13:32:56,389 - Testing is finished...
+2024-05-19 13:32:56,390 - Multimodal intent recognition is finished...
+2024-05-19 13:32:56,390 - Results are saved in results/results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:32:56,442 - ============================== Params ==============================
+2024-05-19 13:32:56,442 - logger_name: mag_bert_vim_MIntRec_multi-class_0
+2024-05-19 13:32:56,442 - dataset: MIntRec
+2024-05-19 13:32:56,442 - ood_dataset: MIntRec-OOD
+2024-05-19 13:32:56,442 - data_mode: multi-class
+2024-05-19 13:32:56,442 - multimodal_method: mag_bert
+2024-05-19 13:32:56,442 - method: mag_bert
+2024-05-19 13:32:56,442 - ood_detection_method: vim
+2024-05-19 13:32:56,442 - text_backbone: bert-base-uncased
+2024-05-19 13:32:56,442 - seed: 1
+2024-05-19 13:32:56,442 - num_workers: 8
+2024-05-19 13:32:56,442 - log_id: mag_bert_vim_MIntRec_multi-class_0_2024-05-19-13-32-33
+2024-05-19 13:32:56,442 - gpu_id: 3
+2024-05-19 13:32:56,442 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-19 13:32:56,442 - train: False
+2024-05-19 13:32:56,442 - tune: True
+2024-05-19 13:32:56,442 - ood: True
+2024-05-19 13:32:56,442 - save_model: False
+2024-05-19 13:32:56,442 - save_results: True
+2024-05-19 13:32:56,442 - log_path: logs
+2024-05-19 13:32:56,442 - cache_path: cache
+2024-05-19 13:32:56,443 - video_data_path: video_data
+2024-05-19 13:32:56,443 - audio_data_path: audio_data
+2024-05-19 13:32:56,443 - video_feats_path: swin_feats.pkl
+2024-05-19 13:32:56,443 - ood_video_feats_path: swin_feats.pkl
+2024-05-19 13:32:56,443 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:32:56,443 - audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:32:56,443 - results_path: results
+2024-05-19 13:32:56,443 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert
+2024-05-19 13:32:56,443 - model_path: models
+2024-05-19 13:32:56,443 - config_file_name: mag_bert_MIntRec
+2024-05-19 13:32:56,443 - results_file_name: results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:32:56,443 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-19 13:32:56,443 - text_seq_len: 30
+2024-05-19 13:32:56,443 - video_seq_len: 230
+2024-05-19 13:32:56,443 - audio_seq_len: 480
+2024-05-19 13:32:56,443 - text_feat_dim: 768
+2024-05-19 13:32:56,443 - video_feat_dim: 1024
+2024-05-19 13:32:56,443 - audio_feat_dim: 768
+2024-05-19 13:32:56,443 - ood_label_id: 20
+2024-05-19 13:32:56,443 - num_labels: 20
+2024-05-19 13:32:56,443 - num_train_examples: 1334
+2024-05-19 13:32:56,443 - need_aligned: True
+2024-05-19 13:32:56,443 - eval_monitor: acc
+2024-05-19 13:32:56,443 - train_batch_size: 32
+2024-05-19 13:32:56,443 - eval_batch_size: 16
+2024-05-19 13:32:56,444 - test_batch_size: 16
+2024-05-19 13:32:56,444 - wait_patience: 5
+2024-05-19 13:32:56,444 - num_train_epochs: 100
+2024-05-19 13:32:56,444 - beta_shift: [0.006]
+2024-05-19 13:32:56,444 - dropout_prob: [0.4]
+2024-05-19 13:32:56,444 - warmup_proportion: [0.1]
+2024-05-19 13:32:56,444 - lr: [2e-05]
+2024-05-19 13:32:56,444 - aligned_method: ['ctc']
+2024-05-19 13:32:56,444 - weight_decay: [0.03]
+2024-05-19 13:32:56,444 - scale: [32]
+2024-05-19 13:32:56,444 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_1
+2024-05-19 13:32:56,444 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_1/models
+2024-05-19 13:32:56,444 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/binary_mag_bert_MIntRec_bert-base-uncased_1
+2024-05-19 13:32:56,448 - device: cuda
+2024-05-19 13:32:56,448 - feat_size: 768
+2024-05-19 13:32:56,448 - ============================== End Params ==============================
+2024-05-19 13:32:57,872 - Multimodal Intent Recognition begins...
+2024-05-19 13:32:57,873 - Testing begins...
+2024-05-19 13:33:11,218 - ***** Out-of-domain Evaluation results *****
+2024-05-19 13:33:11,218 -   aupr_in = 0.7776
+2024-05-19 13:33:11,218 -   aupr_out = 0.7638
+2024-05-19 13:33:11,218 -   auroc = 0.7754
+2024-05-19 13:33:11,218 -   der = 0.3906
+2024-05-19 13:33:11,218 -   eer = 0.3
+2024-05-19 13:33:11,218 -   fpr95 = 0.7356
+2024-05-19 13:33:11,219 - Testing is finished...
+2024-05-19 13:33:11,219 - Multimodal intent recognition is finished...
+2024-05-19 13:33:11,219 - Results are saved in results/results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:33:11,284 - ============================== Params ==============================
+2024-05-19 13:33:11,284 - logger_name: mag_bert_vim_MIntRec_multi-class_0
+2024-05-19 13:33:11,284 - dataset: MIntRec
+2024-05-19 13:33:11,284 - ood_dataset: MIntRec-OOD
+2024-05-19 13:33:11,284 - data_mode: multi-class
+2024-05-19 13:33:11,284 - multimodal_method: mag_bert
+2024-05-19 13:33:11,284 - method: mag_bert
+2024-05-19 13:33:11,284 - ood_detection_method: vim
+2024-05-19 13:33:11,284 - text_backbone: bert-base-uncased
+2024-05-19 13:33:11,284 - seed: 2
+2024-05-19 13:33:11,284 - num_workers: 8
+2024-05-19 13:33:11,284 - log_id: mag_bert_vim_MIntRec_multi-class_0_2024-05-19-13-32-33
+2024-05-19 13:33:11,284 - gpu_id: 3
+2024-05-19 13:33:11,284 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-19 13:33:11,285 - train: False
+2024-05-19 13:33:11,285 - tune: True
+2024-05-19 13:33:11,285 - ood: True
+2024-05-19 13:33:11,285 - save_model: False
+2024-05-19 13:33:11,285 - save_results: True
+2024-05-19 13:33:11,285 - log_path: logs
+2024-05-19 13:33:11,285 - cache_path: cache
+2024-05-19 13:33:11,285 - video_data_path: video_data
+2024-05-19 13:33:11,285 - audio_data_path: audio_data
+2024-05-19 13:33:11,285 - video_feats_path: swin_feats.pkl
+2024-05-19 13:33:11,285 - ood_video_feats_path: swin_feats.pkl
+2024-05-19 13:33:11,285 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:33:11,285 - audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:33:11,285 - results_path: results
+2024-05-19 13:33:11,285 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert
+2024-05-19 13:33:11,285 - model_path: models
+2024-05-19 13:33:11,285 - config_file_name: mag_bert_MIntRec
+2024-05-19 13:33:11,285 - results_file_name: results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:33:11,285 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-19 13:33:11,285 - text_seq_len: 30
+2024-05-19 13:33:11,285 - video_seq_len: 230
+2024-05-19 13:33:11,285 - audio_seq_len: 480
+2024-05-19 13:33:11,285 - text_feat_dim: 768
+2024-05-19 13:33:11,285 - video_feat_dim: 1024
+2024-05-19 13:33:11,285 - audio_feat_dim: 768
+2024-05-19 13:33:11,285 - ood_label_id: 20
+2024-05-19 13:33:11,286 - num_labels: 20
+2024-05-19 13:33:11,286 - num_train_examples: 1334
+2024-05-19 13:33:11,286 - need_aligned: True
+2024-05-19 13:33:11,286 - eval_monitor: acc
+2024-05-19 13:33:11,286 - train_batch_size: 32
+2024-05-19 13:33:11,286 - eval_batch_size: 16
+2024-05-19 13:33:11,286 - test_batch_size: 16
+2024-05-19 13:33:11,286 - wait_patience: 5
+2024-05-19 13:33:11,286 - num_train_epochs: 100
+2024-05-19 13:33:11,286 - beta_shift: [0.006]
+2024-05-19 13:33:11,286 - dropout_prob: [0.4]
+2024-05-19 13:33:11,286 - warmup_proportion: [0.1]
+2024-05-19 13:33:11,286 - lr: [2e-05]
+2024-05-19 13:33:11,286 - aligned_method: ['ctc']
+2024-05-19 13:33:11,286 - weight_decay: [0.03]
+2024-05-19 13:33:11,286 - scale: [32]
+2024-05-19 13:33:11,286 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_2
+2024-05-19 13:33:11,286 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_2/models
+2024-05-19 13:33:11,286 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/binary_mag_bert_MIntRec_bert-base-uncased_2
+2024-05-19 13:33:11,286 - device: cuda
+2024-05-19 13:33:11,286 - feat_size: 768
+2024-05-19 13:33:11,286 - ============================== End Params ==============================
+2024-05-19 13:33:12,563 - Multimodal Intent Recognition begins...
+2024-05-19 13:33:12,563 - Testing begins...
+2024-05-19 13:33:25,547 - ***** Out-of-domain Evaluation results *****
+2024-05-19 13:33:25,548 -   aupr_in = 0.7471
+2024-05-19 13:33:25,548 -   aupr_out = 0.6874
+2024-05-19 13:33:25,548 -   auroc = 0.727
+2024-05-19 13:33:25,548 -   der = 0.4635
+2024-05-19 13:33:25,548 -   eer = 0.3356
+2024-05-19 13:33:25,548 -   fpr95 = 0.8822
+2024-05-19 13:33:25,548 - Testing is finished...
+2024-05-19 13:33:25,548 - Multimodal intent recognition is finished...
+2024-05-19 13:33:25,548 - Results are saved in results/results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:33:25,598 - ============================== Params ==============================
+2024-05-19 13:33:25,598 - logger_name: mag_bert_vim_MIntRec_multi-class_0
+2024-05-19 13:33:25,599 - dataset: MIntRec
+2024-05-19 13:33:25,599 - ood_dataset: MIntRec-OOD
+2024-05-19 13:33:25,599 - data_mode: multi-class
+2024-05-19 13:33:25,599 - multimodal_method: mag_bert
+2024-05-19 13:33:25,599 - method: mag_bert
+2024-05-19 13:33:25,599 - ood_detection_method: vim
+2024-05-19 13:33:25,599 - text_backbone: bert-base-uncased
+2024-05-19 13:33:25,599 - seed: 3
+2024-05-19 13:33:25,599 - num_workers: 8
+2024-05-19 13:33:25,599 - log_id: mag_bert_vim_MIntRec_multi-class_0_2024-05-19-13-32-33
+2024-05-19 13:33:25,599 - gpu_id: 3
+2024-05-19 13:33:25,599 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-19 13:33:25,599 - train: False
+2024-05-19 13:33:25,599 - tune: True
+2024-05-19 13:33:25,599 - ood: True
+2024-05-19 13:33:25,599 - save_model: False
+2024-05-19 13:33:25,599 - save_results: True
+2024-05-19 13:33:25,599 - log_path: logs
+2024-05-19 13:33:25,599 - cache_path: cache
+2024-05-19 13:33:25,599 - video_data_path: video_data
+2024-05-19 13:33:25,599 - audio_data_path: audio_data
+2024-05-19 13:33:25,599 - video_feats_path: swin_feats.pkl
+2024-05-19 13:33:25,599 - ood_video_feats_path: swin_feats.pkl
+2024-05-19 13:33:25,599 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:33:25,600 - audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:33:25,600 - results_path: results
+2024-05-19 13:33:25,600 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert
+2024-05-19 13:33:25,600 - model_path: models
+2024-05-19 13:33:25,600 - config_file_name: mag_bert_MIntRec
+2024-05-19 13:33:25,600 - results_file_name: results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:33:25,600 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-19 13:33:25,600 - text_seq_len: 30
+2024-05-19 13:33:25,600 - video_seq_len: 230
+2024-05-19 13:33:25,600 - audio_seq_len: 480
+2024-05-19 13:33:25,600 - text_feat_dim: 768
+2024-05-19 13:33:25,600 - video_feat_dim: 1024
+2024-05-19 13:33:25,600 - audio_feat_dim: 768
+2024-05-19 13:33:25,600 - ood_label_id: 20
+2024-05-19 13:33:25,600 - num_labels: 20
+2024-05-19 13:33:25,600 - num_train_examples: 1334
+2024-05-19 13:33:25,600 - need_aligned: True
+2024-05-19 13:33:25,600 - eval_monitor: acc
+2024-05-19 13:33:25,600 - train_batch_size: 32
+2024-05-19 13:33:25,600 - eval_batch_size: 16
+2024-05-19 13:33:25,600 - test_batch_size: 16
+2024-05-19 13:33:25,600 - wait_patience: 5
+2024-05-19 13:33:25,600 - num_train_epochs: 100
+2024-05-19 13:33:25,600 - beta_shift: [0.006]
+2024-05-19 13:33:25,600 - dropout_prob: [0.4]
+2024-05-19 13:33:25,601 - warmup_proportion: [0.1]
+2024-05-19 13:33:25,601 - lr: [2e-05]
+2024-05-19 13:33:25,601 - aligned_method: ['ctc']
+2024-05-19 13:33:25,601 - weight_decay: [0.03]
+2024-05-19 13:33:25,601 - scale: [32]
+2024-05-19 13:33:25,601 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_3
+2024-05-19 13:33:25,601 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_3/models
+2024-05-19 13:33:25,601 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/binary_mag_bert_MIntRec_bert-base-uncased_3
+2024-05-19 13:33:25,601 - device: cuda
+2024-05-19 13:33:25,601 - feat_size: 768
+2024-05-19 13:33:25,601 - ============================== End Params ==============================
+2024-05-19 13:33:27,013 - Multimodal Intent Recognition begins...
+2024-05-19 13:33:27,013 - Testing begins...
+2024-05-19 13:33:39,371 - ***** Out-of-domain Evaluation results *****
+2024-05-19 13:33:39,372 -   aupr_in = 0.7531
+2024-05-19 13:33:39,372 -   aupr_out = 0.7407
+2024-05-19 13:33:39,372 -   auroc = 0.7449
+2024-05-19 13:33:39,372 -   der = 0.4092
+2024-05-19 13:33:39,372 -   eer = 0.3222
+2024-05-19 13:33:39,373 -   fpr95 = 0.7778
+2024-05-19 13:33:39,373 - Testing is finished...
+2024-05-19 13:33:39,373 - Multimodal intent recognition is finished...
+2024-05-19 13:33:39,373 - Results are saved in results/results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:33:39,425 - ============================== Params ==============================
+2024-05-19 13:33:39,425 - logger_name: mag_bert_vim_MIntRec_multi-class_0
+2024-05-19 13:33:39,425 - dataset: MIntRec
+2024-05-19 13:33:39,425 - ood_dataset: MIntRec-OOD
+2024-05-19 13:33:39,425 - data_mode: multi-class
+2024-05-19 13:33:39,425 - multimodal_method: mag_bert
+2024-05-19 13:33:39,425 - method: mag_bert
+2024-05-19 13:33:39,425 - ood_detection_method: vim
+2024-05-19 13:33:39,425 - text_backbone: bert-base-uncased
+2024-05-19 13:33:39,426 - seed: 4
+2024-05-19 13:33:39,426 - num_workers: 8
+2024-05-19 13:33:39,426 - log_id: mag_bert_vim_MIntRec_multi-class_0_2024-05-19-13-32-33
+2024-05-19 13:33:39,426 - gpu_id: 3
+2024-05-19 13:33:39,426 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-19 13:33:39,426 - train: False
+2024-05-19 13:33:39,426 - tune: True
+2024-05-19 13:33:39,426 - ood: True
+2024-05-19 13:33:39,426 - save_model: False
+2024-05-19 13:33:39,427 - save_results: True
+2024-05-19 13:33:39,427 - log_path: logs
+2024-05-19 13:33:39,427 - cache_path: cache
+2024-05-19 13:33:39,427 - video_data_path: video_data
+2024-05-19 13:33:39,427 - audio_data_path: audio_data
+2024-05-19 13:33:39,427 - video_feats_path: swin_feats.pkl
+2024-05-19 13:33:39,427 - ood_video_feats_path: swin_feats.pkl
+2024-05-19 13:33:39,427 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:33:39,427 - audio_feats_path: wavlm_feats.pkl
+2024-05-19 13:33:39,428 - results_path: results
+2024-05-19 13:33:39,428 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert
+2024-05-19 13:33:39,428 - model_path: models
+2024-05-19 13:33:39,428 - config_file_name: mag_bert_MIntRec
+2024-05-19 13:33:39,428 - results_file_name: results_mag_bert_MIntRec_ood.csv
+2024-05-19 13:33:39,428 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-19 13:33:39,428 - text_seq_len: 30
+2024-05-19 13:33:39,428 - video_seq_len: 230
+2024-05-19 13:33:39,428 - audio_seq_len: 480
+2024-05-19 13:33:39,428 - text_feat_dim: 768
+2024-05-19 13:33:39,429 - video_feat_dim: 1024
+2024-05-19 13:33:39,429 - audio_feat_dim: 768
+2024-05-19 13:33:39,429 - ood_label_id: 20
+2024-05-19 13:33:39,429 - num_labels: 20
+2024-05-19 13:33:39,429 - num_train_examples: 1334
+2024-05-19 13:33:39,429 - need_aligned: True
+2024-05-19 13:33:39,429 - eval_monitor: acc
+2024-05-19 13:33:39,429 - train_batch_size: 32
+2024-05-19 13:33:39,429 - eval_batch_size: 16
+2024-05-19 13:33:39,430 - test_batch_size: 16
+2024-05-19 13:33:39,430 - wait_patience: 5
+2024-05-19 13:33:39,430 - num_train_epochs: 100
+2024-05-19 13:33:39,430 - beta_shift: [0.006]
+2024-05-19 13:33:39,430 - dropout_prob: [0.4]
+2024-05-19 13:33:39,430 - warmup_proportion: [0.1]
+2024-05-19 13:33:39,430 - lr: [2e-05]
+2024-05-19 13:33:39,430 - aligned_method: ['ctc']
+2024-05-19 13:33:39,430 - weight_decay: [0.03]
+2024-05-19 13:33:39,431 - scale: [32]
+2024-05-19 13:33:39,431 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_4
+2024-05-19 13:33:39,431 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/mag_bert_MIntRec_bert-base-uncased_multi-class_4/models
+2024-05-19 13:33:39,431 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec/mag_bert/binary_mag_bert_MIntRec_bert-base-uncased_4
+2024-05-19 13:33:39,431 - device: cuda
+2024-05-19 13:33:39,431 - feat_size: 768
+2024-05-19 13:33:39,431 - ============================== End Params ==============================
+2024-05-19 13:33:41,160 - Multimodal Intent Recognition begins...
+2024-05-19 13:33:41,160 - Testing begins...
+2024-05-19 13:33:54,431 - ***** Out-of-domain Evaluation results *****
+2024-05-19 13:33:54,432 -   aupr_in = 0.7577
+2024-05-19 13:33:54,432 -   aupr_out = 0.7158
+2024-05-19 13:33:54,432 -   auroc = 0.7443
+2024-05-19 13:33:54,432 -   der = 0.4204
+2024-05-19 13:33:54,432 -   eer = 0.3267
+2024-05-19 13:33:54,432 -   fpr95 = 0.7978
+2024-05-19 13:33:54,432 - Testing is finished...
+2024-05-19 13:33:54,433 - Multimodal intent recognition is finished...
+2024-05-19 13:33:54,433 - Results are saved in results/results_mag_bert_MIntRec_ood.csv

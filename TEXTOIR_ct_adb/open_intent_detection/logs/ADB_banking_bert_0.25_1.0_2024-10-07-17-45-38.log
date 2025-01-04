@@ -1,0 +1,451 @@
+2024-10-07 17:45:38,604 - Detection - Open Intent Detection Begin...
+2024-10-07 17:45:38,604 - Detection - Parameters Initialization...
+2024-10-07 17:45:38,604 - Detection - Data and Model Preparation...
+2024-10-07 17:45:38,605 - Detection - The number of known intents is 19
+2024-10-07 17:45:38,605 - Detection - Lists of known labels are: ['getting_spare_card', 'country_support', 'card_about_to_expire', 'top_up_failed', 'virtual_card_not_working', 'passcode_forgotten', 'direct_debit_payment_not_recognised', 'contactless_not_working', 'card_payment_not_recognised', 'pending_top_up', 'card_arrival', 'fiat_currency_support', 'why_verify_identity', 'exchange_rate', 'card_delivery_estimate', 'transfer_into_account', 'pending_transfer', 'wrong_exchange_rate_for_cash_withdrawal', 'unable_to_verify_identity']
+2024-10-07 17:45:38,630 - Detection - Number of labeled training samples = 2127
+2024-10-07 17:45:38,630 - Detection - Number of unlabeled training samples = 6876
+2024-10-07 17:45:38,632 - Detection - Number of evaluation samples = 235
+2024-10-07 17:45:38,639 - Detection - Number of testing samples = 3080
+2024-10-07 17:45:41,722 - Detection - ============================== Params ==============================
+2024-10-07 17:45:41,722 - Detection - type:	open_intent_detection
+2024-10-07 17:45:41,722 - Detection - logger_name:	Detection
+2024-10-07 17:45:41,722 - Detection - log_dir:	logs
+2024-10-07 17:45:41,722 - Detection - dataset:	banking
+2024-10-07 17:45:41,722 - Detection - known_cls_ratio:	0.25
+2024-10-07 17:45:41,722 - Detection - labeled_ratio:	1.0
+2024-10-07 17:45:41,722 - Detection - method:	ADB
+2024-10-07 17:45:41,722 - Detection - train:	True
+2024-10-07 17:45:41,722 - Detection - tune:	True
+2024-10-07 17:45:41,722 - Detection - pretrain:	True
+2024-10-07 17:45:41,722 - Detection - b_train:	False
+2024-10-07 17:45:41,722 - Detection - save_model:	True
+2024-10-07 17:45:41,722 - Detection - backbone:	bert
+2024-10-07 17:45:41,722 - Detection - config_file_name:	ADB_oos1
+2024-10-07 17:45:41,722 - Detection - seed:	5
+2024-10-07 17:45:41,722 - Detection - gpu_id:	1
+2024-10-07 17:45:41,722 - Detection - pipe_results_path:	pipe_results
+2024-10-07 17:45:41,722 - Detection - data_dir:	/home/sharing/disk3/wangyifan/sujianhua/TEXTOIR_ct_adb/open_intent_detection/../data
+2024-10-07 17:45:41,722 - Detection - output_dir:	/home/sharing/disk3/wangyifan/sujianhua/output
+2024-10-07 17:45:41,722 - Detection - model_dir:	models
+2024-10-07 17:45:41,722 - Detection - load_pretrained_method:	None
+2024-10-07 17:45:41,722 - Detection - result_dir:	results
+2024-10-07 17:45:41,722 - Detection - results_file_name:	results_ADB_banking_noloss.csv
+2024-10-07 17:45:41,722 - Detection - save_results:	True
+2024-10-07 17:45:41,722 - Detection - loss_fct:	CrossEntropyLoss
+2024-10-07 17:45:41,722 - Detection - dataset_neg:	SQUAD
+2024-10-07 17:45:41,722 - Detection - method_output_dir:	/home/sharing/disk3/wangyifan/sujianhua/output/open_intent_detection/ADB_banking_0.25_1.0_bert_5
+2024-10-07 17:45:41,722 - Detection - model_output_dir:	/home/sharing/disk3/wangyifan/sujianhua/output/open_intent_detection/ADB_banking_0.25_1.0_bert_5/models
+2024-10-07 17:45:41,722 - Detection - bert_model:	/home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-10-07 17:45:41,722 - Detection - num_train_epochs:	100
+2024-10-07 17:45:41,722 - Detection - num_labels:	19
+2024-10-07 17:45:41,722 - Detection - max_seq_length:	55
+2024-10-07 17:45:41,722 - Detection - freeze_backbone_parameters:	True
+2024-10-07 17:45:41,722 - Detection - feat_dim:	768
+2024-10-07 17:45:41,722 - Detection - warmup_proportion:	0.1
+2024-10-07 17:45:41,722 - Detection - lr_boundary:	0.05
+2024-10-07 17:45:41,722 - Detection - lr:	2e-05
+2024-10-07 17:45:41,722 - Detection - activation:	relu
+2024-10-07 17:45:41,722 - Detection - train_batch_size:	128
+2024-10-07 17:45:41,722 - Detection - eval_batch_size:	64
+2024-10-07 17:45:41,723 - Detection - test_batch_size:	64
+2024-10-07 17:45:41,723 - Detection - wait_patient:	10
+2024-10-07 17:45:41,723 - Detection - safe1:	0.8
+2024-10-07 17:45:41,723 - Detection - safe2:	0.7
+2024-10-07 17:45:41,723 - Detection - neg_weight:	0.5
+2024-10-07 17:45:41,723 - Detection - margin:	0
+2024-10-07 17:45:41,723 - Detection - p:	2
+2024-10-07 17:45:41,723 - Detection - loss_weight:	1
+2024-10-07 17:45:41,723 - Detection - supcon_loss_weight:	0
+2024-10-07 17:45:41,723 - Detection - triplet_loss_weight:	0
+2024-10-07 17:45:41,723 - Detection - unseen_label_id:	19
+2024-10-07 17:45:41,723 - Detection - anum_labels:	20
+2024-10-07 17:45:41,723 - Detection - ============================== End Params ==============================
+2024-10-07 17:45:43,143 - Detection - Freeze all parameters but the last layer for efficiency
+2024-10-07 17:45:44,933 - Detection - Pre-training Begin...
+2024-10-07 17:45:49,498 - Detection - ***** Epoch: 1: Eval results *****
+2024-10-07 17:45:49,498 - Detection -   best_eval_score = 0
+2024-10-07 17:45:49,498 - Detection -   eval_score = 10.64
+2024-10-07 17:45:49,498 - Detection -   train_loss = 2.9408134993384865
+2024-10-07 17:45:53,095 - Detection - ***** Epoch: 2: Eval results *****
+2024-10-07 17:45:53,095 - Detection -   best_eval_score = 10.64
+2024-10-07 17:45:53,095 - Detection -   eval_score = 14.89
+2024-10-07 17:45:53,095 - Detection -   train_loss = 2.916368204004624
+2024-10-07 17:45:56,648 - Detection - ***** Epoch: 3: Eval results *****
+2024-10-07 17:45:56,648 - Detection -   best_eval_score = 14.89
+2024-10-07 17:45:56,648 - Detection -   eval_score = 28.09
+2024-10-07 17:45:56,648 - Detection -   train_loss = 2.864979533588185
+2024-10-07 17:46:00,198 - Detection - ***** Epoch: 4: Eval results *****
+2024-10-07 17:46:00,198 - Detection -   best_eval_score = 28.09
+2024-10-07 17:46:00,198 - Detection -   eval_score = 41.28
+2024-10-07 17:46:00,198 - Detection -   train_loss = 2.7705460576450123
+2024-10-07 17:46:03,703 - Detection - ***** Epoch: 5: Eval results *****
+2024-10-07 17:46:03,704 - Detection -   best_eval_score = 41.28
+2024-10-07 17:46:03,704 - Detection -   eval_score = 61.7
+2024-10-07 17:46:03,704 - Detection -   train_loss = 2.5497394309324375
+2024-10-07 17:46:07,062 - Detection - ***** Epoch: 6: Eval results *****
+2024-10-07 17:46:07,062 - Detection -   best_eval_score = 61.7
+2024-10-07 17:46:07,062 - Detection -   eval_score = 77.02
+2024-10-07 17:46:07,062 - Detection -   train_loss = 2.1022044630611645
+2024-10-07 17:46:10,729 - Detection - ***** Epoch: 7: Eval results *****
+2024-10-07 17:46:10,729 - Detection -   best_eval_score = 77.02
+2024-10-07 17:46:10,729 - Detection -   eval_score = 83.4
+2024-10-07 17:46:10,729 - Detection -   train_loss = 1.5333553342258228
+2024-10-07 17:46:14,161 - Detection - ***** Epoch: 8: Eval results *****
+2024-10-07 17:46:14,162 - Detection -   best_eval_score = 83.4
+2024-10-07 17:46:14,162 - Detection -   eval_score = 85.11
+2024-10-07 17:46:14,162 - Detection -   train_loss = 1.0623792269650627
+2024-10-07 17:46:17,725 - Detection - ***** Epoch: 9: Eval results *****
+2024-10-07 17:46:17,725 - Detection -   best_eval_score = 85.11
+2024-10-07 17:46:17,725 - Detection -   eval_score = 88.09
+2024-10-07 17:46:17,725 - Detection -   train_loss = 0.7391669574905845
+2024-10-07 17:46:21,397 - Detection - ***** Epoch: 10: Eval results *****
+2024-10-07 17:46:21,397 - Detection -   best_eval_score = 88.09
+2024-10-07 17:46:21,397 - Detection -   eval_score = 90.21
+2024-10-07 17:46:21,397 - Detection -   train_loss = 0.5412114420357872
+2024-10-07 17:46:24,899 - Detection - ***** Epoch: 11: Eval results *****
+2024-10-07 17:46:24,899 - Detection -   best_eval_score = 90.21
+2024-10-07 17:46:24,899 - Detection -   eval_score = 91.91
+2024-10-07 17:46:24,899 - Detection -   train_loss = 0.4197966298636268
+2024-10-07 17:46:28,374 - Detection - ***** Epoch: 12: Eval results *****
+2024-10-07 17:46:28,374 - Detection -   best_eval_score = 91.91
+2024-10-07 17:46:28,374 - Detection -   eval_score = 94.04
+2024-10-07 17:46:28,374 - Detection -   train_loss = 0.34310328346841473
+2024-10-07 17:46:31,921 - Detection - ***** Epoch: 13: Eval results *****
+2024-10-07 17:46:31,921 - Detection -   best_eval_score = 94.04
+2024-10-07 17:46:31,921 - Detection -   eval_score = 92.77
+2024-10-07 17:46:31,921 - Detection -   train_loss = 0.2927335903925054
+2024-10-07 17:46:35,420 - Detection - ***** Epoch: 14: Eval results *****
+2024-10-07 17:46:35,420 - Detection -   best_eval_score = 94.04
+2024-10-07 17:46:35,420 - Detection -   eval_score = 95.32
+2024-10-07 17:46:35,420 - Detection -   train_loss = 0.24788025459822485
+2024-10-07 17:46:38,899 - Detection - ***** Epoch: 15: Eval results *****
+2024-10-07 17:46:38,900 - Detection -   best_eval_score = 95.32
+2024-10-07 17:46:38,900 - Detection -   eval_score = 95.74
+2024-10-07 17:46:38,900 - Detection -   train_loss = 0.22302096030291388
+2024-10-07 17:46:42,476 - Detection - ***** Epoch: 16: Eval results *****
+2024-10-07 17:46:42,476 - Detection -   best_eval_score = 95.74
+2024-10-07 17:46:42,476 - Detection -   eval_score = 94.89
+2024-10-07 17:46:42,476 - Detection -   train_loss = 0.20082678602022283
+2024-10-07 17:46:46,029 - Detection - ***** Epoch: 17: Eval results *****
+2024-10-07 17:46:46,029 - Detection -   best_eval_score = 95.74
+2024-10-07 17:46:46,029 - Detection -   eval_score = 95.32
+2024-10-07 17:46:46,029 - Detection -   train_loss = 0.17590653370408452
+2024-10-07 17:46:49,630 - Detection - ***** Epoch: 18: Eval results *****
+2024-10-07 17:46:49,630 - Detection -   best_eval_score = 95.74
+2024-10-07 17:46:49,630 - Detection -   eval_score = 95.74
+2024-10-07 17:46:49,630 - Detection -   train_loss = 0.16201449492398431
+2024-10-07 17:46:53,211 - Detection - ***** Epoch: 19: Eval results *****
+2024-10-07 17:46:53,211 - Detection -   best_eval_score = 95.74
+2024-10-07 17:46:53,212 - Detection -   eval_score = 95.32
+2024-10-07 17:46:53,212 - Detection -   train_loss = 0.14474410476053462
+2024-10-07 17:46:56,964 - Detection - ***** Epoch: 20: Eval results *****
+2024-10-07 17:46:56,964 - Detection -   best_eval_score = 95.74
+2024-10-07 17:46:56,964 - Detection -   eval_score = 96.17
+2024-10-07 17:46:56,965 - Detection -   train_loss = 0.1356346344246584
+2024-10-07 17:47:00,514 - Detection - ***** Epoch: 21: Eval results *****
+2024-10-07 17:47:00,514 - Detection -   best_eval_score = 96.17
+2024-10-07 17:47:00,514 - Detection -   eval_score = 96.17
+2024-10-07 17:47:00,514 - Detection -   train_loss = 0.12449960279114106
+2024-10-07 17:47:04,065 - Detection - ***** Epoch: 22: Eval results *****
+2024-10-07 17:47:04,065 - Detection -   best_eval_score = 96.17
+2024-10-07 17:47:04,065 - Detection -   eval_score = 95.74
+2024-10-07 17:47:04,065 - Detection -   train_loss = 0.11686309032580432
+2024-10-07 17:47:07,682 - Detection - ***** Epoch: 23: Eval results *****
+2024-10-07 17:47:07,682 - Detection -   best_eval_score = 96.17
+2024-10-07 17:47:07,682 - Detection -   eval_score = 97.02
+2024-10-07 17:47:07,682 - Detection -   train_loss = 0.10812539826421176
+2024-10-07 17:47:11,203 - Detection - ***** Epoch: 24: Eval results *****
+2024-10-07 17:47:11,203 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:11,203 - Detection -   eval_score = 96.6
+2024-10-07 17:47:11,203 - Detection -   train_loss = 0.09944710003979065
+2024-10-07 17:47:14,804 - Detection - ***** Epoch: 25: Eval results *****
+2024-10-07 17:47:14,804 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:14,804 - Detection -   eval_score = 96.17
+2024-10-07 17:47:14,804 - Detection -   train_loss = 0.09434949453262721
+2024-10-07 17:47:18,364 - Detection - ***** Epoch: 26: Eval results *****
+2024-10-07 17:47:18,364 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:18,364 - Detection -   eval_score = 97.02
+2024-10-07 17:47:18,364 - Detection -   train_loss = 0.08749754442011609
+2024-10-07 17:47:21,914 - Detection - ***** Epoch: 27: Eval results *****
+2024-10-07 17:47:21,914 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:21,914 - Detection -   eval_score = 96.6
+2024-10-07 17:47:21,914 - Detection -   train_loss = 0.07743908530649017
+2024-10-07 17:47:25,523 - Detection - ***** Epoch: 28: Eval results *****
+2024-10-07 17:47:25,523 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:25,523 - Detection -   eval_score = 97.02
+2024-10-07 17:47:25,523 - Detection -   train_loss = 0.07538313199492062
+2024-10-07 17:47:28,937 - Detection - ***** Epoch: 29: Eval results *****
+2024-10-07 17:47:28,937 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:28,937 - Detection -   eval_score = 97.02
+2024-10-07 17:47:28,937 - Detection -   train_loss = 0.07203624090727638
+2024-10-07 17:47:32,537 - Detection - ***** Epoch: 30: Eval results *****
+2024-10-07 17:47:32,537 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:32,537 - Detection -   eval_score = 97.02
+2024-10-07 17:47:32,537 - Detection -   train_loss = 0.06357242758659755
+2024-10-07 17:47:36,157 - Detection - ***** Epoch: 31: Eval results *****
+2024-10-07 17:47:36,157 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:36,157 - Detection -   eval_score = 97.02
+2024-10-07 17:47:36,157 - Detection -   train_loss = 0.06482231573146932
+2024-10-07 17:47:39,652 - Detection - ***** Epoch: 32: Eval results *****
+2024-10-07 17:47:39,653 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:39,653 - Detection -   eval_score = 96.6
+2024-10-07 17:47:39,653 - Detection -   train_loss = 0.05869367718696594
+2024-10-07 17:47:43,183 - Detection - ***** Epoch: 33: Eval results *****
+2024-10-07 17:47:43,183 - Detection -   best_eval_score = 97.02
+2024-10-07 17:47:43,183 - Detection -   eval_score = 97.45
+2024-10-07 17:47:43,183 - Detection -   train_loss = 0.05741281193845412
+2024-10-07 17:47:46,639 - Detection - ***** Epoch: 34: Eval results *****
+2024-10-07 17:47:46,639 - Detection -   best_eval_score = 97.45
+2024-10-07 17:47:46,639 - Detection -   eval_score = 97.45
+2024-10-07 17:47:46,639 - Detection -   train_loss = 0.05675997716539046
+2024-10-07 17:47:50,169 - Detection - ***** Epoch: 35: Eval results *****
+2024-10-07 17:47:50,169 - Detection -   best_eval_score = 97.45
+2024-10-07 17:47:50,169 - Detection -   eval_score = 97.45
+2024-10-07 17:47:50,169 - Detection -   train_loss = 0.05354490306447534
+2024-10-07 17:47:53,831 - Detection - ***** Epoch: 36: Eval results *****
+2024-10-07 17:47:53,832 - Detection -   best_eval_score = 97.45
+2024-10-07 17:47:53,832 - Detection -   eval_score = 97.02
+2024-10-07 17:47:53,832 - Detection -   train_loss = 0.047954142422360534
+2024-10-07 17:47:57,330 - Detection - ***** Epoch: 37: Eval results *****
+2024-10-07 17:47:57,330 - Detection -   best_eval_score = 97.45
+2024-10-07 17:47:57,330 - Detection -   eval_score = 97.45
+2024-10-07 17:47:57,330 - Detection -   train_loss = 0.0501630656859454
+2024-10-07 17:48:00,796 - Detection - ***** Epoch: 38: Eval results *****
+2024-10-07 17:48:00,796 - Detection -   best_eval_score = 97.45
+2024-10-07 17:48:00,796 - Detection -   eval_score = 97.45
+2024-10-07 17:48:00,796 - Detection -   train_loss = 0.044193825191434694
+2024-10-07 17:48:04,369 - Detection - ***** Epoch: 39: Eval results *****
+2024-10-07 17:48:04,369 - Detection -   best_eval_score = 97.45
+2024-10-07 17:48:04,369 - Detection -   eval_score = 97.45
+2024-10-07 17:48:04,369 - Detection -   train_loss = 0.04517513108165825
+2024-10-07 17:48:07,877 - Detection - ***** Epoch: 40: Eval results *****
+2024-10-07 17:48:07,877 - Detection -   best_eval_score = 97.45
+2024-10-07 17:48:07,877 - Detection -   eval_score = 97.87
+2024-10-07 17:48:07,878 - Detection -   train_loss = 0.03957171091700301
+2024-10-07 17:48:11,532 - Detection - ***** Epoch: 41: Eval results *****
+2024-10-07 17:48:11,532 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:11,532 - Detection -   eval_score = 97.87
+2024-10-07 17:48:11,532 - Detection -   train_loss = 0.04530452652012601
+2024-10-07 17:48:14,839 - Detection - ***** Epoch: 42: Eval results *****
+2024-10-07 17:48:14,840 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:14,840 - Detection -   eval_score = 97.45
+2024-10-07 17:48:14,840 - Detection -   train_loss = 0.03856282242957283
+2024-10-07 17:48:18,037 - Detection - ***** Epoch: 43: Eval results *****
+2024-10-07 17:48:18,037 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:18,037 - Detection -   eval_score = 97.87
+2024-10-07 17:48:18,037 - Detection -   train_loss = 0.037600144853486735
+2024-10-07 17:48:21,315 - Detection - ***** Epoch: 44: Eval results *****
+2024-10-07 17:48:21,315 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:21,316 - Detection -   eval_score = 97.45
+2024-10-07 17:48:21,316 - Detection -   train_loss = 0.03624767141745371
+2024-10-07 17:48:24,632 - Detection - ***** Epoch: 45: Eval results *****
+2024-10-07 17:48:24,632 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:24,632 - Detection -   eval_score = 97.87
+2024-10-07 17:48:24,632 - Detection -   train_loss = 0.03319051259142511
+2024-10-07 17:48:27,807 - Detection - ***** Epoch: 46: Eval results *****
+2024-10-07 17:48:27,807 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:27,807 - Detection -   eval_score = 97.87
+2024-10-07 17:48:27,807 - Detection -   train_loss = 0.030713463202118874
+2024-10-07 17:48:31,041 - Detection - ***** Epoch: 47: Eval results *****
+2024-10-07 17:48:31,041 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:31,041 - Detection -   eval_score = 97.45
+2024-10-07 17:48:31,041 - Detection -   train_loss = 0.03251438248245155
+2024-10-07 17:48:34,288 - Detection - ***** Epoch: 48: Eval results *****
+2024-10-07 17:48:34,288 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:34,288 - Detection -   eval_score = 97.87
+2024-10-07 17:48:34,288 - Detection -   train_loss = 0.03068532476968625
+2024-10-07 17:48:37,525 - Detection - ***** Epoch: 49: Eval results *****
+2024-10-07 17:48:37,525 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:37,525 - Detection -   eval_score = 97.45
+2024-10-07 17:48:37,525 - Detection -   train_loss = 0.031270079643410796
+2024-10-07 17:48:40,756 - Detection - ***** Epoch: 50: Eval results *****
+2024-10-07 17:48:40,756 - Detection -   best_eval_score = 97.87
+2024-10-07 17:48:40,756 - Detection -   eval_score = 97.87
+2024-10-07 17:48:40,756 - Detection -   train_loss = 0.027867869802695865
+2024-10-07 17:48:40,756 - Detection - Trained models are saved in /home/sharing/disk3/wangyifan/sujianhua/output/open_intent_detection/ADB_banking_0.25_1.0_bert_5/models
+2024-10-07 17:48:42,185 - Detection - Pre-training finished...
+2024-10-07 17:48:42,186 - Detection - Training Begin...
+2024-10-07 17:48:52,668 - Detection - ***** Epoch: 1: Eval results *****
+2024-10-07 17:48:52,668 - Detection -   best_eval_score = 0
+2024-10-07 17:48:52,668 - Detection -   eval_score = 0.0
+2024-10-07 17:48:52,668 - Detection -   train_loss = 12.562782287597656
+2024-10-07 17:48:55,142 - Detection - ***** Epoch: 2: Eval results *****
+2024-10-07 17:48:55,143 - Detection -   best_eval_score = 0
+2024-10-07 17:48:55,143 - Detection -   eval_score = 0.0
+2024-10-07 17:48:55,143 - Detection -   train_loss = 11.838305473327637
+2024-10-07 17:48:57,661 - Detection - ***** Epoch: 3: Eval results *****
+2024-10-07 17:48:57,661 - Detection -   best_eval_score = 0
+2024-10-07 17:48:57,661 - Detection -   eval_score = 0.62
+2024-10-07 17:48:57,661 - Detection -   train_loss = 10.82027390423943
+2024-10-07 17:49:00,224 - Detection - ***** Epoch: 4: Eval results *****
+2024-10-07 17:49:00,224 - Detection -   best_eval_score = 0.62
+2024-10-07 17:49:00,224 - Detection -   eval_score = 9.14
+2024-10-07 17:49:00,224 - Detection -   train_loss = 9.710477885077982
+2024-10-07 17:49:03,562 - Detection - ***** Epoch: 5: Eval results *****
+2024-10-07 17:49:03,562 - Detection -   best_eval_score = 9.14
+2024-10-07 17:49:03,562 - Detection -   eval_score = 22.77
+2024-10-07 17:49:03,562 - Detection -   train_loss = 8.41119109883028
+2024-10-07 17:49:06,163 - Detection - ***** Epoch: 6: Eval results *****
+2024-10-07 17:49:06,164 - Detection -   best_eval_score = 22.77
+2024-10-07 17:49:06,164 - Detection -   eval_score = 42.44
+2024-10-07 17:49:06,164 - Detection -   train_loss = 7.292816330404842
+2024-10-07 17:49:09,598 - Detection - ***** Epoch: 7: Eval results *****
+2024-10-07 17:49:09,598 - Detection -   best_eval_score = 42.44
+2024-10-07 17:49:09,598 - Detection -   eval_score = 59.44
+2024-10-07 17:49:09,598 - Detection -   train_loss = 6.257568163030288
+2024-10-07 17:49:12,526 - Detection - ***** Epoch: 8: Eval results *****
+2024-10-07 17:49:12,526 - Detection -   best_eval_score = 59.44
+2024-10-07 17:49:12,526 - Detection -   eval_score = 69.23
+2024-10-07 17:49:12,526 - Detection -   train_loss = 5.44325200249167
+2024-10-07 17:49:14,984 - Detection - ***** Epoch: 9: Eval results *****
+2024-10-07 17:49:14,984 - Detection -   best_eval_score = 69.23
+2024-10-07 17:49:14,984 - Detection -   eval_score = 76.43
+2024-10-07 17:49:14,984 - Detection -   train_loss = 4.680130818310906
+2024-10-07 17:49:17,483 - Detection - ***** Epoch: 10: Eval results *****
+2024-10-07 17:49:17,483 - Detection -   best_eval_score = 76.43
+2024-10-07 17:49:17,483 - Detection -   eval_score = 81.93
+2024-10-07 17:49:17,483 - Detection -   train_loss = 4.125019522274242
+2024-10-07 17:49:20,932 - Detection - ***** Epoch: 11: Eval results *****
+2024-10-07 17:49:20,932 - Detection -   best_eval_score = 81.93
+2024-10-07 17:49:20,932 - Detection -   eval_score = 84.45
+2024-10-07 17:49:20,932 - Detection -   train_loss = 3.7082871689515957
+2024-10-07 17:49:23,584 - Detection - ***** Epoch: 12: Eval results *****
+2024-10-07 17:49:23,585 - Detection -   best_eval_score = 84.45
+2024-10-07 17:49:23,585 - Detection -   eval_score = 86.35
+2024-10-07 17:49:23,585 - Detection -   train_loss = 3.4302906288820156
+2024-10-07 17:49:26,035 - Detection - ***** Epoch: 13: Eval results *****
+2024-10-07 17:49:26,035 - Detection -   best_eval_score = 86.35
+2024-10-07 17:49:26,035 - Detection -   eval_score = 88.21
+2024-10-07 17:49:26,035 - Detection -   train_loss = 3.208700320299934
+2024-10-07 17:49:29,257 - Detection - ***** Epoch: 14: Eval results *****
+2024-10-07 17:49:29,257 - Detection -   best_eval_score = 88.21
+2024-10-07 17:49:29,257 - Detection -   eval_score = 88.21
+2024-10-07 17:49:29,257 - Detection -   train_loss = 3.0872186211978687
+2024-10-07 17:49:31,791 - Detection - ***** Epoch: 15: Eval results *****
+2024-10-07 17:49:31,791 - Detection -   best_eval_score = 88.21
+2024-10-07 17:49:31,791 - Detection -   eval_score = 88.42
+2024-10-07 17:49:31,791 - Detection -   train_loss = 3.0380909583147835
+2024-10-07 17:49:34,370 - Detection - ***** Epoch: 16: Eval results *****
+2024-10-07 17:49:34,370 - Detection -   best_eval_score = 88.42
+2024-10-07 17:49:34,370 - Detection -   eval_score = 89.58
+2024-10-07 17:49:34,370 - Detection -   train_loss = 3.048733851488899
+2024-10-07 17:49:36,971 - Detection - ***** Epoch: 17: Eval results *****
+2024-10-07 17:49:36,972 - Detection -   best_eval_score = 89.58
+2024-10-07 17:49:36,972 - Detection -   eval_score = 89.58
+2024-10-07 17:49:36,972 - Detection -   train_loss = 3.014073750552009
+2024-10-07 17:49:39,590 - Detection - ***** Epoch: 18: Eval results *****
+2024-10-07 17:49:39,590 - Detection -   best_eval_score = 89.58
+2024-10-07 17:49:39,590 - Detection -   eval_score = 89.58
+2024-10-07 17:49:39,590 - Detection -   train_loss = 3.072655902189367
+2024-10-07 17:49:42,244 - Detection - ***** Epoch: 19: Eval results *****
+2024-10-07 17:49:42,244 - Detection -   best_eval_score = 89.58
+2024-10-07 17:49:42,244 - Detection -   eval_score = 89.58
+2024-10-07 17:49:42,244 - Detection -   train_loss = 3.0294029432184555
+2024-10-07 17:49:44,869 - Detection - ***** Epoch: 20: Eval results *****
+2024-10-07 17:49:44,869 - Detection -   best_eval_score = 89.58
+2024-10-07 17:49:44,869 - Detection -   eval_score = 89.41
+2024-10-07 17:49:44,869 - Detection -   train_loss = 3.023494608262006
+2024-10-07 17:49:47,502 - Detection - ***** Epoch: 21: Eval results *****
+2024-10-07 17:49:47,502 - Detection -   best_eval_score = 89.58
+2024-10-07 17:49:47,502 - Detection -   eval_score = 89.66
+2024-10-07 17:49:47,502 - Detection -   train_loss = 3.0519937487209545
+2024-10-07 17:49:50,185 - Detection - ***** Epoch: 22: Eval results *****
+2024-10-07 17:49:50,185 - Detection -   best_eval_score = 89.66
+2024-10-07 17:49:50,185 - Detection -   eval_score = 89.66
+2024-10-07 17:49:50,185 - Detection -   train_loss = 3.0376460131476906
+2024-10-07 17:49:53,076 - Detection - ***** Epoch: 23: Eval results *****
+2024-10-07 17:49:53,076 - Detection -   best_eval_score = 89.66
+2024-10-07 17:49:53,076 - Detection -   eval_score = 89.83
+2024-10-07 17:49:53,076 - Detection -   train_loss = 3.0709681931663964
+2024-10-07 17:49:56,171 - Detection - ***** Epoch: 24: Eval results *****
+2024-10-07 17:49:56,171 - Detection -   best_eval_score = 89.83
+2024-10-07 17:49:56,171 - Detection -   eval_score = 89.41
+2024-10-07 17:49:56,171 - Detection -   train_loss = 3.036536735646865
+2024-10-07 17:49:58,684 - Detection - ***** Epoch: 25: Eval results *****
+2024-10-07 17:49:58,685 - Detection -   best_eval_score = 89.83
+2024-10-07 17:49:58,685 - Detection -   eval_score = 89.41
+2024-10-07 17:49:58,685 - Detection -   train_loss = 3.034784260918112
+2024-10-07 17:50:01,411 - Detection - ***** Epoch: 26: Eval results *****
+2024-10-07 17:50:01,411 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:01,415 - Detection -   eval_score = 89.61
+2024-10-07 17:50:01,415 - Detection -   train_loss = 3.0404598712921143
+2024-10-07 17:50:04,072 - Detection - ***** Epoch: 27: Eval results *****
+2024-10-07 17:50:04,072 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:04,073 - Detection -   eval_score = 89.41
+2024-10-07 17:50:04,073 - Detection -   train_loss = 3.0543772052316105
+2024-10-07 17:50:06,701 - Detection - ***** Epoch: 28: Eval results *****
+2024-10-07 17:50:06,701 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:06,701 - Detection -   eval_score = 88.7
+2024-10-07 17:50:06,701 - Detection -   train_loss = 3.043065449770759
+2024-10-07 17:50:09,760 - Detection - ***** Epoch: 29: Eval results *****
+2024-10-07 17:50:09,760 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:09,760 - Detection -   eval_score = 89.41
+2024-10-07 17:50:09,760 - Detection -   train_loss = 3.073235231287339
+2024-10-07 17:50:12,927 - Detection - ***** Epoch: 30: Eval results *****
+2024-10-07 17:50:12,927 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:12,927 - Detection -   eval_score = 89.41
+2024-10-07 17:50:12,927 - Detection -   train_loss = 3.0455430395462932
+2024-10-07 17:50:15,432 - Detection - ***** Epoch: 31: Eval results *****
+2024-10-07 17:50:15,432 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:15,432 - Detection -   eval_score = 89.58
+2024-10-07 17:50:15,432 - Detection -   train_loss = 3.050556042615105
+2024-10-07 17:50:18,112 - Detection - ***** Epoch: 32: Eval results *****
+2024-10-07 17:50:18,112 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:18,112 - Detection -   eval_score = 89.58
+2024-10-07 17:50:18,112 - Detection -   train_loss = 3.0527660425971535
+2024-10-07 17:50:20,765 - Detection - ***** Epoch: 33: Eval results *****
+2024-10-07 17:50:20,765 - Detection -   best_eval_score = 89.83
+2024-10-07 17:50:20,765 - Detection -   eval_score = 89.41
+2024-10-07 17:50:20,765 - Detection -   train_loss = 3.041667475419886
+2024-10-07 17:50:20,766 - Detection - Training Finished...
+2024-10-07 17:50:20,766 - Detection - Testing begin...
+2024-10-07 17:50:23,464 - Detection - ***** Test: Confusion Matrix *****
+2024-10-07 17:50:23,465 - Detection - [[  36    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    4]
+ [   0   33    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    7]
+ [   0    0   36    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    4]
+ [   0    0    0   36    0    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    4]
+ [   0    0    0    0   34    0    0    0    0    0    0    0    0    0
+     0    0    0    0    0    6]
+ [   0    0    0    0    0   38    0    0    0    0    0    0    0    0
+     0    0    0    0    0    2]
+ [   0    0    0    0    0    0   27    0    1    0    0    0    0    0
+     0    0    0    0    0   12]
+ [   0    0    0    0    0    0    0   29    0    0    0    0    0    0
+     0    0    0    0    0   11]
+ [   0    0    0    0    0    0    0    0   33    0    0    0    0    0
+     0    0    0    0    0    7]
+ [   0    0    0    2    0    0    0    0    0   33    0    0    0    0
+     0    0    0    0    0    5]
+ [   0    0    0    0    0    0    0    0    0    0   34    0    0    0
+     4    0    0    0    0    2]
+ [   0    0    0    0    0    0    0    0    0    0    0   36    0    0
+     0    0    0    0    0    4]
+ [   0    0    0    0    0    0    0    0    0    0    0    0   36    0
+     0    0    0    0    1    3]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0   35
+     0    0    0    0    0    5]
+ [   0    0    0    0    0    0    0    0    0    0    2    0    0    0
+    33    0    0    0    0    5]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0   30    0    0    0   10]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0   35    0    0    5]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    0    0
+     0    0    0   31    0    9]
+ [   0    0    0    0    0    0    0    0    0    0    0    0    1    0
+     0    0    0    0   31    8]
+ [  18    7    0   32    0    0   20    1   41   10   24   42   34    7
+     4   18   57   37    3 1965]]
+2024-10-07 17:50:23,465 - Detection - ***** Test results *****
+2024-10-07 17:50:23,465 - Detection -   Acc = 84.45
+2024-10-07 17:50:23,465 - Detection -   F1 = 75.0912
+2024-10-07 17:50:23,465 - Detection -   F1-known = 74.3403
+2024-10-07 17:50:23,465 - Detection -   F1-open = 89.3588
+2024-10-07 17:50:23,465 - Detection - Testing finished...
+2024-10-07 17:50:23,465 - Detection - Results saved in results/results_ADB_banking_noloss.csv
+2024-10-07 17:50:23,488 - Detection - Open Intent Detection Finished...

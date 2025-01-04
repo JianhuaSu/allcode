@@ -1,0 +1,766 @@
+2024-05-15 11:13:23,460 - Lists of intent labels are: ['Acknowledge', 'Advise', 'Agree', 'Apologise', 'Arrange', 'Ask for help', 'Asking for opinions', 'Care', 'Comfort', 'Complain', 'Confirm', 'Criticize', 'Doubt', 'Emphasize', 'Explain', 'Flaunt', 'Greet', 'Inform', 'Introduce', 'Invite', 'Joke', 'Leave', 'Oppose', 'Plan', 'Praise', 'Prevent', 'Refuse', 'Taunt', 'Thank', 'Warn']
+2024-05-15 11:13:23,460 - ID Data preparation...
+2024-05-15 11:13:42,785 - OOD Data preparation...
+2024-05-15 11:13:46,533 - ============================== Params ==============================
+2024-05-15 11:13:46,533 - logger_name: msz_ma_MIntRec2_multi-class_0
+2024-05-15 11:13:46,533 - dataset: MIntRec2
+2024-05-15 11:13:46,534 - ood_dataset: MIntRec2-OOD
+2024-05-15 11:13:46,534 - data_mode: multi-class
+2024-05-15 11:13:46,534 - multimodal_method: msz
+2024-05-15 11:13:46,534 - method: msz
+2024-05-15 11:13:46,534 - ood_detection_method: ma
+2024-05-15 11:13:46,534 - text_backbone: bert-base-uncased
+2024-05-15 11:13:46,534 - seed: 0
+2024-05-15 11:13:46,534 - num_workers: 8
+2024-05-15 11:13:46,534 - log_id: msz_ma_MIntRec2_multi-class_0_2024-05-15-11-13-23
+2024-05-15 11:13:46,534 - gpu_id: 0
+2024-05-15 11:13:46,534 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-15 11:13:46,534 - train: True
+2024-05-15 11:13:46,534 - tune: True
+2024-05-15 11:13:46,534 - ood: True
+2024-05-15 11:13:46,534 - save_model: True
+2024-05-15 11:13:46,534 - save_results: True
+2024-05-15 11:13:46,534 - log_path: logs
+2024-05-15 11:13:46,534 - cache_path: cache
+2024-05-15 11:13:46,534 - video_data_path: video_data
+2024-05-15 11:13:46,534 - audio_data_path: audio_data
+2024-05-15 11:13:46,534 - video_feats_path: swin_feats.pkl
+2024-05-15 11:13:46,534 - ood_video_feats_path: swin_feats.pkl
+2024-05-15 11:13:46,534 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:13:46,534 - audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:13:46,534 - results_path: results
+2024-05-15 11:13:46,534 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz
+2024-05-15 11:13:46,534 - model_path: models
+2024-05-15 11:13:46,534 - config_file_name: msz_MIntRec2
+2024-05-15 11:13:46,534 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-15 11:13:46,534 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-15 11:13:46,534 - text_seq_len: 50
+2024-05-15 11:13:46,534 - video_seq_len: 180
+2024-05-15 11:13:46,534 - audio_seq_len: 400
+2024-05-15 11:13:46,534 - text_feat_dim: 768
+2024-05-15 11:13:46,534 - video_feat_dim: 256
+2024-05-15 11:13:46,534 - audio_feat_dim: 768
+2024-05-15 11:13:46,534 - ood_label_id: 30
+2024-05-15 11:13:46,534 - num_labels: 30
+2024-05-15 11:13:46,534 - num_train_examples: 6165
+2024-05-15 11:13:46,534 - need_aligned: True
+2024-05-15 11:13:46,534 - freeze_parameters: False
+2024-05-15 11:13:46,534 - eval_monitor: acc
+2024-05-15 11:13:46,534 - train_batch_size: 32
+2024-05-15 11:13:46,534 - eval_batch_size: 16
+2024-05-15 11:13:46,534 - num_train_epochs: 100
+2024-05-15 11:13:46,535 - lr: [1e-05]
+2024-05-15 11:13:46,535 - weight_decay: [0.1]
+2024-05-15 11:13:46,535 - wait_patience: 3
+2024-05-15 11:13:46,535 - warmup_proportion: [0.01]
+2024-05-15 11:13:46,535 - hidden_dims: [768]
+2024-05-15 11:13:46,535 - num_attention_heads: [6]
+2024-05-15 11:13:46,535 - attention_probs_dropout_prob: [0.3]
+2024-05-15 11:13:46,535 - hidden_dropout_prob: [0.3]
+2024-05-15 11:13:46,535 - intermediate_size: [768]
+2024-05-15 11:13:46,535 - num_hidden_layers: [6]
+2024-05-15 11:13:46,535 - max_position_embeddings: [768]
+2024-05-15 11:13:46,535 - position_embedding_type: absolute
+2024-05-15 11:13:46,535 - batch_first: True
+2024-05-15 11:13:46,535 - aligned_method: ['ctc']
+2024-05-15 11:13:46,535 - sampler: beta
+2024-05-15 11:13:46,535 - multiple_ood: [1]
+2024-05-15 11:13:46,535 - select_number_min: [2]
+2024-05-15 11:13:46,535 - select_number_max: [3]
+2024-05-15 11:13:46,535 - alpha: [2]
+2024-05-15 11:13:46,535 - mlp_hidden_size: [256]
+2024-05-15 11:13:46,535 - mlp_dropout: [0.3]
+2024-05-15 11:13:46,535 - scale: [8]
+2024-05-15 11:13:46,535 - ablation: ['no_fusion_add']
+2024-05-15 11:13:46,535 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_0
+2024-05-15 11:13:46,535 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_0/models
+2024-05-15 11:13:46,535 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/binary_msz_MIntRec2_bert-base-uncased_0
+2024-05-15 11:13:46,535 - ============================== End Params ==============================
+2024-05-15 11:13:49,303 - Multimodal Intent Recognition begins...
+2024-05-15 11:13:49,303 - Training begins...
+2024-05-15 11:14:51,003 - ***** Epoch: 1: Eval results *****
+2024-05-15 11:14:51,004 -   binary_train_loss = 0.7014
+2024-05-15 11:14:51,004 -   binary_eval_score = 0.5005
+2024-05-15 11:14:51,004 -   train_loss = 2.967
+2024-05-15 11:14:51,004 -   eval_score = 0.4521
+2024-05-15 11:14:51,004 -   best_eval_score = 0.0
+2024-05-15 11:15:52,608 - ***** Epoch: 2: Eval results *****
+2024-05-15 11:15:52,608 -   binary_train_loss = 0.6717
+2024-05-15 11:15:52,608 -   binary_eval_score = 0.764
+2024-05-15 11:15:52,609 -   train_loss = 1.6522
+2024-05-15 11:15:52,609 -   eval_score = 0.5199
+2024-05-15 11:15:52,609 -   best_eval_score = 0.4521
+2024-05-15 11:16:54,326 - ***** Epoch: 3: Eval results *****
+2024-05-15 11:16:54,326 -   binary_train_loss = 0.6629
+2024-05-15 11:16:54,326 -   binary_eval_score = 0.7351
+2024-05-15 11:16:54,326 -   train_loss = 1.2217
+2024-05-15 11:16:54,326 -   eval_score = 0.5769
+2024-05-15 11:16:54,326 -   best_eval_score = 0.5199
+2024-05-15 11:17:56,561 - ***** Epoch: 4: Eval results *****
+2024-05-15 11:17:56,563 -   binary_train_loss = 0.6568
+2024-05-15 11:17:56,563 -   binary_eval_score = 0.7473
+2024-05-15 11:17:56,563 -   train_loss = 0.9457
+2024-05-15 11:17:56,563 -   eval_score = 0.585
+2024-05-15 11:17:56,563 -   best_eval_score = 0.5769
+2024-05-15 11:18:59,697 - ***** Epoch: 5: Eval results *****
+2024-05-15 11:18:59,697 -   binary_train_loss = 0.6463
+2024-05-15 11:18:59,697 -   binary_eval_score = 0.7464
+2024-05-15 11:18:59,697 -   train_loss = 0.7276
+2024-05-15 11:18:59,697 -   eval_score = 0.5805
+2024-05-15 11:18:59,697 -   best_eval_score = 0.585
+2024-05-15 11:18:59,697 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:20:01,326 - ***** Epoch: 6: Eval results *****
+2024-05-15 11:20:01,326 -   binary_train_loss = 0.6297
+2024-05-15 11:20:01,326 -   binary_eval_score = 0.7703
+2024-05-15 11:20:01,326 -   train_loss = 0.5659
+2024-05-15 11:20:01,326 -   eval_score = 0.5687
+2024-05-15 11:20:01,326 -   best_eval_score = 0.585
+2024-05-15 11:20:01,326 - EarlyStopping counter: 2 out of 3
+2024-05-15 11:21:01,382 - ***** Epoch: 7: Eval results *****
+2024-05-15 11:21:01,382 -   binary_train_loss = 0.6171
+2024-05-15 11:21:01,383 -   binary_eval_score = 0.7654
+2024-05-15 11:21:01,383 -   train_loss = 0.4348
+2024-05-15 11:21:01,383 -   eval_score = 0.575
+2024-05-15 11:21:01,383 -   best_eval_score = 0.585
+2024-05-15 11:21:01,383 - EarlyStopping counter: 3 out of 3
+2024-05-15 11:21:01,383 - EarlyStopping at epoch 7
+2024-05-15 11:21:01,385 - Trained models are saved in /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_0/models
+2024-05-15 11:21:02,881 - Training is finished...
+2024-05-15 11:21:02,881 - Testing begins...
+2024-05-15 11:21:28,947 - ***** Out-of-domain Evaluation results *****
+2024-05-15 11:21:28,948 -   aupr_in = 0.5666
+2024-05-15 11:21:28,948 -   aupr_out = 0.4398
+2024-05-15 11:21:28,948 -   auroc = 0.5036
+2024-05-15 11:21:28,948 -   der = 0.5581
+2024-05-15 11:21:28,948 -   eer = 0.4978
+2024-05-15 11:21:28,948 -   fpr95 = 0.945
+2024-05-15 11:21:28,948 - Testing is finished...
+2024-05-15 11:21:28,948 - Multimodal intent recognition is finished...
+2024-05-15 11:21:28,948 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-15 11:21:29,028 - ============================== Params ==============================
+2024-05-15 11:21:29,028 - logger_name: msz_ma_MIntRec2_multi-class_0
+2024-05-15 11:21:29,028 - dataset: MIntRec2
+2024-05-15 11:21:29,028 - ood_dataset: MIntRec2-OOD
+2024-05-15 11:21:29,028 - data_mode: multi-class
+2024-05-15 11:21:29,028 - multimodal_method: msz
+2024-05-15 11:21:29,028 - method: msz
+2024-05-15 11:21:29,028 - ood_detection_method: ma
+2024-05-15 11:21:29,028 - text_backbone: bert-base-uncased
+2024-05-15 11:21:29,028 - seed: 1
+2024-05-15 11:21:29,028 - num_workers: 8
+2024-05-15 11:21:29,028 - log_id: msz_ma_MIntRec2_multi-class_0_2024-05-15-11-13-23
+2024-05-15 11:21:29,028 - gpu_id: 0
+2024-05-15 11:21:29,028 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-15 11:21:29,028 - train: True
+2024-05-15 11:21:29,028 - tune: True
+2024-05-15 11:21:29,028 - ood: True
+2024-05-15 11:21:29,028 - save_model: True
+2024-05-15 11:21:29,029 - save_results: True
+2024-05-15 11:21:29,029 - log_path: logs
+2024-05-15 11:21:29,029 - cache_path: cache
+2024-05-15 11:21:29,029 - video_data_path: video_data
+2024-05-15 11:21:29,029 - audio_data_path: audio_data
+2024-05-15 11:21:29,029 - video_feats_path: swin_feats.pkl
+2024-05-15 11:21:29,029 - ood_video_feats_path: swin_feats.pkl
+2024-05-15 11:21:29,029 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:21:29,029 - audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:21:29,029 - results_path: results
+2024-05-15 11:21:29,029 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz
+2024-05-15 11:21:29,029 - model_path: models
+2024-05-15 11:21:29,029 - config_file_name: msz_MIntRec2
+2024-05-15 11:21:29,029 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-15 11:21:29,029 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-15 11:21:29,029 - text_seq_len: 50
+2024-05-15 11:21:29,029 - video_seq_len: 180
+2024-05-15 11:21:29,029 - audio_seq_len: 400
+2024-05-15 11:21:29,029 - text_feat_dim: 768
+2024-05-15 11:21:29,029 - video_feat_dim: 256
+2024-05-15 11:21:29,029 - audio_feat_dim: 768
+2024-05-15 11:21:29,029 - ood_label_id: 30
+2024-05-15 11:21:29,029 - num_labels: 30
+2024-05-15 11:21:29,029 - num_train_examples: 6165
+2024-05-15 11:21:29,029 - need_aligned: True
+2024-05-15 11:21:29,029 - freeze_parameters: False
+2024-05-15 11:21:29,029 - eval_monitor: acc
+2024-05-15 11:21:29,029 - train_batch_size: 32
+2024-05-15 11:21:29,029 - eval_batch_size: 16
+2024-05-15 11:21:29,029 - num_train_epochs: 100
+2024-05-15 11:21:29,029 - lr: [1e-05]
+2024-05-15 11:21:29,029 - weight_decay: [0.1]
+2024-05-15 11:21:29,029 - wait_patience: 3
+2024-05-15 11:21:29,029 - warmup_proportion: [0.01]
+2024-05-15 11:21:29,029 - hidden_dims: [768]
+2024-05-15 11:21:29,029 - num_attention_heads: [6]
+2024-05-15 11:21:29,029 - attention_probs_dropout_prob: [0.3]
+2024-05-15 11:21:29,029 - hidden_dropout_prob: [0.3]
+2024-05-15 11:21:29,029 - intermediate_size: [768]
+2024-05-15 11:21:29,029 - num_hidden_layers: [6]
+2024-05-15 11:21:29,030 - max_position_embeddings: [768]
+2024-05-15 11:21:29,030 - position_embedding_type: absolute
+2024-05-15 11:21:29,030 - batch_first: True
+2024-05-15 11:21:29,030 - aligned_method: ['ctc']
+2024-05-15 11:21:29,030 - sampler: beta
+2024-05-15 11:21:29,030 - multiple_ood: [1]
+2024-05-15 11:21:29,030 - select_number_min: [2]
+2024-05-15 11:21:29,030 - select_number_max: [3]
+2024-05-15 11:21:29,030 - alpha: [2]
+2024-05-15 11:21:29,030 - mlp_hidden_size: [256]
+2024-05-15 11:21:29,030 - mlp_dropout: [0.3]
+2024-05-15 11:21:29,030 - scale: [8]
+2024-05-15 11:21:29,030 - ablation: ['no_fusion_add']
+2024-05-15 11:21:29,030 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_1
+2024-05-15 11:21:29,030 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_1/models
+2024-05-15 11:21:29,030 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/binary_msz_MIntRec2_bert-base-uncased_1
+2024-05-15 11:21:29,030 - device: cuda
+2024-05-15 11:21:29,030 - ============================== End Params ==============================
+2024-05-15 11:21:30,742 - Multimodal Intent Recognition begins...
+2024-05-15 11:21:30,742 - Training begins...
+2024-05-15 11:22:31,482 - ***** Epoch: 1: Eval results *****
+2024-05-15 11:22:31,482 -   binary_train_loss = 0.7022
+2024-05-15 11:22:31,482 -   binary_eval_score = 0.4982
+2024-05-15 11:22:31,482 -   train_loss = 2.92
+2024-05-15 11:22:31,482 -   eval_score = 0.4458
+2024-05-15 11:22:31,482 -   best_eval_score = 0.0
+2024-05-15 11:23:33,838 - ***** Epoch: 2: Eval results *****
+2024-05-15 11:23:33,838 -   binary_train_loss = 0.6727
+2024-05-15 11:23:33,838 -   binary_eval_score = 0.6989
+2024-05-15 11:23:33,838 -   train_loss = 1.6171
+2024-05-15 11:23:33,838 -   eval_score = 0.5651
+2024-05-15 11:23:33,838 -   best_eval_score = 0.4458
+2024-05-15 11:24:35,929 - ***** Epoch: 3: Eval results *****
+2024-05-15 11:24:35,929 -   binary_train_loss = 0.6677
+2024-05-15 11:24:35,929 -   binary_eval_score = 0.6976
+2024-05-15 11:24:35,929 -   train_loss = 1.1807
+2024-05-15 11:24:35,929 -   eval_score = 0.5814
+2024-05-15 11:24:35,929 -   best_eval_score = 0.5651
+2024-05-15 11:25:36,037 - ***** Epoch: 4: Eval results *****
+2024-05-15 11:25:36,038 -   binary_train_loss = 0.6568
+2024-05-15 11:25:36,038 -   binary_eval_score = 0.7288
+2024-05-15 11:25:36,038 -   train_loss = 0.9255
+2024-05-15 11:25:36,038 -   eval_score = 0.575
+2024-05-15 11:25:36,038 -   best_eval_score = 0.5814
+2024-05-15 11:25:36,038 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:26:38,603 - ***** Epoch: 5: Eval results *****
+2024-05-15 11:26:38,603 -   binary_train_loss = 0.65
+2024-05-15 11:26:38,603 -   binary_eval_score = 0.7527
+2024-05-15 11:26:38,603 -   train_loss = 0.705
+2024-05-15 11:26:38,603 -   eval_score = 0.5778
+2024-05-15 11:26:38,603 -   best_eval_score = 0.5814
+2024-05-15 11:26:38,603 - EarlyStopping counter: 2 out of 3
+2024-05-15 11:27:40,865 - ***** Epoch: 6: Eval results *****
+2024-05-15 11:27:40,865 -   binary_train_loss = 0.6305
+2024-05-15 11:27:40,865 -   binary_eval_score = 0.7631
+2024-05-15 11:27:40,866 -   train_loss = 0.5521
+2024-05-15 11:27:40,866 -   eval_score = 0.5859
+2024-05-15 11:27:40,866 -   best_eval_score = 0.5814
+2024-05-15 11:28:42,743 - ***** Epoch: 7: Eval results *****
+2024-05-15 11:28:42,743 -   binary_train_loss = 0.6189
+2024-05-15 11:28:42,743 -   binary_eval_score = 0.7477
+2024-05-15 11:28:42,743 -   train_loss = 0.4118
+2024-05-15 11:28:42,743 -   eval_score = 0.5868
+2024-05-15 11:28:42,743 -   best_eval_score = 0.5859
+2024-05-15 11:29:45,023 - ***** Epoch: 8: Eval results *****
+2024-05-15 11:29:45,023 -   binary_train_loss = 0.5983
+2024-05-15 11:29:45,024 -   binary_eval_score = 0.7812
+2024-05-15 11:29:45,024 -   train_loss = 0.3265
+2024-05-15 11:29:45,024 -   eval_score = 0.5769
+2024-05-15 11:29:45,024 -   best_eval_score = 0.5868
+2024-05-15 11:29:45,024 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:30:46,775 - ***** Epoch: 9: Eval results *****
+2024-05-15 11:30:46,775 -   binary_train_loss = 0.5795
+2024-05-15 11:30:46,775 -   binary_eval_score = 0.8092
+2024-05-15 11:30:46,775 -   train_loss = 0.2588
+2024-05-15 11:30:46,775 -   eval_score = 0.5796
+2024-05-15 11:30:46,775 -   best_eval_score = 0.5868
+2024-05-15 11:30:46,775 - EarlyStopping counter: 2 out of 3
+2024-05-15 11:31:50,406 - ***** Epoch: 10: Eval results *****
+2024-05-15 11:31:50,407 -   binary_train_loss = 0.5623
+2024-05-15 11:31:50,407 -   binary_eval_score = 0.811
+2024-05-15 11:31:50,407 -   train_loss = 0.2081
+2024-05-15 11:31:50,407 -   eval_score = 0.5741
+2024-05-15 11:31:50,407 -   best_eval_score = 0.5868
+2024-05-15 11:31:50,407 - EarlyStopping counter: 3 out of 3
+2024-05-15 11:31:50,407 - EarlyStopping at epoch 10
+2024-05-15 11:31:50,413 - Trained models are saved in /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_1/models
+2024-05-15 11:31:51,912 - Training is finished...
+2024-05-15 11:31:51,912 - Testing begins...
+2024-05-15 11:32:18,633 - ***** Out-of-domain Evaluation results *****
+2024-05-15 11:32:18,634 -   aupr_in = 0.5692
+2024-05-15 11:32:18,634 -   aupr_out = 0.4414
+2024-05-15 11:32:18,634 -   auroc = 0.5071
+2024-05-15 11:32:18,634 -   der = 0.558
+2024-05-15 11:32:18,634 -   eer = 0.4933
+2024-05-15 11:32:18,634 -   fpr95 = 0.9495
+2024-05-15 11:32:18,634 - Testing is finished...
+2024-05-15 11:32:18,634 - Multimodal intent recognition is finished...
+2024-05-15 11:32:18,634 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-15 11:32:18,734 - ============================== Params ==============================
+2024-05-15 11:32:18,734 - logger_name: msz_ma_MIntRec2_multi-class_0
+2024-05-15 11:32:18,734 - dataset: MIntRec2
+2024-05-15 11:32:18,734 - ood_dataset: MIntRec2-OOD
+2024-05-15 11:32:18,735 - data_mode: multi-class
+2024-05-15 11:32:18,735 - multimodal_method: msz
+2024-05-15 11:32:18,735 - method: msz
+2024-05-15 11:32:18,735 - ood_detection_method: ma
+2024-05-15 11:32:18,735 - text_backbone: bert-base-uncased
+2024-05-15 11:32:18,735 - seed: 2
+2024-05-15 11:32:18,735 - num_workers: 8
+2024-05-15 11:32:18,735 - log_id: msz_ma_MIntRec2_multi-class_0_2024-05-15-11-13-23
+2024-05-15 11:32:18,735 - gpu_id: 0
+2024-05-15 11:32:18,735 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-15 11:32:18,735 - train: True
+2024-05-15 11:32:18,735 - tune: True
+2024-05-15 11:32:18,735 - ood: True
+2024-05-15 11:32:18,735 - save_model: True
+2024-05-15 11:32:18,735 - save_results: True
+2024-05-15 11:32:18,735 - log_path: logs
+2024-05-15 11:32:18,735 - cache_path: cache
+2024-05-15 11:32:18,735 - video_data_path: video_data
+2024-05-15 11:32:18,735 - audio_data_path: audio_data
+2024-05-15 11:32:18,735 - video_feats_path: swin_feats.pkl
+2024-05-15 11:32:18,735 - ood_video_feats_path: swin_feats.pkl
+2024-05-15 11:32:18,735 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:32:18,735 - audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:32:18,735 - results_path: results
+2024-05-15 11:32:18,735 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz
+2024-05-15 11:32:18,735 - model_path: models
+2024-05-15 11:32:18,735 - config_file_name: msz_MIntRec2
+2024-05-15 11:32:18,735 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-15 11:32:18,735 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-15 11:32:18,735 - text_seq_len: 50
+2024-05-15 11:32:18,735 - video_seq_len: 180
+2024-05-15 11:32:18,735 - audio_seq_len: 400
+2024-05-15 11:32:18,735 - text_feat_dim: 768
+2024-05-15 11:32:18,735 - video_feat_dim: 256
+2024-05-15 11:32:18,735 - audio_feat_dim: 768
+2024-05-15 11:32:18,735 - ood_label_id: 30
+2024-05-15 11:32:18,735 - num_labels: 30
+2024-05-15 11:32:18,735 - num_train_examples: 6165
+2024-05-15 11:32:18,735 - need_aligned: True
+2024-05-15 11:32:18,736 - freeze_parameters: False
+2024-05-15 11:32:18,736 - eval_monitor: acc
+2024-05-15 11:32:18,736 - train_batch_size: 32
+2024-05-15 11:32:18,736 - eval_batch_size: 16
+2024-05-15 11:32:18,736 - num_train_epochs: 100
+2024-05-15 11:32:18,736 - lr: [1e-05]
+2024-05-15 11:32:18,736 - weight_decay: [0.1]
+2024-05-15 11:32:18,736 - wait_patience: 3
+2024-05-15 11:32:18,736 - warmup_proportion: [0.01]
+2024-05-15 11:32:18,736 - hidden_dims: [768]
+2024-05-15 11:32:18,736 - num_attention_heads: [6]
+2024-05-15 11:32:18,736 - attention_probs_dropout_prob: [0.3]
+2024-05-15 11:32:18,736 - hidden_dropout_prob: [0.3]
+2024-05-15 11:32:18,736 - intermediate_size: [768]
+2024-05-15 11:32:18,736 - num_hidden_layers: [6]
+2024-05-15 11:32:18,736 - max_position_embeddings: [768]
+2024-05-15 11:32:18,736 - position_embedding_type: absolute
+2024-05-15 11:32:18,736 - batch_first: True
+2024-05-15 11:32:18,736 - aligned_method: ['ctc']
+2024-05-15 11:32:18,736 - sampler: beta
+2024-05-15 11:32:18,736 - multiple_ood: [1]
+2024-05-15 11:32:18,736 - select_number_min: [2]
+2024-05-15 11:32:18,736 - select_number_max: [3]
+2024-05-15 11:32:18,736 - alpha: [2]
+2024-05-15 11:32:18,736 - mlp_hidden_size: [256]
+2024-05-15 11:32:18,736 - mlp_dropout: [0.3]
+2024-05-15 11:32:18,736 - scale: [8]
+2024-05-15 11:32:18,736 - ablation: ['no_fusion_add']
+2024-05-15 11:32:18,736 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_2
+2024-05-15 11:32:18,736 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_2/models
+2024-05-15 11:32:18,736 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/binary_msz_MIntRec2_bert-base-uncased_2
+2024-05-15 11:32:18,736 - device: cuda
+2024-05-15 11:32:18,736 - ============================== End Params ==============================
+2024-05-15 11:32:20,689 - Multimodal Intent Recognition begins...
+2024-05-15 11:32:20,690 - Training begins...
+2024-05-15 11:33:21,427 - ***** Epoch: 1: Eval results *****
+2024-05-15 11:33:21,428 -   binary_train_loss = 0.7066
+2024-05-15 11:33:21,428 -   binary_eval_score = 0.505
+2024-05-15 11:33:21,428 -   train_loss = 2.9088
+2024-05-15 11:33:21,428 -   eval_score = 0.4656
+2024-05-15 11:33:21,428 -   best_eval_score = 0.0
+2024-05-15 11:34:24,401 - ***** Epoch: 2: Eval results *****
+2024-05-15 11:34:24,401 -   binary_train_loss = 0.6758
+2024-05-15 11:34:24,401 -   binary_eval_score = 0.6953
+2024-05-15 11:34:24,401 -   train_loss = 1.6107
+2024-05-15 11:34:24,402 -   eval_score = 0.5705
+2024-05-15 11:34:24,402 -   best_eval_score = 0.4656
+2024-05-15 11:35:26,768 - ***** Epoch: 3: Eval results *****
+2024-05-15 11:35:26,768 -   binary_train_loss = 0.67
+2024-05-15 11:35:26,768 -   binary_eval_score = 0.6985
+2024-05-15 11:35:26,768 -   train_loss = 1.1845
+2024-05-15 11:35:26,768 -   eval_score = 0.5624
+2024-05-15 11:35:26,769 -   best_eval_score = 0.5705
+2024-05-15 11:35:26,769 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:36:29,037 - ***** Epoch: 4: Eval results *****
+2024-05-15 11:36:29,037 -   binary_train_loss = 0.6656
+2024-05-15 11:36:29,037 -   binary_eval_score = 0.7224
+2024-05-15 11:36:29,037 -   train_loss = 0.9238
+2024-05-15 11:36:29,037 -   eval_score = 0.5814
+2024-05-15 11:36:29,037 -   best_eval_score = 0.5705
+2024-05-15 11:37:31,097 - ***** Epoch: 5: Eval results *****
+2024-05-15 11:37:31,097 -   binary_train_loss = 0.6547
+2024-05-15 11:37:31,097 -   binary_eval_score = 0.7292
+2024-05-15 11:37:31,097 -   train_loss = 0.7108
+2024-05-15 11:37:31,097 -   eval_score = 0.5859
+2024-05-15 11:37:31,097 -   best_eval_score = 0.5814
+2024-05-15 11:38:33,338 - ***** Epoch: 6: Eval results *****
+2024-05-15 11:38:33,338 -   binary_train_loss = 0.6445
+2024-05-15 11:38:33,338 -   binary_eval_score = 0.7627
+2024-05-15 11:38:33,338 -   train_loss = 0.5476
+2024-05-15 11:38:33,338 -   eval_score = 0.5705
+2024-05-15 11:38:33,338 -   best_eval_score = 0.5859
+2024-05-15 11:38:33,339 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:39:36,094 - ***** Epoch: 7: Eval results *****
+2024-05-15 11:39:36,094 -   binary_train_loss = 0.6248
+2024-05-15 11:39:36,094 -   binary_eval_score = 0.7563
+2024-05-15 11:39:36,094 -   train_loss = 0.4246
+2024-05-15 11:39:36,094 -   eval_score = 0.5805
+2024-05-15 11:39:36,094 -   best_eval_score = 0.5859
+2024-05-15 11:39:36,094 - EarlyStopping counter: 2 out of 3
+2024-05-15 11:40:39,745 - ***** Epoch: 8: Eval results *****
+2024-05-15 11:40:39,745 -   binary_train_loss = 0.6164
+2024-05-15 11:40:39,746 -   binary_eval_score = 0.7744
+2024-05-15 11:40:39,746 -   train_loss = 0.325
+2024-05-15 11:40:39,746 -   eval_score = 0.5859
+2024-05-15 11:40:39,746 -   best_eval_score = 0.5859
+2024-05-15 11:40:39,746 - EarlyStopping counter: 3 out of 3
+2024-05-15 11:40:39,746 - EarlyStopping at epoch 8
+2024-05-15 11:40:39,752 - Trained models are saved in /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_2/models
+2024-05-15 11:40:41,203 - Training is finished...
+2024-05-15 11:40:41,204 - Testing begins...
+2024-05-15 11:41:06,766 - ***** Out-of-domain Evaluation results *****
+2024-05-15 11:41:06,766 -   aupr_in = 0.5682
+2024-05-15 11:41:06,766 -   aupr_out = 0.4394
+2024-05-15 11:41:06,766 -   auroc = 0.5042
+2024-05-15 11:41:06,766 -   der = 0.5573
+2024-05-15 11:41:06,767 -   eer = 0.4939
+2024-05-15 11:41:06,767 -   fpr95 = 0.9463
+2024-05-15 11:41:06,767 - Testing is finished...
+2024-05-15 11:41:06,767 - Multimodal intent recognition is finished...
+2024-05-15 11:41:06,767 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-15 11:41:06,851 - ============================== Params ==============================
+2024-05-15 11:41:06,851 - logger_name: msz_ma_MIntRec2_multi-class_0
+2024-05-15 11:41:06,851 - dataset: MIntRec2
+2024-05-15 11:41:06,851 - ood_dataset: MIntRec2-OOD
+2024-05-15 11:41:06,851 - data_mode: multi-class
+2024-05-15 11:41:06,851 - multimodal_method: msz
+2024-05-15 11:41:06,851 - method: msz
+2024-05-15 11:41:06,851 - ood_detection_method: ma
+2024-05-15 11:41:06,851 - text_backbone: bert-base-uncased
+2024-05-15 11:41:06,851 - seed: 3
+2024-05-15 11:41:06,851 - num_workers: 8
+2024-05-15 11:41:06,851 - log_id: msz_ma_MIntRec2_multi-class_0_2024-05-15-11-13-23
+2024-05-15 11:41:06,851 - gpu_id: 0
+2024-05-15 11:41:06,851 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-15 11:41:06,851 - train: True
+2024-05-15 11:41:06,851 - tune: True
+2024-05-15 11:41:06,851 - ood: True
+2024-05-15 11:41:06,851 - save_model: True
+2024-05-15 11:41:06,851 - save_results: True
+2024-05-15 11:41:06,851 - log_path: logs
+2024-05-15 11:41:06,851 - cache_path: cache
+2024-05-15 11:41:06,851 - video_data_path: video_data
+2024-05-15 11:41:06,851 - audio_data_path: audio_data
+2024-05-15 11:41:06,851 - video_feats_path: swin_feats.pkl
+2024-05-15 11:41:06,851 - ood_video_feats_path: swin_feats.pkl
+2024-05-15 11:41:06,851 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:41:06,851 - audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:41:06,852 - results_path: results
+2024-05-15 11:41:06,852 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz
+2024-05-15 11:41:06,852 - model_path: models
+2024-05-15 11:41:06,852 - config_file_name: msz_MIntRec2
+2024-05-15 11:41:06,852 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-15 11:41:06,852 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-15 11:41:06,852 - text_seq_len: 50
+2024-05-15 11:41:06,852 - video_seq_len: 180
+2024-05-15 11:41:06,852 - audio_seq_len: 400
+2024-05-15 11:41:06,852 - text_feat_dim: 768
+2024-05-15 11:41:06,852 - video_feat_dim: 256
+2024-05-15 11:41:06,852 - audio_feat_dim: 768
+2024-05-15 11:41:06,852 - ood_label_id: 30
+2024-05-15 11:41:06,852 - num_labels: 30
+2024-05-15 11:41:06,852 - num_train_examples: 6165
+2024-05-15 11:41:06,852 - need_aligned: True
+2024-05-15 11:41:06,852 - freeze_parameters: False
+2024-05-15 11:41:06,852 - eval_monitor: acc
+2024-05-15 11:41:06,852 - train_batch_size: 32
+2024-05-15 11:41:06,852 - eval_batch_size: 16
+2024-05-15 11:41:06,852 - num_train_epochs: 100
+2024-05-15 11:41:06,852 - lr: [1e-05]
+2024-05-15 11:41:06,852 - weight_decay: [0.1]
+2024-05-15 11:41:06,852 - wait_patience: 3
+2024-05-15 11:41:06,852 - warmup_proportion: [0.01]
+2024-05-15 11:41:06,852 - hidden_dims: [768]
+2024-05-15 11:41:06,852 - num_attention_heads: [6]
+2024-05-15 11:41:06,852 - attention_probs_dropout_prob: [0.3]
+2024-05-15 11:41:06,852 - hidden_dropout_prob: [0.3]
+2024-05-15 11:41:06,852 - intermediate_size: [768]
+2024-05-15 11:41:06,852 - num_hidden_layers: [6]
+2024-05-15 11:41:06,852 - max_position_embeddings: [768]
+2024-05-15 11:41:06,852 - position_embedding_type: absolute
+2024-05-15 11:41:06,852 - batch_first: True
+2024-05-15 11:41:06,852 - aligned_method: ['ctc']
+2024-05-15 11:41:06,852 - sampler: beta
+2024-05-15 11:41:06,852 - multiple_ood: [1]
+2024-05-15 11:41:06,852 - select_number_min: [2]
+2024-05-15 11:41:06,852 - select_number_max: [3]
+2024-05-15 11:41:06,852 - alpha: [2]
+2024-05-15 11:41:06,852 - mlp_hidden_size: [256]
+2024-05-15 11:41:06,852 - mlp_dropout: [0.3]
+2024-05-15 11:41:06,852 - scale: [8]
+2024-05-15 11:41:06,852 - ablation: ['no_fusion_add']
+2024-05-15 11:41:06,853 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_3
+2024-05-15 11:41:06,853 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_3/models
+2024-05-15 11:41:06,853 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/binary_msz_MIntRec2_bert-base-uncased_3
+2024-05-15 11:41:06,853 - device: cuda
+2024-05-15 11:41:06,853 - ============================== End Params ==============================
+2024-05-15 11:41:08,563 - Multimodal Intent Recognition begins...
+2024-05-15 11:41:08,563 - Training begins...
+2024-05-15 11:42:10,747 - ***** Epoch: 1: Eval results *****
+2024-05-15 11:42:10,747 -   binary_train_loss = 0.704
+2024-05-15 11:42:10,748 -   binary_eval_score = 0.5362
+2024-05-15 11:42:10,748 -   train_loss = 2.8882
+2024-05-15 11:42:10,748 -   eval_score = 0.4656
+2024-05-15 11:42:10,748 -   best_eval_score = 0.0
+2024-05-15 11:43:11,880 - ***** Epoch: 2: Eval results *****
+2024-05-15 11:43:11,880 -   binary_train_loss = 0.6749
+2024-05-15 11:43:11,880 -   binary_eval_score = 0.736
+2024-05-15 11:43:11,880 -   train_loss = 1.6248
+2024-05-15 11:43:11,880 -   eval_score = 0.5542
+2024-05-15 11:43:11,880 -   best_eval_score = 0.4656
+2024-05-15 11:44:13,687 - ***** Epoch: 3: Eval results *****
+2024-05-15 11:44:13,687 -   binary_train_loss = 0.6719
+2024-05-15 11:44:13,687 -   binary_eval_score = 0.7355
+2024-05-15 11:44:13,687 -   train_loss = 1.1908
+2024-05-15 11:44:13,687 -   eval_score = 0.5615
+2024-05-15 11:44:13,687 -   best_eval_score = 0.5542
+2024-05-15 11:45:14,473 - ***** Epoch: 4: Eval results *****
+2024-05-15 11:45:14,473 -   binary_train_loss = 0.6622
+2024-05-15 11:45:14,473 -   binary_eval_score = 0.7536
+2024-05-15 11:45:14,473 -   train_loss = 0.933
+2024-05-15 11:45:14,473 -   eval_score = 0.5778
+2024-05-15 11:45:14,473 -   best_eval_score = 0.5615
+2024-05-15 11:46:17,563 - ***** Epoch: 5: Eval results *****
+2024-05-15 11:46:17,564 -   binary_train_loss = 0.652
+2024-05-15 11:46:17,564 -   binary_eval_score = 0.7599
+2024-05-15 11:46:17,564 -   train_loss = 0.7065
+2024-05-15 11:46:17,564 -   eval_score = 0.5696
+2024-05-15 11:46:17,564 -   best_eval_score = 0.5778
+2024-05-15 11:46:17,564 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:47:20,843 - ***** Epoch: 6: Eval results *****
+2024-05-15 11:47:20,844 -   binary_train_loss = 0.6413
+2024-05-15 11:47:20,844 -   binary_eval_score = 0.7816
+2024-05-15 11:47:20,844 -   train_loss = 0.551
+2024-05-15 11:47:20,844 -   eval_score = 0.5859
+2024-05-15 11:47:20,844 -   best_eval_score = 0.5778
+2024-05-15 11:48:24,653 - ***** Epoch: 7: Eval results *****
+2024-05-15 11:48:24,653 -   binary_train_loss = 0.6249
+2024-05-15 11:48:24,653 -   binary_eval_score = 0.7776
+2024-05-15 11:48:24,654 -   train_loss = 0.4068
+2024-05-15 11:48:24,654 -   eval_score = 0.5868
+2024-05-15 11:48:24,654 -   best_eval_score = 0.5859
+2024-05-15 11:49:27,199 - ***** Epoch: 8: Eval results *****
+2024-05-15 11:49:27,199 -   binary_train_loss = 0.6042
+2024-05-15 11:49:27,199 -   binary_eval_score = 0.792
+2024-05-15 11:49:27,199 -   train_loss = 0.3251
+2024-05-15 11:49:27,199 -   eval_score = 0.5805
+2024-05-15 11:49:27,199 -   best_eval_score = 0.5868
+2024-05-15 11:49:27,199 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:50:30,149 - ***** Epoch: 9: Eval results *****
+2024-05-15 11:50:30,149 -   binary_train_loss = 0.5856
+2024-05-15 11:50:30,149 -   binary_eval_score = 0.7916
+2024-05-15 11:50:30,149 -   train_loss = 0.2545
+2024-05-15 11:50:30,149 -   eval_score = 0.5967
+2024-05-15 11:50:30,149 -   best_eval_score = 0.5868
+2024-05-15 11:51:33,642 - ***** Epoch: 10: Eval results *****
+2024-05-15 11:51:33,642 -   binary_train_loss = 0.5636
+2024-05-15 11:51:33,642 -   binary_eval_score = 0.8178
+2024-05-15 11:51:33,643 -   train_loss = 0.2143
+2024-05-15 11:51:33,643 -   eval_score = 0.5895
+2024-05-15 11:51:33,643 -   best_eval_score = 0.5967
+2024-05-15 11:51:33,643 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:52:37,122 - ***** Epoch: 11: Eval results *****
+2024-05-15 11:52:37,122 -   binary_train_loss = 0.5416
+2024-05-15 11:52:37,122 -   binary_eval_score = 0.8223
+2024-05-15 11:52:37,122 -   train_loss = 0.1833
+2024-05-15 11:52:37,122 -   eval_score = 0.5805
+2024-05-15 11:52:37,122 -   best_eval_score = 0.5967
+2024-05-15 11:52:37,122 - EarlyStopping counter: 2 out of 3
+2024-05-15 11:53:40,126 - ***** Epoch: 12: Eval results *****
+2024-05-15 11:53:40,126 -   binary_train_loss = 0.532
+2024-05-15 11:53:40,126 -   binary_eval_score = 0.858
+2024-05-15 11:53:40,126 -   train_loss = 0.1542
+2024-05-15 11:53:40,126 -   eval_score = 0.5732
+2024-05-15 11:53:40,126 -   best_eval_score = 0.5967
+2024-05-15 11:53:40,126 - EarlyStopping counter: 3 out of 3
+2024-05-15 11:53:40,126 - EarlyStopping at epoch 12
+2024-05-15 11:53:40,130 - Trained models are saved in /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_3/models
+2024-05-15 11:53:41,317 - Training is finished...
+2024-05-15 11:53:41,317 - Testing begins...
+2024-05-15 11:54:08,848 - ***** Out-of-domain Evaluation results *****
+2024-05-15 11:54:08,849 -   aupr_in = 0.5705
+2024-05-15 11:54:08,849 -   aupr_out = 0.4441
+2024-05-15 11:54:08,849 -   auroc = 0.5102
+2024-05-15 11:54:08,849 -   der = 0.5571
+2024-05-15 11:54:08,849 -   eer = 0.4933
+2024-05-15 11:54:08,849 -   fpr95 = 0.9475
+2024-05-15 11:54:08,849 - Testing is finished...
+2024-05-15 11:54:08,849 - Multimodal intent recognition is finished...
+2024-05-15 11:54:08,849 - Results are saved in results/results_msz_ablation_MIntRec2.csv
+2024-05-15 11:54:08,921 - ============================== Params ==============================
+2024-05-15 11:54:08,921 - logger_name: msz_ma_MIntRec2_multi-class_0
+2024-05-15 11:54:08,921 - dataset: MIntRec2
+2024-05-15 11:54:08,921 - ood_dataset: MIntRec2-OOD
+2024-05-15 11:54:08,921 - data_mode: multi-class
+2024-05-15 11:54:08,921 - multimodal_method: msz
+2024-05-15 11:54:08,921 - method: msz
+2024-05-15 11:54:08,921 - ood_detection_method: ma
+2024-05-15 11:54:08,921 - text_backbone: bert-base-uncased
+2024-05-15 11:54:08,921 - seed: 4
+2024-05-15 11:54:08,921 - num_workers: 8
+2024-05-15 11:54:08,921 - log_id: msz_ma_MIntRec2_multi-class_0_2024-05-15-11-13-23
+2024-05-15 11:54:08,921 - gpu_id: 0
+2024-05-15 11:54:08,921 - data_path: /home/sharing/disk2/sjh/intentDataset
+2024-05-15 11:54:08,921 - train: True
+2024-05-15 11:54:08,921 - tune: True
+2024-05-15 11:54:08,921 - ood: True
+2024-05-15 11:54:08,921 - save_model: True
+2024-05-15 11:54:08,921 - save_results: True
+2024-05-15 11:54:08,921 - log_path: logs
+2024-05-15 11:54:08,922 - cache_path: cache
+2024-05-15 11:54:08,922 - video_data_path: video_data
+2024-05-15 11:54:08,922 - audio_data_path: audio_data
+2024-05-15 11:54:08,922 - video_feats_path: swin_feats.pkl
+2024-05-15 11:54:08,922 - ood_video_feats_path: swin_feats.pkl
+2024-05-15 11:54:08,922 - ood_audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:54:08,922 - audio_feats_path: wavlm_feats.pkl
+2024-05-15 11:54:08,922 - results_path: results
+2024-05-15 11:54:08,922 - output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz
+2024-05-15 11:54:08,922 - model_path: models
+2024-05-15 11:54:08,922 - config_file_name: msz_MIntRec2
+2024-05-15 11:54:08,922 - results_file_name: results_msz_ablation_MIntRec2.csv
+2024-05-15 11:54:08,922 - text_pretrained_model: /home/sharing/disk1/pretrained_embedding/bert/uncased_L-12_H-768_A-12/
+2024-05-15 11:54:08,922 - text_seq_len: 50
+2024-05-15 11:54:08,922 - video_seq_len: 180
+2024-05-15 11:54:08,922 - audio_seq_len: 400
+2024-05-15 11:54:08,922 - text_feat_dim: 768
+2024-05-15 11:54:08,922 - video_feat_dim: 256
+2024-05-15 11:54:08,922 - audio_feat_dim: 768
+2024-05-15 11:54:08,922 - ood_label_id: 30
+2024-05-15 11:54:08,922 - num_labels: 30
+2024-05-15 11:54:08,922 - num_train_examples: 6165
+2024-05-15 11:54:08,922 - need_aligned: True
+2024-05-15 11:54:08,922 - freeze_parameters: False
+2024-05-15 11:54:08,922 - eval_monitor: acc
+2024-05-15 11:54:08,922 - train_batch_size: 32
+2024-05-15 11:54:08,922 - eval_batch_size: 16
+2024-05-15 11:54:08,922 - num_train_epochs: 100
+2024-05-15 11:54:08,922 - lr: [1e-05]
+2024-05-15 11:54:08,922 - weight_decay: [0.1]
+2024-05-15 11:54:08,922 - wait_patience: 3
+2024-05-15 11:54:08,922 - warmup_proportion: [0.01]
+2024-05-15 11:54:08,922 - hidden_dims: [768]
+2024-05-15 11:54:08,922 - num_attention_heads: [6]
+2024-05-15 11:54:08,922 - attention_probs_dropout_prob: [0.3]
+2024-05-15 11:54:08,922 - hidden_dropout_prob: [0.3]
+2024-05-15 11:54:08,922 - intermediate_size: [768]
+2024-05-15 11:54:08,922 - num_hidden_layers: [6]
+2024-05-15 11:54:08,922 - max_position_embeddings: [768]
+2024-05-15 11:54:08,922 - position_embedding_type: absolute
+2024-05-15 11:54:08,922 - batch_first: True
+2024-05-15 11:54:08,922 - aligned_method: ['ctc']
+2024-05-15 11:54:08,922 - sampler: beta
+2024-05-15 11:54:08,922 - multiple_ood: [1]
+2024-05-15 11:54:08,922 - select_number_min: [2]
+2024-05-15 11:54:08,922 - select_number_max: [3]
+2024-05-15 11:54:08,923 - alpha: [2]
+2024-05-15 11:54:08,923 - mlp_hidden_size: [256]
+2024-05-15 11:54:08,923 - mlp_dropout: [0.3]
+2024-05-15 11:54:08,923 - scale: [8]
+2024-05-15 11:54:08,923 - ablation: ['no_fusion_add']
+2024-05-15 11:54:08,923 - pred_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_4
+2024-05-15 11:54:08,923 - model_output_path: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_4/models
+2024-05-15 11:54:08,923 - pretrained_save_model: /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/binary_msz_MIntRec2_bert-base-uncased_4
+2024-05-15 11:54:08,923 - device: cuda
+2024-05-15 11:54:08,923 - ============================== End Params ==============================
+2024-05-15 11:54:10,664 - Multimodal Intent Recognition begins...
+2024-05-15 11:54:10,664 - Training begins...
+2024-05-15 11:55:13,929 - ***** Epoch: 1: Eval results *****
+2024-05-15 11:55:13,929 -   binary_train_loss = 0.7022
+2024-05-15 11:55:13,929 -   binary_eval_score = 0.5298
+2024-05-15 11:55:13,929 -   train_loss = 2.9919
+2024-05-15 11:55:13,929 -   eval_score = 0.4204
+2024-05-15 11:55:13,929 -   best_eval_score = 0.0
+2024-05-15 11:56:16,269 - ***** Epoch: 2: Eval results *****
+2024-05-15 11:56:16,269 -   binary_train_loss = 0.6675
+2024-05-15 11:56:16,269 -   binary_eval_score = 0.7238
+2024-05-15 11:56:16,269 -   train_loss = 1.6682
+2024-05-15 11:56:16,269 -   eval_score = 0.5479
+2024-05-15 11:56:16,269 -   best_eval_score = 0.4204
+2024-05-15 11:57:20,321 - ***** Epoch: 3: Eval results *****
+2024-05-15 11:57:20,321 -   binary_train_loss = 0.662
+2024-05-15 11:57:20,321 -   binary_eval_score = 0.7052
+2024-05-15 11:57:20,322 -   train_loss = 1.2205
+2024-05-15 11:57:20,322 -   eval_score = 0.5787
+2024-05-15 11:57:20,322 -   best_eval_score = 0.5479
+2024-05-15 11:58:23,190 - ***** Epoch: 4: Eval results *****
+2024-05-15 11:58:23,191 -   binary_train_loss = 0.655
+2024-05-15 11:58:23,191 -   binary_eval_score = 0.736
+2024-05-15 11:58:23,191 -   train_loss = 0.9588
+2024-05-15 11:58:23,191 -   eval_score = 0.5787
+2024-05-15 11:58:23,191 -   best_eval_score = 0.5787
+2024-05-15 11:58:23,191 - EarlyStopping counter: 1 out of 3
+2024-05-15 11:59:26,300 - ***** Epoch: 5: Eval results *****
+2024-05-15 11:59:26,301 -   binary_train_loss = 0.6411
+2024-05-15 11:59:26,301 -   binary_eval_score = 0.7283
+2024-05-15 11:59:26,301 -   train_loss = 0.7349
+2024-05-15 11:59:26,301 -   eval_score = 0.5805
+2024-05-15 11:59:26,301 -   best_eval_score = 0.5787
+2024-05-15 12:00:29,832 - ***** Epoch: 6: Eval results *****
+2024-05-15 12:00:29,832 -   binary_train_loss = 0.6308
+2024-05-15 12:00:29,832 -   binary_eval_score = 0.7491
+2024-05-15 12:00:29,832 -   train_loss = 0.5604
+2024-05-15 12:00:29,832 -   eval_score = 0.5759
+2024-05-15 12:00:29,832 -   best_eval_score = 0.5805
+2024-05-15 12:00:29,832 - EarlyStopping counter: 1 out of 3
+2024-05-15 12:01:33,344 - ***** Epoch: 7: Eval results *****
+2024-05-15 12:01:33,344 -   binary_train_loss = 0.6138
+2024-05-15 12:01:33,344 -   binary_eval_score = 0.7505
+2024-05-15 12:01:33,344 -   train_loss = 0.4287
+2024-05-15 12:01:33,344 -   eval_score = 0.5832
+2024-05-15 12:01:33,344 -   best_eval_score = 0.5805
+2024-05-15 12:02:36,023 - ***** Epoch: 8: Eval results *****
+2024-05-15 12:02:36,023 -   binary_train_loss = 0.5979
+2024-05-15 12:02:36,023 -   binary_eval_score = 0.7825
+2024-05-15 12:02:36,023 -   train_loss = 0.3293
+2024-05-15 12:02:36,023 -   eval_score = 0.5823
+2024-05-15 12:02:36,023 -   best_eval_score = 0.5832
+2024-05-15 12:02:36,023 - EarlyStopping counter: 1 out of 3
+2024-05-15 12:03:38,801 - ***** Epoch: 9: Eval results *****
+2024-05-15 12:03:38,801 -   binary_train_loss = 0.5755
+2024-05-15 12:03:38,801 -   binary_eval_score = 0.7866
+2024-05-15 12:03:38,801 -   train_loss = 0.271
+2024-05-15 12:03:38,802 -   eval_score = 0.5832
+2024-05-15 12:03:38,802 -   best_eval_score = 0.5832
+2024-05-15 12:03:38,802 - EarlyStopping counter: 2 out of 3
+2024-05-15 12:04:42,606 - ***** Epoch: 10: Eval results *****
+2024-05-15 12:04:42,606 -   binary_train_loss = 0.5607
+2024-05-15 12:04:42,607 -   binary_eval_score = 0.8092
+2024-05-15 12:04:42,607 -   train_loss = 0.2146
+2024-05-15 12:04:42,607 -   eval_score = 0.575
+2024-05-15 12:04:42,607 -   best_eval_score = 0.5832
+2024-05-15 12:04:42,607 - EarlyStopping counter: 3 out of 3
+2024-05-15 12:04:42,607 - EarlyStopping at epoch 10
+2024-05-15 12:04:42,611 - Trained models are saved in /home/sharing/disk2/sjh/Outputs/OOD_MIntRec2/ablation/no_fusion_add_msz/msz_MIntRec2_bert-base-uncased_multi-class_4/models
+2024-05-15 12:04:44,103 - Training is finished...
+2024-05-15 12:04:44,103 - Testing begins...
+2024-05-15 12:05:11,110 - ***** Out-of-domain Evaluation results *****
+2024-05-15 12:05:11,110 -   aupr_in = 0.5678
+2024-05-15 12:05:11,110 -   aupr_out = 0.4407
+2024-05-15 12:05:11,110 -   auroc = 0.505
+2024-05-15 12:05:11,110 -   der = 0.5581
+2024-05-15 12:05:11,110 -   eer = 0.4984
+2024-05-15 12:05:11,110 -   fpr95 = 0.9475
+2024-05-15 12:05:11,110 - Testing is finished...
+2024-05-15 12:05:11,110 - Multimodal intent recognition is finished...
+2024-05-15 12:05:11,110 - Results are saved in results/results_msz_ablation_MIntRec2.csv
