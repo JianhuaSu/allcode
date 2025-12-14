@@ -8,10 +8,10 @@
 - **MSZ_MELD 文件夹**
   - 包含 MSZ 模型在 MELD 数据集下的实验结果。
 
-- **OOD_MSZ 文件夹**
+- **OOD_MSZ 文件夹（小论文相关）**
   - 包含 MSZOOD 方法的主要模型及其基线模型。
 
-- **OOD_MSZ_ablation 文件夹**
+- **OOD_MSZ_ablation 文件夹（小论文相关）**
   - 包含 MSZOOD 方法的消融实验模型。
 
 - **TEXTOIR_ct_adb 文件夹**
@@ -22,8 +22,6 @@
 
 - **demo 文件夹**
   - 包含第六章系统的代码。
-
-根据您提供的文件夹结构，以下是一个详细的 README 文件，用于描述每个模型的基本结构和用途。
 
 ```markdown
 # 项目目录结构
